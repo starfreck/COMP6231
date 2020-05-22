@@ -1,11 +1,17 @@
-package io.github.vasuratanpara;
+package Client;
 
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
+import Server.GameServer;
+
 public class AdministratorClient {
-    
 	
 	static boolean status = true;
     static int PASSWORD_LENGTH = 6;
@@ -14,12 +20,16 @@ public class AdministratorClient {
     static String[] validIPs = {"132","93","183"};
     static Scanner input = new Scanner(System.in);
     
+    static HashMap<String, String> gameServers = new HashMap<String, String>();
+    
     public AdministratorClient()
     {
-
+    	gameServers.put("132","NorthAmerica");
+    	gameServers.put("93","Europe");
+    	gameServers.put("183","Asia");
     }
     
- // Return menu.
+    // Return menu.
  	public static void showMenu()
  	{
  		System.out.println("\n****Welcome Admin****\n");
@@ -53,12 +63,9 @@ public class AdministratorClient {
  		String username = inputUsername();
  		String password = inputPassword();
  		String ipaddress = inputIPAddress();
- 		
- 		 if(getPlayerStatus(username, password, ipaddress)){
- 			 System.out.println("\nNA: 6 online, 1 offline. EU: 7 online, 1 offline, AS: 8 online, 1 offline.");
- 		 }else {
- 			 System.out.println("Wrong Password or Username");
- 		 }
+ 			
+ 		// Print Response
+ 		System.out.println(getPlayerStatus(username, password, ipaddress));
 		
 	}
 
@@ -122,15 +129,43 @@ public class AdministratorClient {
         }
 	}
     
-    public boolean getPlayerStatus (String AdminUsername, String AdminPassword, String IPAddress)
+    public String getPlayerStatus (String AdminUsername, String AdminPassword, String IPAddress)
     {
-        // Check The Admin UserName and Password
-        if("Admin".equals(AdminUsername)  && "Admin".equals(AdminPassword)){
-        	return true;
+    	String status = "false";
+    	String serverName = gameServers.get(IPAddress.split("\\.")[0]);
+    	
+    	// find the remote object and cast it to an interface object
+        GameServer server = getRMIObject(serverName);
+        
+        if (server == null) {
+            return status;
         }
-        else {
-        	return false;
+    	
+        try {
+            status = server.getPlayerStatus(AdminUsername, AdminPassword, IPAddress);
+        } catch (RemoteException e1) {
+            e1.printStackTrace();
         }
+
+        return status;
+    }
+    
+    private GameServer getRMIObject(String serverName) {
+		
+		GameServer server = null;
+
+        // find the remote object and cast it to an interface object
+        try {
+        	server = (GameServer) Naming.lookup(serverName);
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+
+        return server;
     }
     
     private String inputUsername() 

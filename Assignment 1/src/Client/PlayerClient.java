@@ -1,38 +1,49 @@
-package io.github.vasuratanpara;
+package Client;
+
+import Server.GameServer;
+
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class PlayerClient {
-    
-    static boolean status = true;
+	
+	static boolean status = true;
     static int PASSWORD_LENGTH = 6;
     static int USERNAME_MIN_LENGTH = 6;
     static int USERNAME_MAX_LENGTH = 15;
     static String[] validIPs = {"132","93","183"};
     static Scanner input = new Scanner(System.in);
-    
-    
-    public PlayerClient()
-    {
-
-    }
-
+   
+    static HashMap<String, String> gameServers = new HashMap<String, String>();
+   
+    public PlayerClient() {
+    	
+    	gameServers.put("132","NorthAmerica");
+    	gameServers.put("93","Europe");
+    	gameServers.put("183","Asia");
+		
+	}
+	
     // Return menu.
-	public static void showMenu()
-	{
-		System.out.println("\n****Welcome Client****\n");
-		System.out.println("Please select an option (1-4)");
-		System.out.println("1. Create an Account");
-		System.out.println("2. SignIn");
-		System.out.println("3. SignOut");
+ 	public static void showMenu()
+ 	{
+ 		System.out.println("\n****Welcome Client****\n");
+ 		System.out.println("Please select an option (1-4)");
+ 		System.out.println("1. Create an Account");
+ 		System.out.println("2. SignIn");
+ 		System.out.println("3. SignOut");
         System.out.println("4. Exit");
-        
-    }
-
-    //Return basic menu.
-	public void selectMenu(int choice, PlayerClient player )
+         
+ 	}
+ 	
+ 	public void selectMenu(int choice, PlayerClient player )
 	{
 		switch (choice) {
             case 1:
@@ -55,8 +66,9 @@ public class PlayerClient {
         }
         
     }
-    
-    public static void main(String[] args) {
+ 	
+	public static void main(String[] args) {
+		
         
         try {
             
@@ -72,10 +84,10 @@ public class PlayerClient {
         } catch (Exception e) {
             System.out.println(e);
         }
-
-    }
-
-    public void createAccount() {    	
+        
+	}
+	
+	public void createAccount() {    	
 
     	try {
     		String firstname = inputFirstName();
@@ -85,29 +97,27 @@ public class PlayerClient {
     		String password  = inputPassword();
     		String ipaddress = inputIPAddress();
     		
-    		if(this.createPlayerAccount(firstname,lastname,age,username,password,ipaddress)) {
-    			System.out.println("\nAccount created successfully");
-    		}else {
-    			System.out.println("\nError while creating an account");
-    		}
+    		// Print Response
+    		System.out.println(this.createPlayerAccount(firstname,lastname,age,username,password,ipaddress));
+    		
     	}
     	catch (Exception e) {
     		System.out.println(e);
     	} 
     }
-    
-    public void SignIn() {
+	
+	
+	public void SignIn() {
 
     	try {
     		String username  = inputUsername();
     		String password  = inputPassword();
     		String ipaddress = inputIPAddress();
     		
-    		if(this.playerSignIn(username,password,ipaddress)) {
-    			System.out.println("\nUser Sign in successfully");
-    		}else {
-    			System.out.println("\nError while signin an account");
-    		}
+    		
+    		// Print Response
+    		System.out.println(this.playerSignIn(username,password,ipaddress));
+    		
     	}
     	catch (Exception e) {
     		System.out.println(e);
@@ -121,66 +131,106 @@ public class PlayerClient {
     		String username  = inputUsername();
     		String ipaddress = inputIPAddress();
     		
-    		if(this.playerSignOut(username,ipaddress)){
-    			System.out.println("\nAccount Signed Out successfully");
-    		}else {
-    			System.out.println("\nError while Siging Out an account");
-    		}
+    		// Print Response
+    		System.out.println(this.playerSignOut(username,ipaddress));
     	}
     	catch (Exception e) {
     		System.out.println(e);
     	}
     }
-
-	// Method : createPlayerAccount()
     
-    // When a player invokes this method from his/her geo-location through a client
-    // program called PlayerClient, the server associated with this player (determined by
-    // the IPAddress) attempts to create an account with the information passed if the
-    // username does not exist and that the passed information is valid according to the
-    // problem description, and inserts the account at the appropriate location in the hash
-    // table. The server returns information to the player whether the operation was
-    // successful or not and both the server and the player store this information in their
-    // logs.
-
-	public boolean createPlayerAccount(String FirstName,String LastName,int Age,String Username,String Password,String IPAddress)
+    public String createPlayerAccount(String FirstName,String LastName,int Age,String Username,String Password,String IPAddress)
     {
-    	//Player player = new Player(FirstName,LastName,Age,Username,Password,IPAddress);
-    	return true;
-    }
+    	System.out.println("Final");
+    	String status = "false";
+    	String serverName = gameServers.get(IPAddress.split("\\.")[0]);
+    	System.out.println(serverName);
+    	// find the remote object and cast it to an interface object
+        GameServer server = getRMIObject(serverName);
+        
+        if (server == null) {
+            return status;
+        }
+    	
+        try {
+            status = server.createPlayerAccount(FirstName,LastName,Age,Username,Password,IPAddress);
+        } catch (RemoteException e1) {
+            e1.printStackTrace();
+        }
 
-    // Method : playerSignIn()
-
-    // When a player invokes this method from his/her geo-location through a client
-    // program called PlayerClient, the server associated with this player (determined by
-    // the IPAddress) attempts to verify if the account exists, that the password matches
-    // the account password and that the account is not currently signed-in. If these
-    // conditions are met, the server sets the account status to online and returns a
-    // confirmation to the player. Otherwise a descriptive error is returned. Both the
-    // server and the player store this information in their logs. (There are many ways
-    // this can be done. You are encouraged to design your system in such a way that it
-    // is simple to distinguish between online and offline accounts without impacting the
-    // performance of the system.)
-
-    public boolean playerSignIn (String Username, String Password, String IPAddress)
-    {
-    	return true;
-    }
-
-    // Method : playerSignOut()
-
-    // When a player invokes this method from his/her geo-location through a client
-    // program called PlayerClient, the server associated with this player (determined by
-    // the IPAddress) attempts to verify if the account exists and that the account is
-    // currently signed-in. If these conditions are met, the server sets the account status
-    // to offline and returns a confirmation to the player. Otherwise a descriptive error is
-    // returned. Both the server and the player store this information in their logs.
-    public boolean playerSignOut (String Username, String IPAddress)
-    {
-    	return true;
+        return status;
+    	
     }
     
-    public static int inputChoice() {
+    
+    public String playerSignIn (String Username, String Password, String IPAddress)
+    {
+    	String status = "false";
+    	String serverName = gameServers.get(IPAddress.split("\\.")[0]);
+    	
+    	// find the remote object and cast it to an interface object
+        GameServer server = getRMIObject(serverName);
+        
+        if (server == null) {
+            return status;
+        }
+    	
+        try {
+            status = server.playerSignIn(Username,Password,IPAddress);
+        } catch (RemoteException e1) {
+            e1.printStackTrace();
+        }
+
+        return status;
+    }
+    
+    
+    public String playerSignOut (String Username, String IPAddress)
+    {
+    	String status = "false";
+    	String serverName = gameServers.get(IPAddress.split("\\.")[0]);
+    	
+    	// find the remote object and cast it to an interface object
+        GameServer server = getRMIObject(serverName);
+        
+        if (server == null) {
+            return status;
+        }
+    	
+        try {
+            status = server.playerSignOut(Username,IPAddress);
+        } catch (RemoteException e1) {
+            e1.printStackTrace();
+        }
+
+        return status;
+    }
+	
+	
+	private GameServer getRMIObject(String serverName) {
+		
+		GameServer server = null;
+
+        // find the remote object and cast it to an interface object
+        try {
+        	server = (GameServer) Naming.lookup(serverName);
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+
+        return server;
+    }
+	
+	/**
+	 * InputChoice:
+	 *  
+	 * @return
+	 */
+	public static int inputChoice() {
         
     	int choice = 0;
     	boolean inputError = true;
@@ -198,9 +248,9 @@ public class PlayerClient {
 
 		return choice;
     }
-    
-    private String inputFirstName() {
-  	
+
+	private String inputFirstName() {
+	  	
     	String firstname;
     	
     	do{
@@ -285,6 +335,11 @@ public class PlayerClient {
 		return ipaddress;
 	}
     
+    /**
+     * isValidPassword
+     * @param password
+     * @return
+     */
     private boolean isValidPassword(String password) {
 
             if (password.length() < PASSWORD_LENGTH) {
