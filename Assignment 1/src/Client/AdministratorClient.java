@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import Server.GameServer;
+import Logger.FileLogger;
 
 public class AdministratorClient {
 	
@@ -22,11 +23,17 @@ public class AdministratorClient {
     
     static HashMap<String, String> gameServers = new HashMap<String, String>();
     
+    FileLogger logger;
+    
     public AdministratorClient()
     {
+    	// Initialize Servers List
     	gameServers.put("132","NorthAmerica");
     	gameServers.put("93","Europe");
     	gameServers.put("183","Asia");
+    	
+    	// Initialize Logger
+    	this.logger = new FileLogger("./logs/AdministratorClient/","AdministratorClientLogs.log");
     }
     
     // Return menu.
@@ -121,7 +128,6 @@ public class AdministratorClient {
 
             	AdministratorClient.showMenu();
             	int choice = inputChoice();
-            	System.out.println(choice);
             	admin.selectMenu(choice,admin);
             }
         } catch (Exception e) {

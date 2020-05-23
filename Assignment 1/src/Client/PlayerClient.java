@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.HashMap;
 
+import Logger.FileLogger;
+
 public class PlayerClient {
 	
 	static boolean status = true;
@@ -20,14 +22,20 @@ public class PlayerClient {
     static int USERNAME_MAX_LENGTH = 15;
     static String[] validIPs = {"132","93","183"};
     static Scanner input = new Scanner(System.in);
-   
+    
+    FileLogger logger;
+    
     static HashMap<String, String> gameServers = new HashMap<String, String>();
    
     public PlayerClient() {
     	
+    	// Initialize Servers List
     	gameServers.put("132","NorthAmerica");
     	gameServers.put("93","Europe");
     	gameServers.put("183","Asia");
+    	
+    	// Initialize Logger
+    	this.logger = new FileLogger("./logs/PlayerClient/","PlayerClientLogs.log");
 		
 	}
 	
@@ -78,7 +86,6 @@ public class PlayerClient {
 
                 PlayerClient.showMenu();
             	int choice = inputChoice();
-            	System.out.println(choice);
             	player.selectMenu(choice,player);
             }
         } catch (Exception e) {
@@ -88,21 +95,33 @@ public class PlayerClient {
 	}
 	
 	public void createAccount() {    	
-
+		
+		logger.write(">>> Create Account");
+		
     	try {
     		String firstname = inputFirstName();
+    		logger.write(">>> Create Account >>> firstname : "+firstname);
     		String lastname  = inputLastName();
+    		logger.write(">>> Create Account >>> lastname : "+lastname);
     		int age          = inputAge();
+    		logger.write(">>> Create Account >>> age : "+age);
     		String username  = inputUsername();
+    		logger.write(">>> Create Account >>> username : "+username);
     		String password  = inputPassword();
+    		logger.write(">>> Create Account >>> password : "+password);
     		String ipaddress = inputIPAddress();
+    		logger.write(">>> Create Account >>> ipaddress : "+ipaddress);
     		
     		// Print Response
-    		System.out.println(this.createPlayerAccount(firstname,lastname,age,username,password,ipaddress));
+    		logger.write(">>> Create Account >>> Sending data to createPlayerAccount()");
+    		String response = this.createPlayerAccount(firstname,lastname,age,username,password,ipaddress);
+    		System.out.println(response);
+    		logger.write(">>> Create Account >>> Respone from remote method >>> "+response);
     		
     	}
     	catch (Exception e) {
     		System.out.println(e);
+    		logger.write(">>> Create Account >>> Error >>> "+e);
     	} 
     }
 	
@@ -110,10 +129,10 @@ public class PlayerClient {
 	public void SignIn() {
 
     	try {
+    		
     		String username  = inputUsername();
     		String password  = inputPassword();
     		String ipaddress = inputIPAddress();
-    		
     		
     		// Print Response
     		System.out.println(this.playerSignIn(username,password,ipaddress));
@@ -360,6 +379,7 @@ public class PlayerClient {
 		if (username.length() > USERNAME_MAX_LENGTH) {
         	
         	System.out.println("\nA username can be maximum length of 15 characters");
+        	logger.write(">>> Error >>> A username can be maximum length of 15 characters");
         	return true;
         }
         return false;
@@ -376,6 +396,7 @@ public class PlayerClient {
 	    	
 	    	if (ipaddress.isEmpty()) { 
 	    		System.out.print("\nIP address cannot be empty\n");
+	    		logger.write(">>> Error >>> IP address cannot be empty");
 	        	return true;
 	        }
 	    	
@@ -384,10 +405,12 @@ public class PlayerClient {
 	        	System.out.println("2. 93.xxx.xxx.xxx  : IP-addresses starting with 93 indicate an European geo-location.");
 	        	System.out.println("3. 182.xxx.xxx.xxx : IP-addresses starting with 182 indicate an Asian geo-location.");
 	        	System.out.println("\nInvalid IP address");
+	        	logger.write(">>> Error >>> Invalid IP address");
 	        	return true;
 	        }
     	}catch(Exception e) {
     		System.out.println(e+"\nInvalid IP address");
+    		logger.write(">>> Error >>> Invalid IP address "+e);
         	return true;
     	}
     	

@@ -1,0 +1,45 @@
+May 22, 2020 11:19:46 P.M. Logger.FileLogger write
+INFO: >>> Create Account
+May 22, 2020 11:19:50 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Vasu
+May 22, 2020 11:19:54 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Ratanpara
+May 22, 2020 11:19:56 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+May 22, 2020 11:19:59 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> username : vasuratanpara
+May 22, 2020 11:20:04 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> password : vasu1997
+May 22, 2020 11:20:09 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 132.45.6.7
+May 22, 2020 11:20:09 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+May 22, 2020 11:20:09 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> New player account created successfully
+May 22, 2020 11:28:19 P.M. Logger.FileLogger write
+INFO: >>> Create Account
+
+May 22, 2020 11:28:23 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Mayank
+
+May 22, 2020 11:32:30 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Vadariya
+
+May 22, 2020 11:32:33 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> age : 29
+
+May 22, 2020 11:32:55 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> username : mayank92
+
+May 22, 2020 11:33:00 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> password : mayank
+
+May 22, 2020 11:33:06 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 132.34.5.1
+
+May 22, 2020 11:33:06 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+May 22, 2020 11:33:07 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> New player account created successfully
+

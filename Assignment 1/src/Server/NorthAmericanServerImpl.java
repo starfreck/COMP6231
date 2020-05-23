@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
+import Logger.FileLogger;
+
 public class NorthAmericanServerImpl extends UnicastRemoteObject implements GameServer {
 
 	// Define Data structure here
@@ -20,9 +22,14 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
    
 
     private static final long serialVersionUID = 1L;
+	
+    FileLogger logger;
 
 	protected NorthAmericanServerImpl() throws RemoteException {
 		super();
+		// Initialize Logger
+    	this.logger = new FileLogger("./logs/ServerLogs/NorthAmericanServer/","NorthAmericanServer.log");
+		
 	}
 
 	@Override

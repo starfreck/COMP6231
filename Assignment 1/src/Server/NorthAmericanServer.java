@@ -5,6 +5,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
+import Logger.FileLogger;
+
 public class NorthAmericanServer {
 	
 	static final int REGISTRY_PORT = 1099;
@@ -12,6 +14,14 @@ public class NorthAmericanServer {
 	static final int MAX_PACKET_SIZE = 1024;
 	static final String serverName  = "NorthAmerica";
 	static final String registryURL = "NorthAmerica";
+	
+	FileLogger logger;
+	
+	public NorthAmericanServer() {
+    	// Initialize Logger
+    	this.logger = new FileLogger("./logs/ServerLogs/NorthAmericanServer/","NorthAmericanServer.log");
+		
+	}
 	
 	public static void main(String[] args) {
 		
