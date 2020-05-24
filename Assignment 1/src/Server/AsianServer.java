@@ -10,15 +10,15 @@ import java.rmi.registry.Registry;
 
 import Logger.FileLogger;
 
-public class NorthAmericanServer {
+public class AsianServer {
 
 	// Registry URL
-	static final String registryURL = "NorthAmerica";
+	static final String registryURL = "Asia";
 	// Registry Port
 	static final int REGISTRY_PORT = 1099;
 	// Server Name
-	static final String serverName = "NorthAmericanServer";
-	static final String serverShortName = "NA";
+	static final String serverName = "AsianServer";
+	static final String serverShortName = "AS";
 	// Loggers
 	FileLogger logger;
 	// Logger Path
@@ -30,11 +30,10 @@ public class NorthAmericanServer {
 	// Max Packet Size
 	static final int MAX_PACKET_SIZE = 1024;
 
-	public NorthAmericanServer() {
+	public AsianServer() {
 		super();
 		// Initialize Server Logger
 		this.logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
-
 	}
 
 	public static void main(String[] args) {
@@ -42,9 +41,9 @@ public class NorthAmericanServer {
 		try {
 
 			startRegistry(REGISTRY_PORT);
-			NorthAmericanServerImpl NAServer = new NorthAmericanServerImpl();
+			AsianServerImpl ASServer = new AsianServerImpl();
 
-			Naming.rebind(registryURL, NAServer);
+			Naming.rebind(registryURL, ASServer);
 			System.out.println(serverName + " is started...");
 
 			// UDP server will be here
@@ -61,7 +60,7 @@ public class NorthAmericanServer {
 				byte[] reciveData = new byte[MAX_PACKET_SIZE];
 
 				// Socket
-				socket = new DatagramSocket(NA_PORT);
+				socket = new DatagramSocket(AS_PORT);
 
 				// Client Request Data
 				requestPacket = new DatagramPacket(reciveData, reciveData.length);
@@ -70,7 +69,7 @@ public class NorthAmericanServer {
 
 				if (reciveDataString.equals("getPlayerStatus")) {
 
-					status = NAServer.getOwnStatus();
+					status = ASServer.getOwnStatus();
 				}
 
 				// Get Client's IP & Port

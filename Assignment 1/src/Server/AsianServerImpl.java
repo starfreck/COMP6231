@@ -11,15 +11,15 @@ import java.util.Map.Entry;
 
 import Logger.FileLogger;
 
-public class NorthAmericanServerImpl extends UnicastRemoteObject implements GameServer {
+public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 
 	private static final long serialVersionUID = 1L;
 
 	// Total User Count in this the server
 	static int accountCount = 0;
 	// Server Name
-	static final String serverName = "NorthAmericanServer";
-	static final String serverShortName = "NA";
+	static final String serverName = "AsianServer";
+	static final String serverShortName = "AS";
 	// Loggers
 	FileLogger logger;
 	FileLogger userLogger;
@@ -35,7 +35,7 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 	// Contains All Players information
 	static HashMap<String, ArrayList<HashMap<String, String>>> players = new HashMap<String, ArrayList<HashMap<String, String>>>();
 
-	protected NorthAmericanServerImpl() throws RemoteException {
+	protected AsianServerImpl() throws RemoteException {
 		super();
 		// Initialize Server Logger
 		this.logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
@@ -206,8 +206,8 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 
 		// Check The Admin UserName and Password
 		if ("Admin".equals(AdminUsername) && "Admin".equals(AdminPassword)) {
-			String NA = getOwnStatus();
-			response = NA;
+			String AS = getOwnStatus();
+			response = AS;
 		} else {
 			response = "Wrong username or password...";
 		}
@@ -238,23 +238,24 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 			response = response + ',' + EU;
 			socket.close();
 
-			// Get status from Asian Server
+			// Get status from North American Server
 			socket = new DatagramSocket();
 			// Request Data
-			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, AS_PORT);
+			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, NA_PORT);
 			socket.send(requestData);
 			// Response Data
 			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
 			socket.receive(responseData);
 			// Retrieving Data
-			String AS = new String(responseData.getData());
+			String NA = new String(responseData.getData());
 			// Appending to response
-			response = response + ',' + AS + '.';
+			response = response + ',' + NA + '.';
 			socket.close();
 
 		} catch (Exception e) {
 			System.err.println(e);
 		}
+		
 		System.out.println(response);
 		// NA: 6 online, 1 offline, EU: 7 online, 1 offline, AS: 8 online, 1 offline.
 		return response;
