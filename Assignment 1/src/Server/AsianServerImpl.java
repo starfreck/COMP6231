@@ -199,14 +199,17 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 	@Override
 	public String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) throws RemoteException {
 
-		String response = null;
+		String NA = "";
+		String EU = "";
+		String AS = "";
+		String response = "";
 
 		// Init User logs
 		this.adminLogger = initAdminLogger(AdminUsername);
 
 		// Check The Admin UserName and Password
 		if ("Admin".equals(AdminUsername) && "Admin".equals(AdminPassword)) {
-			String AS = getOwnStatus();
+			AS = getOwnStatus();
 			response = AS;
 		} else {
 			response = "Wrong username or password...";
@@ -224,7 +227,7 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 			byte[] sendMessage = methodAction.getBytes();
 			byte[] recivedMessage = new byte[MAX_PACKET_SIZE];
 
-			// Get status from European Server
+			// Get status from Europe Server
 			socket = new DatagramSocket();
 			// Request Data
 			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, EU_PORT);
@@ -233,9 +236,9 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
 			socket.receive(responseData);
 			// Retrieving Data
-			String EU = new String(responseData.getData());
+			EU = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
 			// Appending to response
-			response = response + ',' + EU;
+			response = response + ", " + EU;
 			socket.close();
 
 			// Get status from North American Server
@@ -247,16 +250,15 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
 			socket.receive(responseData);
 			// Retrieving Data
-			String NA = new String(responseData.getData());
+			NA = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
 			// Appending to response
-			response = response + ',' + NA + '.';
+			response = response + ", " + NA + ".";
 			socket.close();
 
 		} catch (Exception e) {
 			System.err.println(e);
 		}
 		
-		System.out.println(response);
 		// NA: 6 online, 1 offline, EU: 7 online, 1 offline, AS: 8 online, 1 offline.
 		return response;
 	}

@@ -65,10 +65,10 @@ public class EuropeanServer {
 				// Client Request Data
 				requestPacket = new DatagramPacket(reciveData, reciveData.length);
 				socket.receive(requestPacket);
-				reciveDataString = new String(requestPacket.getData());
+				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
+						requestPacket.getLength());
 
 				if (reciveDataString.equals("getPlayerStatus")) {
-
 					status = EUServer.getOwnStatus();
 				}
 

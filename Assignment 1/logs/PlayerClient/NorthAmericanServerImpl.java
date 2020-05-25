@@ -199,20 +199,16 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 	@Override
 	public String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) throws RemoteException {
 
-		String NA = "";
-		String EU = "";
-		String AS = "";
-		String response = "";
-		
+		String NA = null, EU = null, AS = null;
+
 		// Init User logs
 		this.adminLogger = initAdminLogger(AdminUsername);
 
 		// Check The Admin UserName and Password
 		if ("Admin".equals(AdminUsername) && "Admin".equals(AdminPassword)) {
 			NA = getOwnStatus();
-			response = NA;
 		} else {
-			response = "Wrong username or password...";
+			return "Wrong username or password...";
 		}
 
 		// UDP client side code will be here
@@ -235,9 +231,8 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 			// Response Data
 			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
 			socket.receive(responseData);
-			// Retrieving Data			
-			EU = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
-			response = response+", "+ EU;
+			// Retrieving Data
+			EU = new String(responseData.getData());
 			socket.close();
 
 			// Get status from Asian Server
@@ -249,16 +244,16 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
 			socket.receive(responseData);
 			// Retrieving Data
-			AS = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
-			response = response+", "+ AS+".";
+			AS = new String(responseData.getData());
 			socket.close();
 
 		} catch (Exception e) {
 			System.err.println(e);
 		}
 		
+		System.out.println(NA+','+EU+','+AS+'.');
 		// NA: 6 online, 1 offline, EU: 7 online, 1 offline, AS: 8 online, 1 offline.
-		return response;
+		return NA+','+EU+','+AS+'.';
 	}
 
 	public String getOwnStatus() {
