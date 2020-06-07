@@ -2,11 +2,10 @@ package Client;
 
 import Server.GameServer;
 
-import java.net.MalformedURLException;
-import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -20,10 +19,16 @@ public class PlayerClient {
 	static int PASSWORD_LENGTH = 6;
 	static int USERNAME_MIN_LENGTH = 6;
 	static int USERNAME_MAX_LENGTH = 15;
+	// Registry Ports
+	static final int AS_REGISTRY_PORT = 52575;
+	static final int EU_REGISTRY_PORT = 52576;
+	static final int NA_REGISTRY_PORT = 52577;
+	
 	static String[] validIPs = { "132", "93", "182" };
 	static Scanner input = new Scanner(System.in);
-
-	FileLogger logger;
+	
+	// Initialize Logger
+	static FileLogger logger = new FileLogger("./logs/PlayerClient/", "PlayerClientLogs.log");
 
 	static HashMap<String, String> gameServers = new HashMap<String, String>();
 
@@ -33,9 +38,6 @@ public class PlayerClient {
 		gameServers.put("132", "NorthAmerica");
 		gameServers.put("93", "Europe");
 		gameServers.put("182", "Asia");
-
-		// Initialize Logger
-		this.logger = new FileLogger("./logs/PlayerClient/", "PlayerClientLogs.log");
 
 	}
 
@@ -152,10 +154,9 @@ public class PlayerClient {
 
 	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
 			String IPAddress) {
-		System.out.println("Final");
 		String status = "false";
 		String serverName = gameServers.get(IPAddress.split("\\.")[0]);
-		System.out.println(serverName);
+		
 		// find the remote object and cast it to an interface object
 		GameServer server = getRMIObject(serverName);
 
@@ -193,7 +194,7 @@ public class PlayerClient {
 		return status;
 	}
 
-	public String playerSignOut(String Username, String IPAddress) {
+	public String playerSignOut(String Username, String IPAddress){
 		String status = "false";
 		String serverName = gameServers.get(IPAddress.split("\\.")[0]);
 
@@ -216,13 +217,26 @@ public class PlayerClient {
 	private GameServer getRMIObject(String serverName) {
 
 		GameServer server = null;
-
+		int port = 0;
+		
 		// find the remote object and cast it to an interface object
 		try {
-			server = (GameServer) Naming.lookup(serverName);
+			
+			if(serverName.equals("Asia"))
+			{
+				port = AS_REGISTRY_PORT;
+			}else if(serverName.equals("Europe"))
+			{
+				port = EU_REGISTRY_PORT;
+			}else if(serverName.equals("NorthAmerica"))
+			{
+				port = NA_REGISTRY_PORT;
+			}
+			
+			Registry registry = LocateRegistry.getRegistry(port);
+			server = (GameServer) registry.lookup(serverName);
+			
 		} catch (NotBoundException e) {
-			e.printStackTrace();
-		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (RemoteException e) {
 			e.printStackTrace();
@@ -231,11 +245,6 @@ public class PlayerClient {
 		return server;
 	}
 
-	/**
-	 * InputChoice:
-	 * 
-	 * @return
-	 */
 	public static int inputChoice() {
 
 		int choice = 0;
@@ -377,7 +386,23 @@ public class PlayerClient {
 		try {
 
 			String ipv4Part = ipaddress.split("\\.")[0];
+			
+			if(ipaddress.split("\\.").length != 4) {
+				System.err.print("\nInvalid IP address formate\n");
+				logger.write(">>> Error >>> Invalid IP address formate");
+				return true;
+			}
+			
+			for (int i = 0; i < ipaddress.split("\\.").length ; i++) {
 
+				if (!isNumeric(ipaddress.split("\\.")[i])) {
+
+					System.err.print("\nInvalid IP address\n");
+					logger.write(">>> Error >>> Invalid IP address");
+					return true;
+				}
+			}
+			
 			// Convert String Array to List
 			List<String> list = Arrays.asList(validIPs);
 
@@ -388,15 +413,13 @@ public class PlayerClient {
 			}
 
 			if (!list.contains(ipv4Part)) {
-				System.err.println(
-						"\n1. 132.xxx.xxx.xxx : IP-addresses starting with 132 indicate a North-American geo-location.");
-				System.err.println(
-						"2. 93.xxx.xxx.xxx  : IP-addresses starting with 93 indicate an European geo-location.");
-				System.err
-						.println("3. 182.xxx.xxx.xxx : IP-addresses starting with 182 indicate an Asian geo-location.");
-				System.err.println("\nInvalid IP address");
+				
+				System.err.println("\n1. 132.xxx.xxx.xxx : a North-American geo-location.");
+				System.err.println("2. 93.xxx.xxx.xxx  : an European geo-location.");
+				System.err.println("3. 182.xxx.xxx.xxx :  an Asian geo-location.");
+				
 				logger.write(">>> Error >>> Invalid IP address");
-				return true;
+				System.err.println("\nInvalid IP address");
 			}
 		} catch (Exception e) {
 			System.err.println(e + "\nInvalid IP address");
@@ -405,6 +428,15 @@ public class PlayerClient {
 		}
 
 		return false;
+	}
+	
+	public static boolean isNumeric(String str) {
+		try {
+			Double.parseDouble(str);
+			return true;
+		} catch (NumberFormatException e) {
+			return false;
+		}
 	}
 
 }

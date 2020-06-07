@@ -14,40 +14,45 @@ public class NorthAmericanServer {
 
 	// Registry URL
 	static final String registryURL = "NorthAmerica";
-	// Registry Port
-	static final int REGISTRY_PORT = 1099;
 	// Server Name
 	static final String serverName = "NorthAmericanServer";
 	static final String serverShortName = "NA";
-	// Loggers
-	FileLogger logger;
-	// Logger Path
-	static final String loggerPath = "./logs/ServerLogs/";
 	// UDP Server Ports
 	static final int NA_PORT = 5001;
 	static final int EU_PORT = 5002;
 	static final int AS_PORT = 5003;
+	// Registry Ports
+	static final int AS_REGISTRY_PORT = 52575;
+	static final int EU_REGISTRY_PORT = 52576;
+	static final int NA_REGISTRY_PORT = 52577;
 	// Max Packet Size
 	static final int MAX_PACKET_SIZE = 1024;
+	// Logger Path
+	static final String loggerPath = "./logs/ServerLogs/";
+	// Initialize Server Logger
+	static FileLogger logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
 
 	public NorthAmericanServer() {
 		super();
-		// Initialize Server Logger
-		this.logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
-
 	}
 
 	public static void main(String[] args) {
 
 		try {
 
-			startRegistry(REGISTRY_PORT);
+			startRegistry(NA_REGISTRY_PORT);
+
+			logger.write(">>> Create North American Server Object");
 			NorthAmericanServerImpl NAServer = new NorthAmericanServerImpl();
 
-			Naming.rebind(registryURL, NAServer);
-			System.out.println(serverName + " is started...");
+			logger.write(">>> Binding " + registryURL + " at " + NA_REGISTRY_PORT);
+			logger.write(">>> rmi://localhost:" + NA_REGISTRY_PORT + "/" + registryURL);
+			Naming.rebind("rmi://localhost:" + NA_REGISTRY_PORT + "/" + registryURL, NAServer);
 
-			// UDP server will be here
+			System.out.println(serverName + " is started...");
+			logger.write(">>> " + serverName + " is started...");
+
+			// UDP server
 
 			while (true) {
 
@@ -70,7 +75,9 @@ public class NorthAmericanServer {
 						requestPacket.getLength());
 
 				if (reciveDataString.equals("getPlayerStatus")) {
+					logger.write(">>> Recived UDP request");
 					status = NAServer.getOwnStatus();
+					logger.write(">>> getOwnStatus >>> " + status);
 				}
 
 				// Get Client's IP & Port
@@ -80,11 +87,13 @@ public class NorthAmericanServer {
 				sendData = status.getBytes();
 				responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
 				socket.send(responsePacket);
+				logger.write(">>> Sending response of UDP request");
 				socket.close();
 
 			}
 
 		} catch (Exception e) {
+			logger.write(">>> Exception >>> " + e);
 			System.out.println("Exception" + e);
 		}
 
@@ -92,12 +101,21 @@ public class NorthAmericanServer {
 
 	private static void startRegistry(int port) throws RemoteException {
 		try {
-			Registry registry = LocateRegistry.getRegistry(port);
+
+			// location, port
+			Registry registry = LocateRegistry.getRegistry(serverName, port);
 			registry.list();
+
 		} catch (RemoteException e) {
+
 			// No valid registry at given port.
+
+			logger.write(">>> RMI registry cannot be found at port " + port);
 			System.out.println("RMI registry cannot be found at port " + port);
+
 			LocateRegistry.createRegistry(port);
+
+			logger.write(">>> RMI registry created at port " + port);
 			System.out.println("RMI registry created at port " + port);
 		}
 	}
