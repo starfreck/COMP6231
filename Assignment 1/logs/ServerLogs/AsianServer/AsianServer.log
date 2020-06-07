@@ -1,0 +1,805 @@
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Recived UDP request
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> getOwnStatus >>> AS: 0 online, 5 offline
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Sending response of UDP request
+
+Jun. 07, 2020 5:02:24 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 5:02:24 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> bruce15
+
+Jun. 07, 2020 5:02:24 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> Bruce123
+
+Jun. 07, 2020 5:02:24 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.45.26.7
+
+Jun. 07, 2020 5:02:24 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> bruce15 signed in successfully...
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> Recived UDP request
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> getOwnStatus >>> AS: 1 online, 4 offline
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> Sending response of UDP request
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.56.3.7
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 1 online, 4 offline
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to European Server
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from European Server
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from European Server >>> EU: 3 online, 3 offline
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to North American Server
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from North American Server
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from North American Server >>> NA: 5 online, 1 offline
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 1 online, 4 offline, EU: 3 online, 3 offline, NA: 5 online, 1 offline.
+
+Jun. 07, 2020 5:33:57 P.M. Logger.FileLogger write
+INFO: >>> RMI registry cannot be found at port 52575
+
+Jun. 07, 2020 5:33:57 P.M. Logger.FileLogger write
+INFO: >>> Exception >>> java.rmi.server.ExportException: Port already in use: 52575; nested exception is: 
+	java.net.BindException: Address already in use
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> RMI registry cannot be found at port 52575
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> RMI registry created at port 52575
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> Create Asian Server Object
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> bruce15
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Bruce
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Nguyen
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Bruce123
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.1
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> lee45
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Charles
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Lee
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Charles123
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 15
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.2
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> akim
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Ada
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Kim
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Ada123
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 18
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.3
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> varun97
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Varun
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Patel
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Varun123
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.4
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> kt0012
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Kevin
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Tran
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Kevin123
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 23
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.5
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> Binding Asia at 52575
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> rmi://localhost:52575/Asia
+
+Jun. 07, 2020 5:34:11 P.M. Logger.FileLogger write
+INFO: >>> AsianServer is started...
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> RMI registry cannot be found at port 52575
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> RMI registry created at port 52575
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> Create Asian Server Object
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> bruce15
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Bruce
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Nguyen
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Bruce123
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.1
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> lee45
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Charles
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Lee
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Charles123
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 15
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.2
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> akim
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Ada
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Kim
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Ada123
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 18
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.3
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> varun97
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Varun
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Patel
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Varun123
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.4
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> kt0012
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Kevin
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Tran
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Kevin123
+
+Jun. 07, 2020 5:37:47 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 23
+
+Jun. 07, 2020 5:37:48 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.5
+
+Jun. 07, 2020 5:37:48 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:37:48 P.M. Logger.FileLogger write
+INFO: >>> Binding Asia at 52575
+
+Jun. 07, 2020 5:37:48 P.M. Logger.FileLogger write
+INFO: >>> rmi://localhost:52575/Asia
+
+Jun. 07, 2020 5:37:48 P.M. Logger.FileLogger write
+INFO: >>> AsianServer is started...
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> RMI registry cannot be found at port 52575
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> RMI registry created at port 52575
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> Create Asian Server Object
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> bruce15
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Bruce
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Nguyen
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Bruce123
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.1
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> lee45
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Charles
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Lee
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Charles123
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 15
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.2
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> akim
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Ada
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Kim
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Ada123
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 18
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.3
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> varun97
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Varun
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Patel
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Varun123
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.4
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> kt0012
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Kevin
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Tran
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Kevin123
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 23
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.5
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> Binding Asia at 52575
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> rmi://localhost:52575/Asia
+
+Jun. 07, 2020 5:59:43 P.M. Logger.FileLogger write
+INFO: >>> AsianServer is started...
+
+Jun. 07, 2020 6:02:41 P.M. Logger.FileLogger write
+INFO: >>> Recived UDP request
+
+Jun. 07, 2020 6:02:41 P.M. Logger.FileLogger write
+INFO: >>> getOwnStatus >>> AS: 0 online, 5 offline
+
+Jun. 07, 2020 6:02:41 P.M. Logger.FileLogger write
+INFO: >>> Sending response of UDP request
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Recived UDP request
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> getOwnStatus >>> AS: 0 online, 5 offline
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Sending response of UDP request
+
+Jun. 07, 2020 6:07:30 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 6:07:30 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> bruce15
+
+Jun. 07, 2020 6:07:30 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> Bruce123
+
+Jun. 07, 2020 6:07:30 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.56.2.1
+
+Jun. 07, 2020 6:07:30 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> bruce15 signed in successfully...
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> RMI registry cannot be found at port 52575
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> RMI registry created at port 52575
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> Create Asian Server Object
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Bruce123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Bruce
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Nguyen
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Bruce123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.1
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Charles123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Charles
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Lee
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Charles123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 15
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.2
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Adak123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Ada
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Kim
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Adak123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 18
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.3
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Varun123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Varun
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Patel
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Varun123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.4
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Kevin123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Kevin
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Tran
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Kevin123
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 23
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.34.2.5
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> Binding Asia at 52575
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> rmi://localhost:52575/Asia
+
+Jun. 07, 2020 6:09:04 P.M. Logger.FileLogger write
+INFO: >>> AsianServer is started...
+
+Jun. 07, 2020 6:09:49 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 6:09:49 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> Charles123
+
+Jun. 07, 2020 6:09:49 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> Charles123
+
+Jun. 07, 2020 6:09:49 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.45.2.6
+
+Jun. 07, 2020 6:09:49 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> Charles123 signed in successfully...
+
+Jun. 07, 2020 6:10:03 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 6:10:03 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> Bruce123
+
+Jun. 07, 2020 6:10:03 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> Bruce123
+
+Jun. 07, 2020 6:10:03 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.5.8.2
+
+Jun. 07, 2020 6:10:03 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> Bruce123 signed in successfully...
+
+Jun. 07, 2020 6:10:23 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 6:10:23 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> Adak123
+
+Jun. 07, 2020 6:10:23 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> Adak123
+
+Jun. 07, 2020 6:10:23 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.56.7.1
+
+Jun. 07, 2020 6:10:23 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> Adak123 signed in successfully...
+
+Jun. 07, 2020 6:10:39 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 6:10:39 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> varun97
+
+Jun. 07, 2020 6:10:39 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> varun97
+
+Jun. 07, 2020 6:10:39 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.4.2.6
+
+Jun. 07, 2020 6:10:39 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> A player doesn't exixts with varun97 username
+
+Jun. 07, 2020 6:11:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 6:11:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> Varun123
+
+Jun. 07, 2020 6:11:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> Varun123
+
+Jun. 07, 2020 6:11:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.5.2.1
+
+Jun. 07, 2020 6:11:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> Varun123 signed in successfully...
+
+Jun. 07, 2020 6:11:18 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn
+
+Jun. 07, 2020 6:11:18 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> username >>> Kevin123
+
+Jun. 07, 2020 6:11:18 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> password >>> Kevin123
+
+Jun. 07, 2020 6:11:18 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> ipadddress >>> 182.5.67.1
+
+Jun. 07, 2020 6:11:18 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> Kevin123 signed in successfully...
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.6.2.1
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 5 online, 0 offline
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to European Server
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from European Server
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from European Server >>> EU: 5 online, 0 offline
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to North American Server
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from North American Server
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from North American Server >>> NA: 5 online, 0 offline
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 5 online, 0 offline, EU: 5 online, 0 offline, NA: 5 online, 0 offline.
+
+Jun. 07, 2020 6:18:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignOut
+
+Jun. 07, 2020 6:18:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignOut >>> username >>> Vasu1997
+
+Jun. 07, 2020 6:18:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignOut >>> ipadddress >>> 182.4.2.1
+
+Jun. 07, 2020 6:18:05 P.M. Logger.FileLogger write
+INFO: >>> playerSignOut >>> A player doesn't exixts with Vasu1997 username
+

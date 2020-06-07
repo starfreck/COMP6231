@@ -1,0 +1,30 @@
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> vasu1997
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Vasu
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Ratanpara
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Vasu@1997
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 23
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.1.4.2
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 4:54:32 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> vasu1997 signed in successfully...
+
+Jun. 07, 2020 4:57:41 P.M. Logger.FileLogger write
+INFO: >>> playerSignOut >>> vasu1997 signed out successfully...
+

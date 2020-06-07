@@ -143,7 +143,7 @@ public class AdministratorClient {
 			e1.printStackTrace();
 		}
 
-		return status;
+		return "\n"+status;
 	}
 
 	private GameServer getRMIObject(String serverName) {

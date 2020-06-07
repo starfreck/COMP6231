@@ -47,8 +47,8 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 
 		String[] firstname  = { "Bruce", "Charles", "Ada", "Varun", "Kevin" };
 		String[] lastname   = { "Nguyen", "Lee", "Kim", "Patel", "Tran" };
-		String[] usernames  = { "bruce15", "lee45", "akim", "varun97", "kt0012" };
-		String[] password   = { "Bruce123", "Charles123", "Ada123", "Varun123", "Kevin123" };
+		String[] usernames  = { "Bruce123", "Charles123", "Adak123", "Varun123", "Kevin123" };
+		String[] password   = { "Bruce123", "Charles123", "Adak123", "Varun123", "Kevin123" };
 		String[] ipaddress  = { "182.34.2.1", "182.34.2.2", "182.34.2.3", "182.34.2.4", "182.34.2.5" };
 		String[] age 		= { "19", "15", "18", "20", "23" };
 
@@ -123,7 +123,7 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 	@Override
 	public synchronized String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
 			String IPAddress) throws RemoteException {
-
+		
 		this.logger.write(">>> createPlayerAccount");
 		this.logger.write(">>> createPlayerAccount >>> username >>> " + Username);
 		this.logger.write(">>> createPlayerAccount >>> firstname >>> " + FirstName);
@@ -191,7 +191,7 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 
 	@Override
 	public synchronized String playerSignIn(String Username, String Password, String IPAddress) throws RemoteException {
-
+		
 		String message = null;
 		
 		this.logger.write(">>> playerSignIn");
@@ -234,6 +234,9 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 						this.userLogger.write(">>> playerSignIn >>> "+Username+" entered wrong password...");
 						message = "Wrong password...";
 					}
+					
+					return message;
+					
 				} else {
 					this.logger.write(">>> playerSignIn >>> A player doesn't exixts with "+Username+" username");
 					message = "A player doesn't exixts with given username";
@@ -251,7 +254,6 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 
 	@Override
 	public synchronized String playerSignOut(String Username, String IPAddress) throws RemoteException {
-
 		String message = null;
 	
 		this.logger.write(">>> playerSignOut");
@@ -292,6 +294,9 @@ public class AsianServerImpl extends UnicastRemoteObject implements GameServer {
 						
 						message = "Account not signed in...";
 					}
+					
+					return message;
+					
 				} else {
 					this.logger.write(">>> playerSignOut >>> A player doesn't exixts with "+Username+" username");
 					message = "A player doesn't exixts with given username";

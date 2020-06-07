@@ -1,0 +1,160 @@
+Jun. 07, 2020 4:55:48 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.45.25.14
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun. 07, 2020 4:56:03 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 1 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jun. 07, 2020 5:13:13 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.5.8.3
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun. 07, 2020 5:13:23 P.M. Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to NorthAmerica
+
+Jun. 07, 2020 5:13:24 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 5 online, 1 offline, EU: 1 online, 5 offline, AS: 1 online, 4 offline.
+
+Jun. 07, 2020 5:17:35 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.56.3.7
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun. 07, 2020 5:17:48 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 1 online, 4 offline, EU: 3 online, 3 offline, NA: 5 online, 1 offline.
+
+Jun. 07, 2020 6:02:32 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 6:02:40 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun. 07, 2020 6:02:40 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun. 07, 2020 6:02:40 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.1.1.1
+
+Jun. 07, 2020 6:02:40 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun. 07, 2020 6:02:40 P.M. Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun. 07, 2020 6:02:41 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 5 online, 0 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jun. 07, 2020 6:05:46 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.45.2.1
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to NorthAmerica
+
+Jun. 07, 2020 6:06:30 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 5 online, 0 offline, EU: 5 online, 0 offline, AS: 0 online, 5 offline.
+
+Jun. 07, 2020 6:11:24 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.6.2.1
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun. 07, 2020 6:11:35 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 5 online, 0 offline, EU: 5 online, 0 offline, NA: 5 online, 0 offline.
+
+Jun. 07, 2020 6:12:07 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  vasu
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> vasu
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.1.4.1
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+Wrong username or password...
+
+Jun. 07, 2020 6:12:33 P.M. Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun. 07, 2020 6:12:42 P.M. Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+

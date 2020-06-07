@@ -1,0 +1,90 @@
+Jun. 07, 2020 4:52:24 P.M. Logger.FileLogger write
+INFO: >>> Create Account
+
+Jun. 07, 2020 4:52:28 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Vasu
+
+Jun. 07, 2020 4:52:32 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Ratanpara
+
+Jun. 07, 2020 4:52:34 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+
+Jun. 07, 2020 4:52:38 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> username : vasu1997
+
+Jun. 07, 2020 4:52:45 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> password : Vasu@1997
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 93.1.4.2
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jun. 07, 2020 4:52:55 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jun. 07, 2020 5:00:11 P.M. Logger.FileLogger write
+INFO: >>> Create Account
+
+Jun. 07, 2020 5:00:25 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Neha
+
+Jun. 07, 2020 5:00:28 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Patel
+
+Jun. 07, 2020 5:00:37 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> age : 27
+
+Jun. 07, 2020 5:00:43 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> username : neha93
+
+Jun. 07, 2020 5:00:49 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> password : neha123
+
+Jun. 07, 2020 5:01:00 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 132.45.14.6
+
+Jun. 07, 2020 5:01:00 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jun. 07, 2020 5:01:00 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jun. 07, 2020 6:13:30 P.M. Logger.FileLogger write
+INFO: >>> Create Account
+
+Jun. 07, 2020 6:13:34 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Vasu
+
+Jun. 07, 2020 6:13:37 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Patel
+
+Jun. 07, 2020 6:13:46 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+
+Jun. 07, 2020 6:14:32 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> username : vasupatel
+
+Jun. 07, 2020 6:14:45 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> password : vasu1997
+
+Jun. 07, 2020 6:15:44 P.M. Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jun. 07, 2020 6:16:22 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 93.2.2.2
+
+Jun. 07, 2020 6:16:22 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jun. 07, 2020 6:16:22 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jun. 07, 2020 6:17:58 P.M. Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+

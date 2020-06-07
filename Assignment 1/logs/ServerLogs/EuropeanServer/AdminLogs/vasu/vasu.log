@@ -1,0 +1,15 @@
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> vasu
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> vasu
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.4.1
+
+Jun. 07, 2020 6:12:28 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Wrong username or password...
+

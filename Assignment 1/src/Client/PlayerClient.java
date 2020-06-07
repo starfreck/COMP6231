@@ -170,7 +170,7 @@ public class PlayerClient {
 			e1.printStackTrace();
 		}
 
-		return status;
+		return "\n"+status;
 
 	}
 
@@ -191,7 +191,7 @@ public class PlayerClient {
 			e1.printStackTrace();
 		}
 
-		return status;
+		return "\n"+status;
 	}
 
 	public String playerSignOut(String Username, String IPAddress){
@@ -211,7 +211,7 @@ public class PlayerClient {
 			e1.printStackTrace();
 		}
 
-		return status;
+		return "\n"+status;
 	}
 
 	private GameServer getRMIObject(String serverName) {
@@ -349,12 +349,6 @@ public class PlayerClient {
 		return ipaddress;
 	}
 
-	/**
-	 * isValidPassword
-	 * 
-	 * @param password
-	 * @return
-	 */
 	private boolean isValidPassword(String password) {
 
 		if (password.length() < PASSWORD_LENGTH) {
@@ -420,6 +414,8 @@ public class PlayerClient {
 				
 				logger.write(">>> Error >>> Invalid IP address");
 				System.err.println("\nInvalid IP address");
+				
+				return true;
 			}
 		} catch (Exception e) {
 			System.err.println(e + "\nInvalid IP address");

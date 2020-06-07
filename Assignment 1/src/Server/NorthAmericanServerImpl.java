@@ -123,7 +123,7 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 	@Override
 	public synchronized String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
 			String IPAddress) throws RemoteException {
-
+		
 		this.logger.write(">>> createPlayerAccount");
 		this.logger.write(">>> createPlayerAccount >>> username >>> " + Username);
 		this.logger.write(">>> createPlayerAccount >>> firstname >>> " + FirstName);
@@ -234,6 +234,9 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 						this.userLogger.write(">>> playerSignIn >>> "+Username+" entered wrong password...");
 						message = "Wrong password...";
 					}
+					
+					return message;
+					
 				} else {
 					this.logger.write(">>> playerSignIn >>> A player doesn't exixts with "+Username+" username");
 					message = "A player doesn't exixts with given username";
@@ -292,6 +295,9 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 						
 						message = "Account not signed in...";
 					}
+					
+					return message;
+					
 				} else {
 					this.logger.write(">>> playerSignOut >>> A player doesn't exixts with "+Username+" username");
 					message = "A player doesn't exixts with given username";
@@ -308,7 +314,7 @@ public class NorthAmericanServerImpl extends UnicastRemoteObject implements Game
 
 	@Override
 	public synchronized String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) throws RemoteException {
-
+		
 		String NA = "";
 		String EU = "";
 		String AS = "";

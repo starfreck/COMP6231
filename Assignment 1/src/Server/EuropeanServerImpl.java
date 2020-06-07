@@ -46,11 +46,11 @@ public class EuropeanServerImpl extends UnicastRemoteObject implements GameServe
 	private void addUsers() {
 
 		String[] firstname = { "Fabienne", "Darcie", "Philipa", "Davinia", "Gyles" };
-		String[] lastname  = { "Tapani", "Sammie", "Alphonzo", "Amsel", "Key" };
+		String[] lastname = { "Tapani", "Sammie", "Alphonzo", "Amsel", "Key" };
 		String[] usernames = { "tapani15", "ksammie45", "aphilipa22", "Amsel97", "Key007" };
-		String[] password  = { "Fabienne123", "Darcie123", "Philipa123", "Davinia123", "Gyles123" };
+		String[] password = { "Fabienne123", "Darcie123", "Philipa123", "Davinia123", "Gyles123" };
 		String[] ipaddress = { "93.5.4.1", "93.5.4.2", "93.5.4.3", "93.5.4.4", "93.5.4.5" };
-		String[] age 	   = { "19", "15", "18", "20", "23" };
+		String[] age = { "19", "15", "18", "20", "23" };
 
 		for (int i = 0; i <= usernames.length - 1; i++) {
 
@@ -234,6 +234,9 @@ public class EuropeanServerImpl extends UnicastRemoteObject implements GameServe
 						this.userLogger.write(">>> playerSignIn >>> " + Username + " entered wrong password...");
 						message = "Wrong password...";
 					}
+
+					return message;
+
 				} else {
 					this.logger.write(">>> playerSignIn >>> A player doesn't exixts with " + Username + " username");
 					message = "A player doesn't exixts with given username";
@@ -292,6 +295,9 @@ public class EuropeanServerImpl extends UnicastRemoteObject implements GameServe
 
 						message = "Account not signed in...";
 					}
+					
+					return message;
+					
 				} else {
 					this.logger.write(">>> playerSignOut >>> A player doesn't exixts with " + Username + " username");
 					message = "A player doesn't exixts with given username";
@@ -340,7 +346,7 @@ public class EuropeanServerImpl extends UnicastRemoteObject implements GameServe
 			this.adminLogger.write(">>> getPlayerStatus >>> getOwnStatus >>> " + EU);
 
 			response = EU;
-			
+
 		} else {
 
 			this.logger.write(">>> getPlayerStatus >>> Wrong username or password...");

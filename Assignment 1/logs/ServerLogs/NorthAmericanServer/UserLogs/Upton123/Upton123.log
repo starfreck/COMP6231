@@ -1,0 +1,78 @@
+Jun. 07, 2020 5:12:47 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> Upton123 signed in successfully...
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Upton123
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Bailee
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Upton
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Upton123
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 132.34.2.4
+
+Jun. 07, 2020 5:34:20 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Upton123
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Bailee
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Upton
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Upton123
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 132.34.2.4
+
+Jun. 07, 2020 5:37:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Upton123
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Bailee
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Upton
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Upton123
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 132.34.2.4
+
+Jun. 07, 2020 5:59:55 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 6:04:28 P.M. Logger.FileLogger write
+INFO: >>> playerSignIn >>> Upton123 signed in successfully...
+
