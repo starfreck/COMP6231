@@ -76,3 +76,81 @@ INFO: >>> getPlayerStatus >>> Response from North American Server >>> NA: 0 onli
 Jun. 07, 2020 6:02:41 P.M. Logger.FileLogger write
 INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 5 online, 0 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
 
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.3.1
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 5 offline
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to Asian Server
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from Asian Server
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from Asian Server >>> AS: 0 online, 5 offline
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to North American Server
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from North American Server
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from North American Server >>> NA: 0 online, 5 offline
+
+Jun. 07, 2020 6:36:26 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.2.3
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 5 offline
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to Asian Server
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from Asian Server
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from Asian Server >>> AS: 0 online, 5 offline
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending request to North American Server
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Reciving response from North American Server
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Response from North American Server >>> NA: 0 online, 5 offline
+
+Jun. 07, 2020 10:26:05 P.M. Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+

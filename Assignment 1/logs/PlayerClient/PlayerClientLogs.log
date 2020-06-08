@@ -88,3 +88,21 @@ New player account created successfully
 Jun. 07, 2020 6:17:58 P.M. Logger.FileLogger write
 INFO: >>> Error >>> Invalid IP address
 
+Jun. 07, 2020 10:26:46 P.M. Logger.FileLogger write
+INFO: >>> Create Account
+
+Jun. 07, 2020 10:26:51 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Varun1997
+
+Jun. 07, 2020 10:26:54 P.M. Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Varun1997
+
+Jun. 07, 2020 10:28:47 P.M. Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Jun. 07, 2020 10:29:30 P.M. Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jun. 07, 2020 10:29:41 P.M. Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+

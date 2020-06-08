@@ -121,3 +121,51 @@ INFO: >>> createPlayerAccount >>> User information stored
 Jun. 07, 2020 6:02:00 P.M. Logger.FileLogger write
 INFO: >>> playerSignIn >>> Amsel97 signed in successfully...
 
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Amsel97
+
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Davinia
+
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Amsel
+
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Davinia123
+
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.4
+
+Jun. 07, 2020 6:35:44 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Amsel97
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Davinia
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Amsel
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Davinia123
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.4
+
+Jun. 07, 2020 10:25:25 P.M. Logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
