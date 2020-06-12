@@ -56,7 +56,8 @@ public class AdministratorClient {
 		System.out.println("\n****Welcome Admin****\n");
 		System.out.println("Please select an option (1-2)");
 		System.out.println("1. Get Players Status");
-		System.out.println("2. Exit");
+		System.out.println("2. Suspend Account");
+		System.out.println("3. Exit");
 	}
 
 	// Return basic menu.
@@ -67,6 +68,9 @@ public class AdministratorClient {
 			admin.getStatus();
 			break;
 		case 2:
+			admin.suspendPlayer();
+			break;
+		case 3:
 			System.out.println("\nGood Bye.");
 			AdministratorClient.status = false;
 			System.exit(0);
@@ -96,6 +100,30 @@ public class AdministratorClient {
 		// Print Response
 		System.out.println(response);
 		logger.write(">>> Get Status >>> Response >>> " + response);
+
+	}
+	
+	private void suspendPlayer()
+			throws InvalidName, NotFound, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName {
+
+		logger.write(">>> Suspend Account");
+		
+		String username 		 = inputUsername();
+		String password 		 = inputPassword();
+		String ipaddress 		 = inputIPAddress();
+		String usernameToSuspend = inputPlayerUsername();
+		
+		logger.write(">>> Suspend Account >>> username >>>  " + username);
+		logger.write(">>> Suspend Account >>> password >>> " + password);
+		logger.write(">>> Suspend Account >>> ipaddress >>> " + ipaddress);
+		logger.write(">>> Suspend Account >>> Username To Suspend >>> " + usernameToSuspend);
+
+		logger.write(">>> Suspend Account >>> Sending request to server");
+
+		String response = suspendAccount(username, password, ipaddress, usernameToSuspend);
+		// Print Response
+		System.out.println(response);
+		logger.write(">>> Suspend Account >>> Response >>> " + response);
 
 	}
 
@@ -155,6 +183,27 @@ public class AdministratorClient {
 
 		return "\n" + status;
 	}
+	
+	public String suspendAccount(String AdminUsername, String AdminPassword, String IPAddress, String UsernameToSuspend)
+			throws InvalidName, NotFound, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName {
+		
+		String status = "false";
+
+		String serverName = gameServers.get(IPAddress.split("\\.")[0]);
+
+		logger.write(">>> Suspend Account >>> Sending request to " + serverName);
+		
+		GameServer server = getServerObj(serverName);
+
+		if (server == null) {
+			logger.write(">>>  Suspend Account >>> Server not found");
+			return status;
+		}
+
+		status = server.suspendAccount(AdminUsername, AdminPassword, IPAddress, UsernameToSuspend);
+
+		return "\n" + status;
+	}
 
 	private GameServer getServerObj(String serverName)
 			throws InvalidName, NotFound, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName {
@@ -181,6 +230,17 @@ public class AdministratorClient {
 	private String inputUsername() {
 		System.out.print("\nEnter username: ");
 		String username = input.nextLine();
+		return username;
+	}
+	
+	private String inputPlayerUsername() {
+		String username;
+
+		do {
+			System.out.print("\nEnter player's username: ");
+			username = input.nextLine();
+		} while (isValidUsername(username));
+
 		return username;
 	}
 
@@ -253,6 +313,23 @@ public class AdministratorClient {
 			return true;
 		}
 
+		return false;
+	}
+	
+	private boolean isValidUsername(String username) {
+
+		if (username.length() < USERNAME_MIN_LENGTH) {
+
+			System.err.println("\nA player's username must have at least 6 characters\n");
+			logger.write(">>> Error >>> A player's username must have at least 6 characters");
+			return true;
+		}
+		if (username.length() > USERNAME_MAX_LENGTH) {
+
+			System.err.println("\nA player's username can be maximum length of 15 characters\n");
+			logger.write(">>> Error >>> A player's username can be maximum length of 15 characters");
+			return true;
+		}
 		return false;
 	}
 

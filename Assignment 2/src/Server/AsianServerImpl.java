@@ -48,7 +48,7 @@ public class AsianServerImpl extends GameServerPOA {
 		this.addUsers();
 
 	}
-	
+
 	private void addUsers() {
 
 		String[] firstname = { "Bruce", "Charles", "Ada", "Varun", "Kevin" };
@@ -256,13 +256,26 @@ public class AsianServerImpl extends GameServerPOA {
 
 		return message;
 	}
-	
+
 	@Override
-	public String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
-		// TODO Auto-generated method stub
+	public synchronized String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
+
+		// Asian IP
+		if (NewIPAddress.split("\\.")[0].equals("182")) {
+
+		}
+		// European IP
+		else if (NewIPAddress.split("\\.")[0].equals("93")) {
+
+		}
+		// North American IP
+		else if (NewIPAddress.split("\\.")[0].equals("132")) {
+
+		}
+
 		return null;
 	}
-	
+
 	@Override
 	public synchronized String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
 
@@ -274,7 +287,7 @@ public class AsianServerImpl extends GameServerPOA {
 		// Init User logs
 		this.adminLogger = initAdminLogger(AdminUsername);
 
-		this.logger.write(">>> getPlayerStatus");
+		this.logger.write(">>> getPlayerSsuspendAccounttatus");
 		this.logger.write(">>> getPlayerStatus >>> username >>> " + AdminUsername);
 		this.logger.write(">>> getPlayerStatus >>> password >>> " + AdminPassword);
 		this.logger.write(">>> getPlayerStatus >>> ipadddress >>> " + IPAddress);
@@ -381,7 +394,7 @@ public class AsianServerImpl extends GameServerPOA {
 
 		return response;
 	}
-	
+
 	public synchronized String getOwnStatus() {
 
 		int online = 0, offline = 0;
@@ -401,12 +414,65 @@ public class AsianServerImpl extends GameServerPOA {
 
 		return serverShortName + ": " + online + " online, " + offline + " offline";
 	}
-	
+
 	@Override
-	public String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
+	public synchronized String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
 			String UsernameToSuspend) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		// Init Admin logs
+		this.adminLogger = initAdminLogger(AdminUsername);
+		
+		this.logger.write(">>> suspendAccount");
+		this.logger.write(">>> suspendAccount >>> Admin Username >>> " + AdminUsername);
+		this.logger.write(">>> suspendAccount >>> Admin Password >>> " + AdminPassword);
+		this.logger.write(">>> suspendAccount >>> Admin IPAddress >>> " + AdminIPAddress);
+		this.logger.write(">>> suspendAccount >>> Username To Suspend >>> " + UsernameToSuspend);
+		
+		this.adminLogger.write(">>> suspendAccount");
+		this.adminLogger.write(">>> suspendAccount >>> Admin Username >>> " + AdminUsername);
+		this.adminLogger.write(">>> suspendAccount >>> Admin Password >>> " + AdminPassword);
+		this.adminLogger.write(">>> suspendAccount >>> Admin IPAddress >>> " + AdminIPAddress);
+		this.adminLogger.write(">>> suspendAccount >>> Username To Suspend >>> " + UsernameToSuspend);
+
+		if ("Admin".equals(AdminUsername) && "Admin".equals(AdminPassword)) {
+
+			// Check if user exist
+			ArrayList<HashMap<String, String>> playerList = players.get(UsernameToSuspend.substring(0, 1).toUpperCase());
+
+			if (playerList != null) {
+
+				// Find in list
+				for (HashMap<String, String> player : playerList) {
+
+					// Account exists
+					if (player.get("username").equals(UsernameToSuspend)) {
+
+						// Account is valid and should suspended
+						playerList.remove(player);
+						// Update HashMap
+						players.put(UsernameToSuspend.substring(0, 1).toUpperCase(), playerList);
+
+						this.logger.write(">>> suspendAccount >>> A player account with \"" + UsernameToSuspend+ "\" username is suspended");
+						this.adminLogger.write(">>> suspendAccount >>> A player account with \"" + UsernameToSuspend+ "\" username is suspended");
+
+						return "A player account with \"" + UsernameToSuspend + "\" username is suspended";
+					}
+				}
+
+			}
+			
+			this.logger.write(">>> suspendAccount >>> A player doesn't exixts with " + UsernameToSuspend + " username");
+			this.adminLogger.write(">>> suspendAccount >>> A player doesn't exixts with " + UsernameToSuspend + " username");
+			
+			return "A player doesn't exixts with given username";
+			 			
+		} else {
+
+			this.logger.write(">>> suspendAccount >>> Wrong username or password...");
+			this.adminLogger.write(">>> suspendAccount >>> Wrong username or password...");
+
+			return "Wrong username or password...";
+		}
 	}
 
 	private FileLogger initUserLogger(String username) {

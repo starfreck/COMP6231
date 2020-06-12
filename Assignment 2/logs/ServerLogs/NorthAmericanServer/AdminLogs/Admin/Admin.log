@@ -1,0 +1,18 @@
+Jun 12, 2020 12:27:06 AM Logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jun 12, 2020 12:27:06 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jun 12, 2020 12:27:06 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jun 12, 2020 12:27:06 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 132.1.1.1
+
+Jun 12, 2020 12:27:06 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Garfield123
+
+Jun 12, 2020 12:27:06 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> A player accountwith "Garfield123" username is suspended
+
