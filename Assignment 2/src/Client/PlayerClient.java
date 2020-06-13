@@ -58,7 +58,8 @@ public class PlayerClient {
 		System.out.println("1. Create an Account");
 		System.out.println("2. SignIn");
 		System.out.println("3. SignOut");
-		System.out.println("4. Exit");
+		System.out.println("4. Transfer Account");
+		System.out.println("5. Exit");
 
 	}
 
@@ -74,6 +75,9 @@ public class PlayerClient {
 			player.SignOut();
 			break;
 		case 4:
+			player.transferAccount();
+			break;
+		case 5:
 			System.out.println("\nGood Bye.");
 			PlayerClient.status = false;
 			System.exit(0);
@@ -161,6 +165,22 @@ public class PlayerClient {
 			System.out.println(e);
 		}
 	}
+	
+	public void transferAccount() {
+
+		try {
+			// username, Password, OldIPAddress, NewIPAddress
+			String username = inputUsername();
+			String password = inputPassword();
+			String oldIPAddress = inputIPAddress();
+			String newIPAddress = inputNewIPAddress();
+
+			// Print Response
+			System.out.println(this.PlayerTransferAccount(username, password, oldIPAddress, newIPAddress));
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
 
 	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
 			String IPAddress)
@@ -214,6 +234,24 @@ public class PlayerClient {
 
 		return "\n" + status;
 	}
+	
+	public String PlayerTransferAccount(String Username, String Password, String oldIPAddress, String newIPAddress)
+			throws InvalidName, NotFound, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName {
+		String status = "false";
+		String serverName = gameServers.get(oldIPAddress.split("\\.")[0]);
+
+		// find the remote object and cast it to an interface object
+		GameServer server = getServerObj(serverName);
+
+		if (server == null) {
+			return status;
+		}
+
+		status = server.transferAccount(Username, Password, oldIPAddress, newIPAddress);
+
+		return "\n" + status;
+	}
+	
 
 	private GameServer getServerObj(String serverName)
 			throws InvalidName, NotFound, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName {
@@ -334,6 +372,19 @@ public class PlayerClient {
 
 		do {
 			System.out.print("\nEnter IP address: ");
+			ipaddress = input.nextLine();
+
+		} while (isValidIPAddress(ipaddress));
+
+		return ipaddress;
+	}
+	
+	private String inputNewIPAddress() {
+
+		String ipaddress;
+
+		do {
+			System.out.print("\nEnter New IP address: ");
 			ipaddress = input.nextLine();
 
 		} while (isValidIPAddress(ipaddress));

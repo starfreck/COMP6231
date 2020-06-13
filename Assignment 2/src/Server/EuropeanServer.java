@@ -131,10 +131,31 @@ public class EuropeanServer {
 			reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
 					requestPacket.getLength());
 
-			if (reciveDataString.equals("getPlayerStatus")) {
+			String data = reciveDataString.split(":",2)[1];
+
+			if (reciveDataString.contains("getPlayerStatus")) {
+				
 				logger.write(">>> Recived UDP request");
 				status = EuropeanServerObj.getOwnStatus();
 				logger.write(">>> getOwnStatus >>> " + status);
+			
+			} else if (reciveDataString.contains("transferAccount")) {
+				
+				logger.write(">>> Recived UDP request");
+				
+				String[] accountInfo = data.split("\\|");
+				
+				if(EuropeanServerObj.validateAccount(accountInfo[0])) {
+					// Account with Given Name is already present
+					logger.write(">>> transferAccount >>> Account with" + status + " username is already present");
+					status = "false";
+				} else {
+					// Account Can transfer
+					// FirstName, LastName, Age, Username, Password, IPAddress
+					EuropeanServerObj.createPlayerAccount(accountInfo[2],accountInfo[3],Integer.parseInt(accountInfo[4]),accountInfo[0],accountInfo[1],accountInfo[5]);
+					status = "true";
+				}
+				
 			}
 
 			// Get Client's IP & Port

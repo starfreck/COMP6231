@@ -258,17 +258,105 @@ public class EuropeanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
-		// TODO Auto-generated method stub
-		return null;
+	public synchronized String transferAccount(String Username, String Password, String OldIPAddress,
+			String NewIPAddress) {
+		String message = null;
+
+		this.logger.write(">>> transferAccount");
+		this.logger.write(">>> transferAccount >>> username >>> " + Username);
+		this.logger.write(">>> transferAccount >>> password >>> " + Password);
+		this.logger.write(">>> transferAccount >>> ipadddress >>> " + OldIPAddress);
+		this.logger.write(">>> transferAccount >>> NewIPAdddress >>> " + NewIPAddress);
+
+		// Check if user exist
+		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
+
+		if (playerList != null) {
+			// Find in list
+			for (HashMap<String, String> player : playerList) {
+
+				// Account exists
+				if (player.get("username").equals(Username)) {
+
+					// Account is valid and signed
+					if (player.get("password").equals(Password)) {
+
+						// Asian IP
+						if (NewIPAddress.split("\\.")[0].equals("182")) {
+							
+							String Data = getPlayerAccountInfo(Username);
+							String status = this.UDPServerTunnel("AS", "transferAccount", Data + NewIPAddress);
+
+							if ("true".equals(status)) {
+								// Account is transfer
+								// Delete Account
+								if (this.deleteAccount(Username)) {
+									return "Account is succesfully transfered";
+								} else {
+									return "Something went wrong during account transfering";
+								}
+							} else if ("false".equals(status)) {
+								// Account with Given Name is already present on Remote server
+								return "Account with Given Name is already present on remote server";
+							}
+						}
+						// European IP
+						else if (NewIPAddress.split("\\.")[0].equals("93")) {
+
+							return "Your Account is already in European Server";
+						}
+						// North American IP
+						else if (NewIPAddress.split("\\.")[0].equals("132")) {
+
+							String Data = getPlayerAccountInfo(Username);
+							String status = this.UDPServerTunnel("NA", "transferAccount", Data + NewIPAddress);
+
+							if ("true".equals(status)) {
+								// Account is transfer
+								// Delete Account
+								if (this.deleteAccount(Username)) {
+									return "Account is succesfully transfered";
+								} else {
+									return "Something went wrong during account transfering";
+								}
+							} else if ("false".equals(status)) {
+								// Account with Given Name is already present on Remote server
+								return "Account with Given Name is already present on remote server";
+							}
+						}
+
+						return "New IP Address is invalid";
+
+					} else {
+						// you entered wrong password
+						this.logger.write(">>> transferAccount >>> " + Username + " entered wrong password...");
+						// Init User logs
+						this.userLogger = initUserLogger(Username);
+						this.userLogger.write(">>> transferAccount >>> " + Username + " entered wrong password...");
+						message = "Wrong password...";
+					}
+
+					return message;
+
+				} else {
+					this.logger.write(">>> transferAccount >>> A player doesn't exixts with " + Username + " username");
+					message = "A player doesn't exixts with given username";
+				}
+			}
+
+		} else {
+			this.logger.write(">>> transferAccount >>> A player doesn't exixts with " + Username + " username");
+			message = "A player doesn't exixts with given username";
+		}
+
+		return message;
+
 	}
 
 	@Override
 	public synchronized String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
 
-		String NA = "";
 		String EU = "";
-		String AS = "";
 		String response = "";
 
 		// Init User logs
@@ -305,76 +393,11 @@ public class EuropeanServerImpl extends GameServerPOA {
 			return "Wrong username or password...";
 		}
 
-		// UDP clients
-		try {
+		// Get status from Asian Server
+		response = response + ", " + this.UDPServerTunnel("AS", "getPlayerStatus", "");
 
-			String methodAction = "getPlayerStatus";
-			DatagramSocket socket;
-			DatagramPacket requestData;
-			DatagramPacket responseData;
-			InetAddress host = InetAddress.getLocalHost();
-
-			byte[] sendMessage = methodAction.getBytes();
-			byte[] recivedMessage = new byte[MAX_PACKET_SIZE];
-
-			// Get status from Asian Server
-			socket = new DatagramSocket();
-			// Request Data
-			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, AS_PORT);
-			socket.send(requestData);
-
-			this.logger.write(">>> getPlayerStatus >>> Sending request to Asian Server");
-			this.adminLogger.write(">>> getPlayerStatus >>> Sending request to Asian Server");
-
-			// Response Data
-			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
-			socket.receive(responseData);
-
-			this.logger.write(">>> getPlayerStatus >>> Reciving response from Asian Server");
-			this.adminLogger.write(">>> getPlayerStatus >>> Reciving response from Asian Server");
-
-			// Retrieving Data
-			AS = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
-
-			this.logger.write(">>> getPlayerStatus >>> Response from Asian Server >>> " + AS);
-			this.adminLogger.write(">>> getPlayerStatus >>> Response from Asian Server >>> " + AS);
-
-			// Appending to response
-			response = response + ", " + AS;
-			socket.close();
-
-			// Get status from North American Server
-			socket = new DatagramSocket();
-			// Request Data
-			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, NA_PORT);
-			socket.send(requestData);
-
-			this.logger.write(">>> getPlayerStatus >>> Sending request to North American Server");
-			this.adminLogger.write(">>> getPlayerStatus >>> Sending request to North American Server");
-
-			// Response Data
-			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
-			socket.receive(responseData);
-
-			this.logger.write(">>> getPlayerStatus >>> Reciving response from North American Server");
-			this.adminLogger.write(">>> getPlayerStatus >>> Reciving response from North American Server");
-
-			// Retrieving Data
-			NA = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
-
-			this.logger.write(">>> getPlayerStatus >>> Response from North American Server >>> " + NA);
-			this.adminLogger.write(">>> getPlayerStatus >>> Response from North American Server >>> " + NA);
-
-			// Appending to response
-			response = response + ", " + NA + ".";
-			socket.close();
-
-		} catch (Exception e) {
-
-			this.logger.write(">>> getPlayerStatus >>> Exception >>> " + e);
-			this.adminLogger.write(">>> getPlayerStatus >>> Exception >>> " + e);
-			System.err.println(e);
-		}
+		// Get status from North American Server
+		response = response + ", " + this.UDPServerTunnel("NA", "getPlayerStatus", "") + ".";
 
 		// NA: 6 online, 1 offline, EU: 7 online, 1 offline, AS: 8 online, 1 offline.
 		this.logger.write(">>> getPlayerStatus >>> Sending response to Admin >>> " + response);
@@ -406,16 +429,16 @@ public class EuropeanServerImpl extends GameServerPOA {
 	@Override
 	public synchronized String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
 			String UsernameToSuspend) {
-		
+
 		// Init Admin logs
 		this.adminLogger = initAdminLogger(AdminUsername);
-		
+
 		this.logger.write(">>> suspendAccount");
 		this.logger.write(">>> suspendAccount >>> Admin Username >>> " + AdminUsername);
 		this.logger.write(">>> suspendAccount >>> Admin Password >>> " + AdminPassword);
 		this.logger.write(">>> suspendAccount >>> Admin IPAddress >>> " + AdminIPAddress);
 		this.logger.write(">>> suspendAccount >>> Username To Suspend >>> " + UsernameToSuspend);
-		
+
 		this.adminLogger.write(">>> suspendAccount");
 		this.adminLogger.write(">>> suspendAccount >>> Admin Username >>> " + AdminUsername);
 		this.adminLogger.write(">>> suspendAccount >>> Admin Password >>> " + AdminPassword);
@@ -424,36 +447,25 @@ public class EuropeanServerImpl extends GameServerPOA {
 
 		if ("Admin".equals(AdminUsername) && "Admin".equals(AdminPassword)) {
 
-			// Check if user exist
-			ArrayList<HashMap<String, String>> playerList = players.get(UsernameToSuspend.substring(0, 1).toUpperCase());
+			if (this.deleteAccount(UsernameToSuspend)) {
 
-			if (playerList != null) {
+				this.logger.write(">>> suspendAccount >>> A player account with \"" + UsernameToSuspend
+						+ "\" username is suspended");
+				this.adminLogger.write(">>> suspendAccount >>> A player account with \"" + UsernameToSuspend
+						+ "\" username is suspended");
 
-				// Find in list
-				for (HashMap<String, String> player : playerList) {
+				return "A player account with \"" + UsernameToSuspend + "\" username is suspended";
 
-					// Account exists
-					if (player.get("username").equals(UsernameToSuspend)) {
+			} else {
 
-						// Account is valid and should suspended
-						playerList.remove(player);
-						// Update HashMap
-						players.put(UsernameToSuspend.substring(0, 1).toUpperCase(), playerList);
+				this.logger.write(
+						">>> suspendAccount >>> A player doesn't exixts with " + UsernameToSuspend + " username");
+				this.adminLogger.write(
+						">>> suspendAccount >>> A player doesn't exixts with " + UsernameToSuspend + " username");
 
-						this.logger.write(">>> suspendAccount >>> A player account with \"" + UsernameToSuspend+ "\" username is suspended");
-						this.adminLogger.write(">>> suspendAccount >>> A player account with \"" + UsernameToSuspend+ "\" username is suspended");
-
-						return "A player account with \"" + UsernameToSuspend + "\" username is suspended";
-					}
-				}
-
+				return "A player doesn't exixts with given username";
 			}
-			
-			this.logger.write(">>> suspendAccount >>> A player doesn't exixts with " + UsernameToSuspend + " username");
-			this.adminLogger.write(">>> suspendAccount >>> A player doesn't exixts with " + UsernameToSuspend + " username");
-			
-			return "A player doesn't exixts with given username";
-			 			
+
 		} else {
 
 			this.logger.write(">>> suspendAccount >>> Wrong username or password...");
@@ -461,6 +473,127 @@ public class EuropeanServerImpl extends GameServerPOA {
 
 			return "Wrong username or password...";
 		}
+	}
+
+	public synchronized boolean validateAccount(String Username) {
+
+		// Check if user exist
+		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
+
+		if (playerList != null) {
+
+			// Find in list
+			for (HashMap<String, String> player : playerList) {
+
+				// Account exists
+				if (player.get("username").equals(Username)) {
+
+					// Account is valid
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
+	private synchronized boolean deleteAccount(String Username) {
+
+		// Check if user exist
+		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
+
+		if (playerList != null) {
+
+			// Find in list
+			for (HashMap<String, String> player : playerList) {
+
+				// Account exists
+				if (player.get("username").equals(Username)) {
+
+					// Account is valid and should suspended
+					playerList.remove(player);
+					// Update HashMap
+					players.put(Username.substring(0, 1).toUpperCase(), playerList);
+
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
+	private synchronized String getPlayerAccountInfo(String Username) {
+
+		// Check if user exist
+		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
+
+		if (playerList != null) {
+
+			// Find in list
+			for (HashMap<String, String> player : playerList) {
+
+				// Account exists
+				if (player.get("username").equals(Username)) {
+
+					// Combine User info with '|'
+					return player.get("username") + "|" + player.get("password") + "|" + player.get("firstname") + "|"
+							+ player.get("lastname") + "|" + player.get("age").toString() + "|";
+				}
+			}
+		}
+
+		return "User with given name doesn't exist";
+	}
+
+	private String UDPServerTunnel(String serverName, String methodName, String Data) {
+
+		String response = "";
+		int UDP_PORT;
+
+		if (serverName.equals("NA")) {
+			UDP_PORT = NA_PORT;
+		} else if (serverName.equals("EU")) {
+			UDP_PORT = EU_PORT;
+		} else if (serverName.equals("AS")) {
+			UDP_PORT = AS_PORT;
+		} else {
+			return "Unknown server name";
+		}
+
+		// UDP client
+		try {
+
+			String methodAction = methodName + ":" + Data;
+			DatagramSocket socket;
+			DatagramPacket requestData;
+			DatagramPacket responseData;
+			InetAddress host = InetAddress.getLocalHost();
+
+			byte[] sendMessage = methodAction.getBytes();
+			byte[] recivedMessage = new byte[MAX_PACKET_SIZE];
+
+			// Get status from Given Server
+			socket = new DatagramSocket();
+			// Request Data
+			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, UDP_PORT);
+			socket.send(requestData);
+
+			// Response Data
+			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
+			socket.receive(responseData);
+
+			// Retrieving Data
+			response = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
+
+			socket.close();
+
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+
+		return response;
+
 	}
 
 	private FileLogger initUserLogger(String username) {

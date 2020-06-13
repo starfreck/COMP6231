@@ -128,11 +128,32 @@ public class AsianServer {
 			socket.receive(requestPacket);
 			reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
 					requestPacket.getLength());
+			
+			String data = reciveDataString.split(":",2)[1];
 
-			if (reciveDataString.equals("getPlayerStatus")) {
+			if (reciveDataString.contains("getPlayerStatus")) {
+				
 				logger.write(">>> Recived UDP request");
 				status = AsianServerObj.getOwnStatus();
 				logger.write(">>> getOwnStatus >>> " + status);
+			
+			} else if (reciveDataString.contains("transferAccount")) {
+				
+				logger.write(">>> Recived UDP request");
+				
+				String[] accountInfo = data.split("\\|");
+				
+				if(AsianServerObj.validateAccount(accountInfo[0])) {
+					// Account with Given Name is already present
+					logger.write(">>> transferAccount >>> Account with" + status + " username is already present");
+					status = "false";
+				} else {
+					// Account Can transfer
+					// FirstName, LastName, Age, Username, Password, IPAddress
+					AsianServerObj.createPlayerAccount(accountInfo[2],accountInfo[3],Integer.parseInt(accountInfo[4]),accountInfo[0],accountInfo[1],accountInfo[5]);
+					status = "true";
+				}
+				
 			}
 
 			// Get Client's IP & Port
