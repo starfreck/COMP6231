@@ -25,10 +25,8 @@ public class AdministratorClient {
 	static int PASSWORD_LENGTH = 6;
 	static int USERNAME_MIN_LENGTH = 6;
 	static int USERNAME_MAX_LENGTH = 15;
-	// Registry Ports
-	static final int AS_REGISTRY_PORT = 52575;
-	static final int EU_REGISTRY_PORT = 52576;
-	static final int NA_REGISTRY_PORT = 52577;
+	// Orb Port
+	static final String ORB_PORT = "1050";
 
 	static String[] validIPs = { "132", "93", "182" };
 	static Scanner input = new Scanner(System.in);
@@ -348,7 +346,7 @@ public class AdministratorClient {
 
 		// Creating args array for ORB.init()
 		orbarg[0] = "-ORBInitialPort";
-		orbarg[1] = "1050";
+		orbarg[1] = ORB_PORT;
 		orbarg[2] = "-ORBInitialHost";
 		orbarg[3] = "localhost";
 

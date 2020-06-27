@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 
 import org.omg.CORBA.ORB;
 import org.omg.CosNaming.NameComponent;
@@ -28,10 +29,8 @@ public class NorthAmericanServer {
 	static final int NA_PORT = 5001;
 	static final int EU_PORT = 5002;
 	static final int AS_PORT = 5003;
-	// Registry Ports
-	static final int AS_REGISTRY_PORT = 52575;
-	static final int EU_REGISTRY_PORT = 52576;
-	static final int NA_REGISTRY_PORT = 52577;
+	// Orb Port
+	static final String ORB_PORT = "1050";
 	// Max Packet Size
 	static final int MAX_PACKET_SIZE = 1024;
 	// Logger Path
@@ -110,66 +109,88 @@ public class NorthAmericanServer {
 	public static void UDPServer() throws IOException {
 
 		// UDP server
+		DatagramSocket socket;
+		DatagramPacket requestPacket;
+		DatagramPacket responsePacket;
+		String reciveDataString, status = "";
 
-		while (true) {
-
-			DatagramSocket socket;
-			DatagramPacket requestPacket;
-			DatagramPacket responsePacket;
-
-			String reciveDataString, status = "";
-
-			byte[] sendData = new byte[MAX_PACKET_SIZE];
-			byte[] reciveData = new byte[MAX_PACKET_SIZE];
+		try {
 
 			// Socket
 			socket = new DatagramSocket(NA_PORT);
 
-			// Client Request Data
-			requestPacket = new DatagramPacket(reciveData, reciveData.length);
-			socket.receive(requestPacket);
-			reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
-					requestPacket.getLength());
-			
-	
-			String data = reciveDataString.split(":", 2)[1];
-			
-			if (reciveDataString.contains("getPlayerStatus")) {
+			while (true) {
 
-				logger.write(">>> Recived UDP request");
-				status = NorthAmericanServerObj.getOwnStatus();
-				logger.write(">>> getOwnStatus >>> " + status);
+				byte[] sendData = new byte[MAX_PACKET_SIZE];
+				byte[] reciveData = new byte[MAX_PACKET_SIZE];
 
-			} else if (reciveDataString.contains("transferAccount")) {
+				// Client Request Data
+				requestPacket = new DatagramPacket(reciveData, reciveData.length);
+				socket.receive(requestPacket);
+				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
+						requestPacket.getLength());
 
-				logger.write(">>> Recived UDP request");
+				String data = reciveDataString.split(":", 2)[1];
 
-				String[] accountInfo = data.split("\\|");
+				if (reciveDataString.contains("getPlayerStatus")) {
 
-				if (NorthAmericanServerObj.validateAccount(accountInfo[0])) {
-					// Account with Given Name is already present
-					logger.write(">>> transferAccount >>> Account with" + status + " username is already present");
-					status = "false";
-				} else {
-					// Account Can transfer
-					// FirstName, LastName, Age, Username, Password, IPAddress
-					NorthAmericanServerObj.createPlayerAccount(accountInfo[2], accountInfo[3], Integer.parseInt(accountInfo[4]),
-							accountInfo[0], accountInfo[1], accountInfo[5]);
-					status = "true";
+					logger.write(">>> Recived UDP request");
+					status = NorthAmericanServerObj.getOwnStatus();
+					logger.write(">>> getOwnStatus >>> " + status);
+
+				} else if (reciveDataString.contains("transferAccount")) {
+
+					logger.write(">>> Recived UDP request");
+
+					String[] accountInfo = data.split("\\|");
+
+					if (NorthAmericanServerObj.validateAccount(accountInfo[0])) {
+						// Account with Given Name is already present
+						logger.write(">>> transferAccount >>> Account with" + status + " username is already present");
+						status = "false";
+					} else {
+						// Account Can transfer
+						// FirstName, LastName, Age, Username, Password, IPAddress
+						NorthAmericanServerObj.createPlayerAccount(accountInfo[2], accountInfo[3],
+								Integer.parseInt(accountInfo[4]), accountInfo[0], accountInfo[1], accountInfo[5]);
+						status = "true";
+					}
+
+				} else if (reciveDataString.contains("deleteTransferedAccount")) {
+
+					logger.write(">>> Recived UDP request");
+
+					String[] accountInfo = data.split("\\|");
+					String Username = accountInfo[0];
+					if (NorthAmericanServerObj.validateAccount(accountInfo[0])) {
+						// Account with Given Name is present
+						logger.write(">>> deleteTransferedAccount >>> Account with" + status + " username is present");
+						// Delete Account
+						status = Boolean.toString(NorthAmericanServerObj.deleteAccount(Username));
+					} else {
+						// Account with Given Name is present
+						logger.write(
+								">>> deleteTransferedAccount >>> Account with" + status + " username is not present");
+						status = "false";
+					}
+
 				}
 
+				// Get Client's IP & Port
+				InetAddress IPAddress = requestPacket.getAddress();
+				int port = requestPacket.getPort();
+				// Converting Message into Bytes
+				sendData = status.getBytes();
+				responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
+				socket.send(responsePacket);
+				logger.write(">>> Sending response of UDP request");
+				// socket.close();
+
 			}
-
-			// Get Client's IP & Port
-			InetAddress IPAddress = requestPacket.getAddress();
-			int port = requestPacket.getPort();
-			// Converting Message into Bytes
-			sendData = status.getBytes();
-			responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
-			socket.send(responsePacket);
-			logger.write(">>> Sending response of UDP request");
-			socket.close();
-
+		} catch (SocketException e) {
+			System.out.println("Socket: " + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("IO: " + e.getMessage());
 		}
 
 	}
@@ -180,7 +201,7 @@ public class NorthAmericanServer {
 
 		// Creating args array for ORB.init()
 		orbarg[0] = "-ORBInitialPort";
-		orbarg[1] = "1050";
+		orbarg[1] = ORB_PORT;
 		orbarg[2] = "-ORBInitialHost";
 		orbarg[3] = "localhost";
 

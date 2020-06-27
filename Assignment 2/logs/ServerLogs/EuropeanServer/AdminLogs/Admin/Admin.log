@@ -133,3 +133,180 @@ INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 6 offline
 Jun 12, 2020 9:36:27 PM Logger.FileLogger write
 INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 6 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
 
+Jun 25, 2020 9:41:40 AM Logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jun 25, 2020 9:41:41 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jun 25, 2020 9:41:41 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jun 25, 2020 9:41:41 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 93.1.1.1
+
+Jun 25, 2020 9:41:41 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Varun123
+
+Jun 25, 2020 9:41:41 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Varun123" username is suspended
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.1.1
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 1 online, 6 offline
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 1 online, 6 offline, AS: 0 online, 3 offline, NA: 0 online, 5 offline.
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.1.1
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 6 offline
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 6 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
+
+Jun 27, 2020 2:38:37 AM Logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 93.1.1.1
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> tapani15
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> A player doesn't exixts with tapani15 username
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.1.1
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 5 offline
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 4 offline.
+
+Jun 27, 2020 2:39:21 AM Logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jun 27, 2020 2:39:21 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jun 27, 2020 2:39:21 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jun 27, 2020 2:39:21 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 93.1.1.1
+
+Jun 27, 2020 2:39:21 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Fabienne123
+
+Jun 27, 2020 2:39:21 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Fabienne123" username is suspended
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.1.1
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 4 offline
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 4 offline, AS: 0 online, 5 offline, NA: 0 online, 4 offline.
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 93.1.1.1
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Philipa123
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> A player doesn't exixts with Philipa123 username
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.1.1.1
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 3 offline
+
+Jun 27, 2020 2:50:58 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 3 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
+

@@ -34,3 +34,63 @@ INFO: >>> suspendAccount >>> Username To Suspend >>> Siddall123
 Jun 12, 2020 5:42:17 PM Logger.FileLogger write
 INFO: >>> suspendAccount >>> A player account with "Siddall123" username is suspended
 
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.1.1.1
+
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Jun 27, 2020 2:37:34 AM Logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jun 27, 2020 2:37:34 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jun 27, 2020 2:37:34 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jun 27, 2020 2:37:34 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 132.1.1.1
+
+Jun 27, 2020 2:37:34 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Siddall123
+
+Jun 27, 2020 2:37:34 AM Logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Siddall123" username is suspended
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.1.1.1
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 4 offline
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 4 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+

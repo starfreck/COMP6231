@@ -940,3 +940,369 @@ AS: 0 online, 4 offline, EU: 0 online, 6 offline, NA: 0 online, 5 offline.
 Jun 12, 2020 10:16:31 PM Logger.FileLogger write
 INFO: >>> inputChoice >>> Please input Integer only
 
+Jun 22, 2020 3:04:23 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 22, 2020 3:04:34 PM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jun 22, 2020 3:04:41 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 22, 2020 3:04:41 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 22, 2020 3:04:41 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.1.1.1
+
+Jun 22, 2020 3:04:41 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 22, 2020 3:04:41 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to NorthAmerica
+
+Jun 22, 2020 3:04:42 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Jun 22, 2020 3:19:27 PM Logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Jun 23, 2020 5:40:34 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 23, 2020 5:40:46 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 23, 2020 5:40:46 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 23, 2020 5:40:46 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 5:40:46 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 23, 2020 5:40:46 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 23, 2020 5:40:46 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jun 23, 2020 5:42:37 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 23, 2020 5:43:20 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 23, 2020 5:43:20 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 23, 2020 5:43:20 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 5:43:20 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 23, 2020 5:43:20 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 23, 2020 5:43:20 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 6 offline, NA: 0 online, 5 offline.
+
+Jun 23, 2020 7:36:25 PM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 23, 2020 7:36:43 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Bruce123
+
+Jun 23, 2020 7:36:43 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Bruce123
+
+Jun 23, 2020 7:36:43 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 7:36:43 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Bruce123
+
+Jun 23, 2020 7:36:43 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 23, 2020 7:36:43 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 23, 2020 7:36:43 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Jun 23, 2020 7:36:46 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 23, 2020 7:36:54 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 23, 2020 7:36:54 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 23, 2020 7:36:54 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 7:36:54 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 23, 2020 7:36:54 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 23, 2020 7:36:54 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 1 online, 4 offline, EU: 1 online, 5 offline, NA: 0 online, 5 offline.
+
+Jun 23, 2020 7:37:53 PM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 23, 2020 7:38:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Bruce123
+
+Jun 23, 2020 7:38:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Bruce123
+
+Jun 23, 2020 7:38:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 7:38:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Bruce123
+
+Jun 23, 2020 7:38:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 23, 2020 7:38:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 23, 2020 7:38:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Jun 23, 2020 7:38:03 PM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 23, 2020 7:38:12 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Jun 23, 2020 7:38:12 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admmin
+
+Jun 23, 2020 7:38:12 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 7:38:12 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Bruce123
+
+Jun 23, 2020 7:38:12 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 23, 2020 7:38:12 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 23, 2020 7:38:12 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Jun 23, 2020 7:38:15 PM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 23, 2020 7:38:36 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Jun 23, 2020 7:38:36 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Jun 23, 2020 7:38:36 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 7:38:36 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Bruce123
+
+Jun 23, 2020 7:38:36 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 23, 2020 7:38:36 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 23, 2020 7:38:37 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Bruce123" username is suspended
+
+Jun 23, 2020 7:38:42 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 23, 2020 7:38:57 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 23, 2020 7:38:57 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 23, 2020 7:38:57 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jun 23, 2020 7:38:57 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 23, 2020 7:38:57 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 23, 2020 7:38:57 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 1 online, 5 offline, NA: 0 online, 5 offline.
+
+Jun 25, 2020 9:40:53 AM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 25, 2020 9:41:09 AM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Jun 25, 2020 9:41:20 AM Logger.FileLogger write
+INFO: >>> Error >>> A player's username must have at least 6 characters
+
+Jun 25, 2020 9:41:24 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Varun123
+
+Jun 25, 2020 9:41:24 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> 
+
+Jun 25, 2020 9:41:24 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1.
+
+Jun 25, 2020 9:41:24 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> fafasfasdas
+
+Jun 25, 2020 9:41:24 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 25, 2020 9:41:24 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 25, 2020 9:41:24 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Jun 25, 2020 9:41:28 AM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 25, 2020 9:41:40 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Jun 25, 2020 9:41:40 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Jun 25, 2020 9:41:40 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 93.1.1.1
+
+Jun 25, 2020 9:41:40 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Jun 25, 2020 9:41:40 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 25, 2020 9:41:40 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 25, 2020 9:41:41 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Varun123" username is suspended
+
+Jun 25, 2020 1:40:48 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.1.1.1
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun 25, 2020 1:40:58 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 1 online, 6 offline, AS: 0 online, 3 offline, NA: 0 online, 5 offline.
+
+Jun 25, 2020 1:41:18 PM Logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Jun 25, 2020 3:45:58 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 25, 2020 3:46:09 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 25, 2020 3:46:09 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 25, 2020 3:46:09 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jun 25, 2020 3:46:09 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 25, 2020 3:46:09 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 25, 2020 3:46:09 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 6 offline, NA: 0 online, 5 offline.
+
+Jun 26, 2020 5:22:23 PM Logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Jun 26, 2020 5:36:46 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 26, 2020 5:36:56 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 26, 2020 5:36:56 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 26, 2020 5:36:56 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jun 26, 2020 5:36:56 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 26, 2020 5:36:56 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 26, 2020 5:36:56 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 6 offline, NA: 0 online, 5 offline.
+
+Jun 27, 2020 12:00:11 AM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.1.1.1
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun 27, 2020 12:00:26 AM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 0 online, 6 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
+

@@ -6,6 +6,7 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.omg.CORBA.ORB;
 
@@ -39,7 +40,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	// Max Packet Size
 	static final int MAX_PACKET_SIZE = 1024;
 	// Contains All Players information
-	static HashMap<String, ArrayList<HashMap<String, String>>> players = new HashMap<String, ArrayList<HashMap<String, String>>>();
+	static ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
 
 	protected NorthAmericanServerImpl() {
 		super();
@@ -67,7 +68,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String createPlayerAccount(String FirstName, String LastName, int Age, String Username,
+	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username,
 			String Password, String IPAddress) {
 
 		this.logger.write(">>> createPlayerAccount");
@@ -81,7 +82,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		// Check if user already exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
 
@@ -118,7 +119,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		player.put("status", "offline");
 
 		// Adding Player into Player's List
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			playerList.add(player);
 		} else {
 			ArrayList<HashMap<String, String>> newPlayerList = new ArrayList<HashMap<String, String>>();
@@ -136,7 +137,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String playerSignIn(String Username, String Password, String IPAddress) {
+	public String playerSignIn(String Username, String Password, String IPAddress) {
 
 		String message = null;
 
@@ -148,7 +149,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
 
@@ -199,7 +200,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String playerSignOut(String Username, String IPAddress) {
+	public String playerSignOut(String Username, String IPAddress) {
 		String message = null;
 
 		this.logger.write(">>> playerSignOut");
@@ -209,7 +210,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
 
@@ -258,7 +259,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String transferAccount(String Username, String Password, String OldIPAddress,
+	public String transferAccount(String Username, String Password, String OldIPAddress,
 			String NewIPAddress) {
 		String message = null;
 
@@ -271,7 +272,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
 
@@ -293,7 +294,15 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 								if (this.deleteAccount(Username)) {
 									return "Account is succesfully transfered";
 								} else {
-									return "Something went wrong during account transfering";
+									// Delete Account from remote server
+									status = UDPServerTunnel("AS","deleteTransferedAccount", Data);
+									String msg = "Something went wrong during account transfer rollback started...";
+									if("true".equals(status)) {
+										msg = msg + "\nRollback successfully finshed...";
+									} else {
+										msg = msg + "\nRollback failed...";
+									}
+									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
@@ -312,7 +321,15 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 								if (this.deleteAccount(Username)) {
 									return "Account is succesfully transfered";
 								} else {
-									return "Something went wrong during account transfering";
+									// Delete Account from remote server
+									status = UDPServerTunnel("EU","deleteTransferedAccount", Data);
+									String msg = "Something went wrong during account transfer rollback started...";
+									if("true".equals(status)) {
+										msg = msg + "\nRollback successfully finshed...";
+									} else {
+										msg = msg + "\nRollback failed...";
+									}
+									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
@@ -353,7 +370,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
+	public String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
 
 		String NA = "";
 		String response = "";
@@ -404,7 +421,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		return response;
 	}
 
-	public synchronized String getOwnStatus() {
+	public String getOwnStatus() {
 
 		int online = 0, offline = 0;
 
@@ -425,7 +442,7 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
+	public String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
 			String UsernameToSuspend) {
 
 		// Init Admin logs
@@ -473,12 +490,12 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		}
 	}
 
-	public synchronized boolean validateAccount(String Username) {
+	public boolean validateAccount(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
@@ -495,12 +512,12 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		return false;
 	}
 
-	private synchronized boolean deleteAccount(String Username) {
+	public boolean deleteAccount(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
@@ -521,12 +538,12 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 		return false;
 	}
 
-	private synchronized String getPlayerAccountInfo(String Username) {
+	private String getPlayerAccountInfo(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
@@ -595,13 +612,11 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	}
 
 	private FileLogger initUserLogger(String username) {
-
 		// Initialize User Logger
 		return new FileLogger(loggerPath + serverName + "/UserLogs/" + username + "/", username + ".log");
 	}
 
 	private FileLogger initAdminLogger(String username) {
-
 		// Initialize Admin Logger
 		return new FileLogger(loggerPath + serverName + "/AdminLogs/" + username + "/", username + ".log");
 	}
@@ -609,6 +624,5 @@ public class NorthAmericanServerImpl extends GameServerPOA {
 	@Override
 	public void shutdown() {
 		orb.shutdown(false);
-
 	}
 }

@@ -10,3 +10,34 @@ INFO: >>> Error >>> Invalid IP address
 Jun 12, 2020 10:00:59 PM Logger.FileLogger write
 INFO: >>> Error >>> Invalid IP address formate
 
+Jun 23, 2020 7:35:05 PM Logger.FileLogger write
+INFO: >>> Create Account
+
+Jun 23, 2020 7:35:07 PM Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Bruce123
+
+Jun 23, 2020 7:35:08 PM Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Bruce123
+
+Jun 23, 2020 7:35:10 PM Logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+
+Jun 23, 2020 7:35:11 PM Logger.FileLogger write
+INFO: >>> Create Account >>> username : Bruce123
+
+Jun 23, 2020 7:35:12 PM Logger.FileLogger write
+INFO: >>> Create Account >>> password : Bruce123
+
+Jun 23, 2020 7:35:15 PM Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 182.1.1.1
+
+Jun 23, 2020 7:35:15 PM Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jun 23, 2020 7:35:15 PM Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jun 25, 2020 12:20:14 PM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+

@@ -6,6 +6,7 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.omg.CORBA.ORB;
 
@@ -38,9 +39,12 @@ public class AsianServerImpl extends GameServerPOA {
 	static final int AS_PORT = 5003;
 	// Max Packet Size
 	static final int MAX_PACKET_SIZE = 1024;
+	
 	// Contains All Players information
-	static HashMap<String, ArrayList<HashMap<String, String>>> players = new HashMap<String, ArrayList<HashMap<String, String>>>();
-
+	static ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
+	
+	static HashMap<String, ArrayList<HashMap<String, String>>> transectionPlayers = new HashMap<String, ArrayList<HashMap<String, String>>>();
+	
 	protected AsianServerImpl() {
 		super();
 		// Initialize Server Logger
@@ -67,7 +71,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String createPlayerAccount(String FirstName, String LastName, int Age, String Username,
+	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username,
 			String Password, String IPAddress) {
 
 		this.logger.write(">>> createPlayerAccount");
@@ -81,7 +85,7 @@ public class AsianServerImpl extends GameServerPOA {
 		// Check if user already exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
 
@@ -118,7 +122,7 @@ public class AsianServerImpl extends GameServerPOA {
 		player.put("status", "offline");
 
 		// Adding Player into Player's List
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			playerList.add(player);
 		} else {
 			ArrayList<HashMap<String, String>> newPlayerList = new ArrayList<HashMap<String, String>>();
@@ -136,7 +140,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String playerSignIn(String Username, String Password, String IPAddress) {
+	public String playerSignIn(String Username, String Password, String IPAddress) {
 
 		String message = null;
 
@@ -147,14 +151,15 @@ public class AsianServerImpl extends GameServerPOA {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
+	
+		if (playerList != null && !playerList.isEmpty()) {
 
-		if (playerList != null) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
-
+				
 				// Account exists
 				if (player.get("username").equals(Username)) {
-
+					
 					// Account is valid and signed
 					if (player.get("password").equals(Password) && player.get("status").equals("offline")) {
 						// Update Account status
@@ -188,18 +193,19 @@ public class AsianServerImpl extends GameServerPOA {
 					message = "A player doesn't exixts with given username";
 				}
 			}
-
+			
 		} else {
 			this.logger.write(">>> playerSignIn >>> A player doesn't exixts with " + Username + " username");
 			message = "A player doesn't exixts with given username";
 		}
-
+		
+		this.logger.write(">>> playerSignIn >>> Final message >>>" +message);
 		return message;
 
 	}
 
 	@Override
-	public synchronized String playerSignOut(String Username, String IPAddress) {
+	public String playerSignOut(String Username, String IPAddress) {
 		String message = null;
 
 		this.logger.write(">>> playerSignOut");
@@ -209,7 +215,7 @@ public class AsianServerImpl extends GameServerPOA {
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
 
@@ -258,7 +264,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String transferAccount(String Username, String Password, String OldIPAddress,
+	public String transferAccount(String Username, String Password, String OldIPAddress,
 			String NewIPAddress) {
 		String message = null;
 
@@ -270,8 +276,10 @@ public class AsianServerImpl extends GameServerPOA {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
-
-		if (playerList != null) {
+		
+		System.out.println("\nplayerList: "+playerList+"\n");
+		
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
 
@@ -287,17 +295,31 @@ public class AsianServerImpl extends GameServerPOA {
 						}
 						// European IP
 						else if (NewIPAddress.split("\\.")[0].equals("93")) {
+							
+							System.out.println("\ntrasferring server to European Server\n");
 
 							String Data = getPlayerAccountInfo(Username);
 							String status = this.UDPServerTunnel("EU", "transferAccount", Data + NewIPAddress);
-
+							
+							System.out.println("\n transferAccount from EU status :"+status);
+							
 							if ("true".equals(status)) {
 								// Account is transfer
 								// Delete Account
 								if (this.deleteAccount(Username)) {
 									return "Account is succesfully transfered";
 								} else {
-									return "Something went wrong during account transfering";
+									
+									// Delete Account from remote server
+									status = UDPServerTunnel("EU","deleteTransferedAccount", Data+NewIPAddress);
+									String msg = "Something went wrong during account transfer rollback started...";
+									
+									if("true".equals(status)) {
+										msg = msg + "\nRollback successfully finshed...";
+									} else if("false".equals(status)) {
+										msg = msg + "\nRollback failed...";
+									}
+									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
@@ -306,7 +328,9 @@ public class AsianServerImpl extends GameServerPOA {
 						}
 						// North American IP
 						else if (NewIPAddress.split("\\.")[0].equals("132")) {
-
+							
+							System.out.println("\ntrasferring server to North American Server\n");
+							
 							String Data = getPlayerAccountInfo(Username);
 							String status = this.UDPServerTunnel("NA", "transferAccount", Data + NewIPAddress);
 
@@ -316,7 +340,15 @@ public class AsianServerImpl extends GameServerPOA {
 								if (this.deleteAccount(Username)) {
 									return "Account is succesfully transfered";
 								} else {
-									return "Something went wrong during account transfering";
+									// Delete Account from remote server
+									status = UDPServerTunnel("NA","deleteTransferedAccount", Data + NewIPAddress);
+									String msg = "Something went wrong during account transfer rollback started...";
+									if("true".equals(status)) {
+										msg = msg + "\nRollback successfully finshed...";
+									} else {
+										msg = msg + "\nRollback failed...";
+									}
+									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
@@ -352,7 +384,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
+	public String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
 
 		String AS = "";
 		String response = "";
@@ -360,7 +392,7 @@ public class AsianServerImpl extends GameServerPOA {
 		// Init User logs
 		this.adminLogger = initAdminLogger(AdminUsername);
 
-		this.logger.write(">>> getPlayerSsuspendAccounttatus");
+		this.logger.write(">>> getPlayerStatus");
 		this.logger.write(">>> getPlayerStatus >>> username >>> " + AdminUsername);
 		this.logger.write(">>> getPlayerStatus >>> password >>> " + AdminPassword);
 		this.logger.write(">>> getPlayerStatus >>> ipadddress >>> " + IPAddress);
@@ -404,7 +436,7 @@ public class AsianServerImpl extends GameServerPOA {
 		return response;
 	}
 
-	public synchronized String getOwnStatus() {
+	public String getOwnStatus() {
 
 		int online = 0, offline = 0;
 
@@ -425,7 +457,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public synchronized String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
+	public String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
 			String UsernameToSuspend) {
 
 		// Init Admin logs
@@ -473,12 +505,12 @@ public class AsianServerImpl extends GameServerPOA {
 		}
 	}
 
-	public synchronized boolean validateAccount(String Username) {
+	public boolean validateAccount(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
@@ -495,12 +527,12 @@ public class AsianServerImpl extends GameServerPOA {
 		return false;
 	}
 
-	private synchronized boolean deleteAccount(String Username) {
+	public boolean deleteAccount(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
@@ -521,12 +553,12 @@ public class AsianServerImpl extends GameServerPOA {
 		return false;
 	}
 
-	private synchronized String getPlayerAccountInfo(String Username) {
+	private String getPlayerAccountInfo(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
 
-		if (playerList != null) {
+		if (playerList != null && !playerList.isEmpty()) {
 
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
@@ -545,7 +577,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	private String UDPServerTunnel(String serverName, String methodName, String Data) {
-
+		
 		String response = "";
 		int UDP_PORT;
 
@@ -558,7 +590,7 @@ public class AsianServerImpl extends GameServerPOA {
 		} else {
 			return "Unknown server name";
 		}
-
+		
 		// UDP client
 		try {
 
@@ -573,6 +605,7 @@ public class AsianServerImpl extends GameServerPOA {
 
 			// Get status from Given Server
 			socket = new DatagramSocket();
+					
 			// Request Data
 			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, UDP_PORT);
 			socket.send(requestData);
@@ -610,5 +643,9 @@ public class AsianServerImpl extends GameServerPOA {
 	public void shutdown() {
 		orb.shutdown(false);
 
+	}
+	
+	public void startTransection() {
+		
 	}
 }
