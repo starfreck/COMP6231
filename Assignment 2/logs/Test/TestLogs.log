@@ -196,3 +196,30 @@ INFO: >>> Suspend Account >>> Sending request to Asia
 Jun 27, 2020 11:42:24 PM Logger.FileLogger write
 INFO: >>> Get Player Status >>> Sending request to Asia
 
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.1.1.1
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.1.1.1
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.1.1.1
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+

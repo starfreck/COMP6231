@@ -49,6 +49,7 @@ public class Test {
 
 	public static void main(String[] args) throws IOException, InterruptedException, InvalidName, NotFound, CannotProceed, org.omg.CosNaming.NamingContextPackage.InvalidName {
 
+		System.out.println(">>> Concurrency Test");
 		System.out.println("Case 1 : suspendAccount() will run first and then transferAccout()");
 		System.out.println("Case 2 : transferAccout() will run first and then suspendAccount()");
 		System.out.println("Case 3 : transferAccout() and suspendAccount() will run together");
@@ -63,6 +64,14 @@ public class Test {
 		String oldIPAddress = IPAddress;
 		String UsernameToSuspend = Username;
 
+		logger.write(">>> Concurrency Test >>> Username >>> " + Username);
+		logger.write(">>> Concurrency Test >>> Password >>> " + Password);
+		logger.write(">>> Concurrency Test >>> IPAddress >>> " + IPAddress);
+		logger.write(">>> Concurrency Test >>> newIPAddress >>> " + newIPAddress);
+		logger.write(">>> Concurrency Test >>> AdminPassword >>> " + AdminPassword);
+		logger.write(">>> Concurrency Test >>> oldIPAddress >>> " + oldIPAddress);
+		logger.write(">>> Concurrency Test >>> UsernameToSuspend >>> " + UsernameToSuspend);
+		
 		Test TestCase = new Test();
 		
 		Thread Thread1 = new Thread("Thread1") {
@@ -72,10 +81,11 @@ public class Test {
 					// calling transferAccount()
 					
 					if(Test.CHOICE == 1) {
+						logger.write(">>> Concurrency Test >>> transferAccount() >>> going to sleep 1 second");
 						sleep(1000);
 					}
-					
-					System.out.println("\nResult of transferAccount() : "+ TestCase.transferAccount(Username, Password, oldIPAddress, newIPAddress));
+					String status2 =  TestCase.transferAccount(Username, Password, oldIPAddress, newIPAddress);
+					System.out.println("\nResult of transferAccount() : "+ status2);
 				} catch (InvalidName | NotFound | CannotProceed
 						| org.omg.CosNaming.NamingContextPackage.InvalidName | InterruptedException e) {
 					e.printStackTrace();
@@ -92,10 +102,13 @@ public class Test {
 					// calling suspendAccount()
 					
 					if(Test.CHOICE == 2) {
+
+						logger.write(">>> Concurrency Test >>> suspendAccount() >>> going to sleep 1 second");
 						sleep(1000);
 					}
 					
-					System.out.println("\nResult of suspendAccount() :"+ TestCase.suspendAccount(AdminUsername, AdminPassword, IPAddress, UsernameToSuspend));
+					String status2 = TestCase.suspendAccount(AdminUsername, AdminPassword, IPAddress, UsernameToSuspend);
+					System.out.println("\nResult of suspendAccount() :"+ status2);
 				} catch (InvalidName | NotFound | CannotProceed
 						| org.omg.CosNaming.NamingContextPackage.InvalidName | InterruptedException e) {
 					e.printStackTrace();
@@ -109,7 +122,8 @@ public class Test {
 		Thread1.join();
 		Thread2.join();
 		
-		System.out.println("\nFinal State =>"+ TestCase.getPlayerStatus(AdminUsername, AdminPassword, IPAddress));
+		String status = TestCase.getPlayerStatus(AdminUsername, AdminPassword, IPAddress);
+		System.out.println("\nFinal State =>"+ status);
 		
 	}
 
@@ -137,12 +151,12 @@ public class Test {
 
 		String serverName = gameServers.get(IPAddress.split("\\.")[0]);
 
-		logger.write(">>> Get Player Status >>> Sending request to " + serverName);
+		logger.write(">>> Concurrency Test >>> Sending request to " + serverName);
 		// find the remote object and cast it to an interface object
 		GameServer server = getServerObj(serverName);
 
 		if (server == null) {
-			logger.write(">>> Get Player Status >>> Server not found");
+			logger.write(">>> Concurrency Test >>> Server not found");
 			return status;
 		}
 
@@ -221,6 +235,17 @@ public class Test {
 			} catch (Exception e) {
 				System.err.println("\nPlease input Integer only");
 			}
+			
+			if (choice > 3) {
+				System.err.println("\nPlease input valid choice");
+				inputError = true;
+			}
+			
+			if (choice < 1) {
+				System.err.println("\nPlease input valid choice");
+				inputError = true;
+			}
+			
 		} while (inputError);
 
 		return choice;
