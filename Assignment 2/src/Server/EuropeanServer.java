@@ -32,13 +32,11 @@ public class EuropeanServer {
 	// Orb Port
 	static final String ORB_PORT = "1050";
 	// Max Packet Size
-	static final int MAX_PACKET_SIZE = 10240;
+	static final int MAX_PACKET_SIZE = 1024;
 	// Logger Path
 	static final String loggerPath = "./logs/ServerLogs/";
 	// Initialize Server Logger
 	static FileLogger logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
-	// Server Args
-	static String[] ServerArgs;
 	// CORBA Server Var
 	static EuropeanServerImpl EuropeanServerObj;
 
@@ -155,6 +153,8 @@ public class EuropeanServer {
 								Integer.parseInt(accountInfo[4]), accountInfo[0], accountInfo[1], accountInfo[5]);
 						status = "true";
 					}
+					
+					logger.write(">>> transferAccountStatus >>> " + status);
 
 				} else if (reciveDataString.contains("deleteTransferedAccount")) {
 
@@ -169,10 +169,13 @@ public class EuropeanServer {
 						status = Boolean.toString(EuropeanServerObj.deleteAccount(Username));
 					} else {
 						// Account with Given Name is present
-						logger.write(">>> deleteTransferedAccount >>> Account with" + status + " username is not present");
+						logger.write(
+								">>> deleteTransferedAccount >>> Account with" + status + " username is not present");
 						status = "false";
 					}
-
+					
+					logger.write(">>> deleteTransferedAccountStatus >>> " + status);
+					
 				}
 
 				// Get Client's IP & Port
@@ -183,7 +186,6 @@ public class EuropeanServer {
 				responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
 				socket.send(responsePacket);
 				logger.write(">>> Sending response of UDP request");
-				// socket.close();
 
 			}
 		} catch (SocketException e) {

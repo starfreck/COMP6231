@@ -310,3 +310,21 @@ INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 3 offline
 Jun 27, 2020 2:50:58 AM Logger.FileLogger write
 INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 3 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
 
+Jun 27, 2020 3:28:01 PM Logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jun 27, 2020 3:28:02 PM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jun 27, 2020 3:28:02 PM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jun 27, 2020 3:28:02 PM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 93.1.1.1
+
+Jun 27, 2020 3:28:02 PM Logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Fabienne123
+
+Jun 27, 2020 3:28:02 PM Logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Fabienne123" username is suspended
+

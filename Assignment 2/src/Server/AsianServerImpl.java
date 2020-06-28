@@ -39,12 +39,9 @@ public class AsianServerImpl extends GameServerPOA {
 	static final int AS_PORT = 5003;
 	// Max Packet Size
 	static final int MAX_PACKET_SIZE = 1024;
-	
 	// Contains All Players information
 	static ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
-	
-	static HashMap<String, ArrayList<HashMap<String, String>>> transectionPlayers = new HashMap<String, ArrayList<HashMap<String, String>>>();
-	
+
 	protected AsianServerImpl() {
 		super();
 		// Initialize Server Logger
@@ -71,8 +68,8 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username,
-			String Password, String IPAddress) {
+	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
+			String IPAddress) {
 
 		this.logger.write(">>> createPlayerAccount");
 		this.logger.write(">>> createPlayerAccount >>> username >>> " + Username);
@@ -151,15 +148,14 @@ public class AsianServerImpl extends GameServerPOA {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
-	
-		if (playerList != null && !playerList.isEmpty()) {
 
+		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
-				
+
 				// Account exists
 				if (player.get("username").equals(Username)) {
-					
+
 					// Account is valid and signed
 					if (player.get("password").equals(Password) && player.get("status").equals("offline")) {
 						// Update Account status
@@ -193,13 +189,13 @@ public class AsianServerImpl extends GameServerPOA {
 					message = "A player doesn't exixts with given username";
 				}
 			}
-			
+
 		} else {
 			this.logger.write(">>> playerSignIn >>> A player doesn't exixts with " + Username + " username");
 			message = "A player doesn't exixts with given username";
 		}
-		
-		this.logger.write(">>> playerSignIn >>> Final message >>>" +message);
+
+		this.logger.write(">>> playerSignIn >>> Final message >>>" + message);
 		return message;
 
 	}
@@ -264,8 +260,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String transferAccount(String Username, String Password, String OldIPAddress,
-			String NewIPAddress) {
+	public String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
 		String message = null;
 
 		this.logger.write(">>> transferAccount");
@@ -276,9 +271,7 @@ public class AsianServerImpl extends GameServerPOA {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
-		
-		System.out.println("\nplayerList: "+playerList+"\n");
-		
+
 		if (playerList != null && !playerList.isEmpty()) {
 			// Find in list
 			for (HashMap<String, String> player : playerList) {
@@ -291,45 +284,47 @@ public class AsianServerImpl extends GameServerPOA {
 
 						// Asian IP
 						if (NewIPAddress.split("\\.")[0].equals("182")) {
+							this.logger.write(">>> transferAccount >>> New IPAdddress is Asian Server IP >>> Account is already in Asian Server");
 							return "Your Account is already in Asian Server";
 						}
 						// European IP
 						else if (NewIPAddress.split("\\.")[0].equals("93")) {
 							
-							System.out.println("\ntrasferring server to European Server\n");
-
+							this.logger.write(">>> transferAccount >>> New IPAdddress is European Server IP");
+							
 							String Data = getPlayerAccountInfo(Username);
 							String status = this.UDPServerTunnel("EU", "transferAccount", Data + NewIPAddress);
-							
-							System.out.println("\n transferAccount from EU status :"+status);
-							
+
 							if ("true".equals(status)) {
 								// Account is transfer
 								// Delete Account
 								if (this.deleteAccount(Username)) {
+									this.logger.write(">>> transferAccount >>> Account is succesfully transfered");
 									return "Account is succesfully transfered";
 								} else {
-									
+
 									// Delete Account from remote server
-									status = UDPServerTunnel("EU","deleteTransferedAccount", Data+NewIPAddress);
+									status = UDPServerTunnel("EU", "deleteTransferedAccount", Data + NewIPAddress);
 									String msg = "Something went wrong during account transfer rollback started...";
-									
-									if("true".equals(status)) {
+
+									if ("true".equals(status)) {
 										msg = msg + "\nRollback successfully finshed...";
-									} else if("false".equals(status)) {
+									} else if ("false".equals(status)) {
 										msg = msg + "\nRollback failed...";
 									}
+									this.logger.write(">>> transferAccount >>> "+msg);
 									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
+								this.logger.write(">>> transferAccount >>> Account with Given Name is already present on remote server");
 								return "Account with Given Name is already present on remote server";
 							}
 						}
 						// North American IP
 						else if (NewIPAddress.split("\\.")[0].equals("132")) {
 							
-							System.out.println("\ntrasferring server to North American Server\n");
+							this.logger.write(">>> transferAccount >>> New IPAdddress is North American Server IP");
 							
 							String Data = getPlayerAccountInfo(Username);
 							String status = this.UDPServerTunnel("NA", "transferAccount", Data + NewIPAddress);
@@ -338,20 +333,23 @@ public class AsianServerImpl extends GameServerPOA {
 								// Account is transfer
 								// Delete Account
 								if (this.deleteAccount(Username)) {
+									this.logger.write(">>> transferAccount >>> Account is succesfully transfered");
 									return "Account is succesfully transfered";
 								} else {
 									// Delete Account from remote server
-									status = UDPServerTunnel("NA","deleteTransferedAccount", Data + NewIPAddress);
+									status = UDPServerTunnel("NA", "deleteTransferedAccount", Data + NewIPAddress);
 									String msg = "Something went wrong during account transfer rollback started...";
-									if("true".equals(status)) {
+									if ("true".equals(status)) {
 										msg = msg + "\nRollback successfully finshed...";
 									} else {
 										msg = msg + "\nRollback failed...";
 									}
+									this.logger.write(">>> transferAccount >>> "+msg);
 									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
+								this.logger.write(">>> transferAccount >>> Account with Given Name is already present on remote server");
 								return "Account with Given Name is already present on remote server";
 							}
 						}
@@ -381,6 +379,7 @@ public class AsianServerImpl extends GameServerPOA {
 		}
 
 		return message;
+
 	}
 
 	@Override
@@ -414,7 +413,6 @@ public class AsianServerImpl extends GameServerPOA {
 			this.adminLogger.write(">>> getPlayerStatus >>> getOwnStatus >>> " + AS);
 
 			response = AS;
-
 		} else {
 
 			this.logger.write(">>> getPlayerStatus >>> Wrong username or password...");
@@ -577,7 +575,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	private String UDPServerTunnel(String serverName, String methodName, String Data) {
-		
+
 		String response = "";
 		int UDP_PORT;
 
@@ -590,7 +588,7 @@ public class AsianServerImpl extends GameServerPOA {
 		} else {
 			return "Unknown server name";
 		}
-		
+
 		// UDP client
 		try {
 
@@ -605,7 +603,7 @@ public class AsianServerImpl extends GameServerPOA {
 
 			// Get status from Given Server
 			socket = new DatagramSocket();
-					
+
 			// Request Data
 			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, UDP_PORT);
 			socket.send(requestData);
@@ -642,10 +640,5 @@ public class AsianServerImpl extends GameServerPOA {
 	@Override
 	public void shutdown() {
 		orb.shutdown(false);
-
-	}
-	
-	public void startTransection() {
-		
 	}
 }

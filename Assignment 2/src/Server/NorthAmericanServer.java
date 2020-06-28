@@ -37,8 +37,6 @@ public class NorthAmericanServer {
 	static final String loggerPath = "./logs/ServerLogs/";
 	// Initialize Server Logger
 	static FileLogger logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
-	// Server Args
-	static String[] ServerArgs;
 	// CORBA Server Var
 	static NorthAmericanServerImpl NorthAmericanServerObj;
 
@@ -156,6 +154,8 @@ public class NorthAmericanServer {
 						status = "true";
 					}
 
+					logger.write(">>> transferAccountStatus >>> " + status);
+					
 				} else if (reciveDataString.contains("deleteTransferedAccount")) {
 
 					logger.write(">>> Recived UDP request");
@@ -174,6 +174,8 @@ public class NorthAmericanServer {
 						status = "false";
 					}
 
+					logger.write(">>> deleteTransferedAccountStatus >>> " + status);
+					
 				}
 
 				// Get Client's IP & Port
@@ -184,7 +186,6 @@ public class NorthAmericanServer {
 				responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
 				socket.send(responsePacket);
 				logger.write(">>> Sending response of UDP request");
-				// socket.close();
 
 			}
 		} catch (SocketException e) {
@@ -207,5 +208,4 @@ public class NorthAmericanServer {
 
 		return orbarg;
 	}
-
 }

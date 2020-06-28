@@ -113,10 +113,10 @@ public class AsianServer {
 		String reciveDataString, status = "";
 
 		try {
-			
+
 			// Socket
 			socket = new DatagramSocket(AS_PORT);
-			
+
 			while (true) {
 
 				byte[] sendData = new byte[MAX_PACKET_SIZE];
@@ -125,7 +125,8 @@ public class AsianServer {
 				// Client Request Data
 				requestPacket = new DatagramPacket(reciveData, reciveData.length);
 				socket.receive(requestPacket);
-				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(), requestPacket.getLength());
+				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
+						requestPacket.getLength());
 
 				String data = reciveDataString.split(":", 2)[1];
 
@@ -152,9 +153,10 @@ public class AsianServer {
 								Integer.parseInt(accountInfo[4]), accountInfo[0], accountInfo[1], accountInfo[5]);
 						status = "true";
 					}
+					
+					logger.write(">>> transferAccountStatus >>> " + status);
 
 				} else if (reciveDataString.contains("deleteTransferedAccount")) {
-
 
 					logger.write(">>> Recived UDP request");
 
@@ -167,9 +169,12 @@ public class AsianServer {
 						status = Boolean.toString(AsianServerObj.deleteAccount(Username));
 					} else {
 						// Account with Given Name is present
-						logger.write(">>> deleteTransferedAccount >>> Account with" + status + " username is not present");
+						logger.write(
+								">>> deleteTransferedAccount >>> Account with" + status + " username is not present");
 						status = "false";
 					}
+					
+					logger.write(">>> deleteTransferedAccountStatus >>> " + status);					
 
 				}
 
@@ -181,7 +186,6 @@ public class AsianServer {
 				responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
 				socket.send(responsePacket);
 				logger.write(">>> Sending response of UDP request");
-				//socket.close();
 
 			}
 		} catch (SocketException e) {

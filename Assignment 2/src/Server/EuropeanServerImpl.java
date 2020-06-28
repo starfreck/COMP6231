@@ -68,8 +68,8 @@ public class EuropeanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username,
-			String Password, String IPAddress) {
+	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
+			String IPAddress) {
 
 		this.logger.write(">>> createPlayerAccount");
 		this.logger.write(">>> createPlayerAccount >>> username >>> " + Username);
@@ -127,6 +127,7 @@ public class EuropeanServerImpl extends GameServerPOA {
 			players.put(Username.substring(0, 1).toUpperCase(), newPlayerList);
 		}
 
+		// Update player count
 		accountCount = accountCount + 1;
 
 		this.logger.write(">>> createPlayerAccount >>> User information stored");
@@ -194,6 +195,7 @@ public class EuropeanServerImpl extends GameServerPOA {
 			message = "A player doesn't exixts with given username";
 		}
 
+		this.logger.write(">>> playerSignIn >>> Final message >>>" + message);
 		return message;
 
 	}
@@ -258,8 +260,7 @@ public class EuropeanServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String transferAccount(String Username, String Password, String OldIPAddress,
-			String NewIPAddress) {
+	public String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
 		String message = null;
 
 		this.logger.write(">>> transferAccount");
@@ -283,6 +284,8 @@ public class EuropeanServerImpl extends GameServerPOA {
 
 						// Asian IP
 						if (NewIPAddress.split("\\.")[0].equals("182")) {
+
+							this.logger.write(">>> transferAccount >>> New IP is for an Asian Server");
 							
 							String Data = getPlayerAccountInfo(Username);
 							String status = this.UDPServerTunnel("AS", "transferAccount", Data + NewIPAddress);
@@ -291,31 +294,38 @@ public class EuropeanServerImpl extends GameServerPOA {
 								// Account is transfer
 								// Delete Account
 								if (this.deleteAccount(Username)) {
+									this.logger.write(">>> transferAccount >>> Account is succesfully transfered");
 									return "Account is succesfully transfered";
 								} else {
+
 									// Delete Account from remote server
-									status = UDPServerTunnel("AS","deleteTransferedAccount", Data);
+									status = UDPServerTunnel("AS", "deleteTransferedAccount", Data);
 									String msg = "Something went wrong during account transfer rollback started...";
-									if("true".equals(status)) {
+
+									if ("true".equals(status)) {
 										msg = msg + "\nRollback successfully finshed...";
-									} else {
+									} else if ("false".equals(status)) {
 										msg = msg + "\nRollback failed...";
 									}
+									this.logger.write(">>> transferAccount >>> "+msg);
 									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
+								this.logger.write(">>> transferAccount >>> Account with Given Name is already present on remote server");
 								return "Account with Given Name is already present on remote server";
 							}
 						}
 						// European IP
 						else if (NewIPAddress.split("\\.")[0].equals("93")) {
-
+							this.logger.write(">>> transferAccount >>> Your Account is already in European Server");
 							return "Your Account is already in European Server";
 						}
 						// North American IP
 						else if (NewIPAddress.split("\\.")[0].equals("132")) {
 
+							this.logger.write(">>> transferAccount >>> New IP in a North American Server");
+							
 							String Data = getPlayerAccountInfo(Username);
 							String status = this.UDPServerTunnel("NA", "transferAccount", Data + NewIPAddress);
 
@@ -323,24 +333,27 @@ public class EuropeanServerImpl extends GameServerPOA {
 								// Account is transfer
 								// Delete Account
 								if (this.deleteAccount(Username)) {
+									this.logger.write(">>> transferAccount >>> Account is succesfully transfered");
 									return "Account is succesfully transfered";
 								} else {
 									// Delete Account from remote server
-									status = UDPServerTunnel("NA","deleteTransferedAccount", Data);
+									status = UDPServerTunnel("NA", "deleteTransferedAccount", Data);
 									String msg = "Something went wrong during account transfer rollback started...";
-									if("true".equals(status)) {
+									if ("true".equals(status)) {
 										msg = msg + "\nRollback successfully finshed...";
 									} else {
 										msg = msg + "\nRollback failed...";
 									}
+									this.logger.write(">>> transferAccount >>> "+msg);
 									return msg;
 								}
 							} else if ("false".equals(status)) {
 								// Account with Given Name is already present on Remote server
+								this.logger.write(">>> transferAccount >>> Account with Given Name is already present on remote server");
 								return "Account with Given Name is already present on remote server";
 							}
 						}
-
+						this.logger.write(">>> transferAccount >>> New IP Address is invalid");
 						return "New IP Address is invalid";
 
 					} else {
@@ -400,7 +413,6 @@ public class EuropeanServerImpl extends GameServerPOA {
 			this.adminLogger.write(">>> getPlayerStatus >>> getOwnStatus >>> " + EU);
 
 			response = EU;
-
 		} else {
 
 			this.logger.write(">>> getPlayerStatus >>> Wrong username or password...");
@@ -591,6 +603,7 @@ public class EuropeanServerImpl extends GameServerPOA {
 
 			// Get status from Given Server
 			socket = new DatagramSocket();
+
 			// Request Data
 			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, UDP_PORT);
 			socket.send(requestData);
@@ -627,6 +640,5 @@ public class EuropeanServerImpl extends GameServerPOA {
 	@Override
 	public void shutdown() {
 		orb.shutdown(false);
-
 	}
 }

@@ -1306,3 +1306,153 @@ Jun 27, 2020 12:00:26 AM Logger.FileLogger write
 INFO: >>> Get Status >>> Response >>> 
 EU: 0 online, 6 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
 
+Jun 27, 2020 3:27:14 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 27, 2020 3:27:21 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 27, 2020 3:27:21 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 27, 2020 3:27:21 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jun 27, 2020 3:27:21 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 27, 2020 3:27:21 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 3:27:21 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 2 offline, EU: 0 online, 6 offline, NA: 0 online, 5 offline.
+
+Jun 27, 2020 3:27:30 PM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 27, 2020 3:28:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Jun 27, 2020 3:28:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Jun 27, 2020 3:28:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 93.1.1.1
+
+Jun 27, 2020 3:28:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Fabienne123
+
+Jun 27, 2020 3:28:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 27, 2020 3:28:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 27, 2020 3:28:02 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Fabienne123" username is suspended
+
+Jun 27, 2020 3:29:28 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 27, 2020 3:29:37 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 27, 2020 3:29:37 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 27, 2020 3:29:37 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.1.1.1
+
+Jun 27, 2020 3:29:37 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 27, 2020 3:29:37 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to NorthAmerica
+
+Jun 27, 2020 3:29:37 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 1 online, 5 offline, EU: 0 online, 4 offline, AS: 0 online, 2 offline.
+
+Jun 27, 2020 4:29:06 PM Logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Jun 27, 2020 4:29:06 PM Logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Jun 27, 2020 4:29:06 PM Logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Jun 27, 2020 11:36:30 PM Logger.FileLogger write
+INFO: >>> Get Status
+
+Jun 27, 2020 11:36:49 PM Logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jun 27, 2020 11:36:49 PM Logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jun 27, 2020 11:36:49 PM Logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.11.1.1
+
+Jun 27, 2020 11:36:49 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jun 27, 2020 11:36:49 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 11:36:49 PM Logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jun 27, 2020 11:36:59 PM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 27, 2020 11:37:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Varun123
+
+Jun 27, 2020 11:37:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Varun123
+
+Jun 27, 2020 11:37:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1
+
+Jun 27, 2020 11:37:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Jun 27, 2020 11:37:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 27, 2020 11:37:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 11:37:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Jun 27, 2020 11:37:38 PM Logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jun 27, 2020 11:37:54 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Jun 27, 2020 11:37:54 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Jun 27, 2020 11:37:54 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1
+
+Jun 27, 2020 11:37:54 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Jun 27, 2020 11:37:54 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jun 27, 2020 11:37:54 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 11:37:54 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Varun123" username is suspended
+
