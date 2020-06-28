@@ -68,7 +68,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
+	public synchronized String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
 			String IPAddress) {
 
 		this.logger.write(">>> createPlayerAccount");
@@ -137,7 +137,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String playerSignIn(String Username, String Password, String IPAddress) {
+	public synchronized String playerSignIn(String Username, String Password, String IPAddress) {
 
 		String message = null;
 
@@ -201,7 +201,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String playerSignOut(String Username, String IPAddress) {
+	public synchronized String playerSignOut(String Username, String IPAddress) {
 		String message = null;
 
 		this.logger.write(">>> playerSignOut");
@@ -260,7 +260,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
+	public synchronized String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
 		String message = null;
 
 		this.logger.write(">>> transferAccount");
@@ -383,7 +383,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
+	public synchronized String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
 
 		String AS = "";
 		String response = "";
@@ -434,7 +434,7 @@ public class AsianServerImpl extends GameServerPOA {
 		return response;
 	}
 
-	public String getOwnStatus() {
+	public synchronized String getOwnStatus() {
 
 		int online = 0, offline = 0;
 
@@ -455,7 +455,7 @@ public class AsianServerImpl extends GameServerPOA {
 	}
 
 	@Override
-	public String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
+	public synchronized String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress,
 			String UsernameToSuspend) {
 
 		// Init Admin logs
@@ -503,7 +503,7 @@ public class AsianServerImpl extends GameServerPOA {
 		}
 	}
 
-	public boolean validateAccount(String Username) {
+	public synchronized boolean validateAccount(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
@@ -525,7 +525,7 @@ public class AsianServerImpl extends GameServerPOA {
 		return false;
 	}
 
-	public boolean deleteAccount(String Username) {
+	public synchronized boolean deleteAccount(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
@@ -551,7 +551,7 @@ public class AsianServerImpl extends GameServerPOA {
 		return false;
 	}
 
-	private String getPlayerAccountInfo(String Username) {
+	private synchronized String getPlayerAccountInfo(String Username) {
 
 		// Check if user exist
 		ArrayList<HashMap<String, String>> playerList = players.get(Username.substring(0, 1).toUpperCase());
