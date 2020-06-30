@@ -41,3 +41,62 @@ New player account created successfully
 Jun 25, 2020 12:20:14 PM Logger.FileLogger write
 INFO: >>> Error >>> Invalid IP address formate
 
+Jun 28, 2020 10:16:02 PM Logger.FileLogger write
+INFO: >>> Create Account
+
+Jun 28, 2020 10:17:12 PM Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Mark
+
+Jun 28, 2020 10:17:37 PM Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Zuckerberg
+
+Jun 28, 2020 10:18:25 PM Logger.FileLogger write
+INFO: >>> Create Account >>> age : 36
+
+Jun 28, 2020 10:19:09 PM Logger.FileLogger write
+INFO: >>> Create Account >>> username : markzuckerberg
+
+Jun 28, 2020 10:19:19 PM Logger.FileLogger write
+INFO: >>> Create Account >>> password : mark123
+
+Jun 28, 2020 10:19:25 PM Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 132.56.1.78
+
+Jun 28, 2020 10:19:25 PM Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jun 28, 2020 10:19:25 PM Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jun 29, 2020 2:45:45 AM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Jun 29, 2020 3:08:24 AM Logger.FileLogger write
+INFO: >>> Create Account
+
+Jun 29, 2020 3:08:27 AM Logger.FileLogger write
+INFO: >>> Create Account >>> firstname : dfd
+
+Jun 29, 2020 3:08:29 AM Logger.FileLogger write
+INFO: >>> Create Account >>> lastname : ds
+
+Jun 29, 2020 3:08:35 AM Logger.FileLogger write
+INFO: >>> Create Account >>> age : 34
+
+Jun 29, 2020 3:08:40 AM Logger.FileLogger write
+INFO: >>> Create Account >>> username : vxvvxcv
+
+Jun 29, 2020 3:08:45 AM Logger.FileLogger write
+INFO: >>> Create Account >>> password : dfdsfdfdf
+
+Jun 29, 2020 3:08:54 AM Logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 93.34.56.2
+
+Jun 29, 2020 3:08:54 AM Logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jun 29, 2020 3:08:55 AM Logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
