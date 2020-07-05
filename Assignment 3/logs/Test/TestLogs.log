@@ -1,0 +1,30 @@
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.45.6.1
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.56.2.1
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.45.6.1
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jul 04, 2020 10:25:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> transferAccount() >>> going to sleep 1 second
+
+Jul 04, 2020 10:26:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+

@@ -22,8 +22,10 @@ public class AsianServer {
 	static final int NA_PORT = 5001;
 	static final int EU_PORT = 5002;
 	static final int AS_PORT = 5003;
-	// Orb Port
-	static final String WS_PORT = "8081";
+	// Web Service Ports
+	static final String AS_WS_PORT = "8081";
+	static final String EU_WS_PORT = "8082";
+	static final String NA_WS_PORT = "8083";
 	// Max Packet Size
 	static final int MAX_PACKET_SIZE = 1024;
 	// Logger Path
@@ -36,9 +38,14 @@ public class AsianServer {
 	public static void main(String[] args) {
 
 		AsianServerObj = new AsianServerImpl();
-		Endpoint endpoint = Endpoint.publish("http://localhost:" + WS_PORT + "/" + registryURL, AsianServerObj);
-		System.out.println(serverName + " ready and waiting ...");
-
+		Endpoint endpoint = Endpoint.publish("http://localhost:" + AS_WS_PORT + "/" + registryURL, AsianServerObj);
+		
+		if(endpoint.isPublished()) {
+			System.out.println(serverName + " ready and waiting ...");
+		} else {
+			System.out.println(serverName + " isn't ready ...");
+		}
+		
 		// UDP server
 		DatagramSocket socket;
 		DatagramPacket requestPacket;
