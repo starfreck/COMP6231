@@ -1,0 +1,34 @@
+Jul 08, 2020 12:55:43 AM logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jul 08, 2020 1:17:33 AM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 08, 2020 1:18:08 AM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Anqi
+
+Jul 08, 2020 1:18:18 AM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Wang
+
+Jul 08, 2020 1:20:14 AM logger.FileLogger write
+INFO: >>> Create Account >>> age : 0
+
+Jul 08, 2020 1:20:22 AM logger.FileLogger write
+INFO: >>> Create Account >>> username : anqiwang
+
+Jul 08, 2020 1:20:33 AM logger.FileLogger write
+INFO: >>> Create Account >>> password : anqi123
+
+Jul 08, 2020 1:20:41 AM logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jul 08, 2020 1:20:46 AM logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 182.45.23.1
+
+Jul 08, 2020 1:20:46 AM logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jul 08, 2020 1:20:46 AM logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+

@@ -1,0 +1,21 @@
+Jul 08, 2020 4:34:27 PM logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jul 08, 2020 4:34:27 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jul 08, 2020 4:34:27 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jul 08, 2020 4:34:27 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.5.4.2
+
+Jul 08, 2020 4:34:27 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jul 08, 2020 4:34:27 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 5 offline
+
+Jul 08, 2020 4:34:27 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
