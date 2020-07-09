@@ -1,0 +1,84 @@
+Jul 08, 2020 11:51:05 PM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 08, 2020 11:51:07 PM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : dfsdf
+
+Jul 08, 2020 11:51:08 PM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : dfsd
+
+Jul 08, 2020 11:51:10 PM logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+
+Jul 08, 2020 11:51:14 PM logger.FileLogger write
+INFO: >>> Create Account >>> username : 123456
+
+Jul 08, 2020 11:51:17 PM logger.FileLogger write
+INFO: >>> Create Account >>> password : 123456
+
+Jul 08, 2020 11:51:24 PM logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 93.24.56.33
+
+Jul 08, 2020 11:51:24 PM logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jul 08, 2020 11:51:25 PM logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jul 08, 2020 11:51:29 PM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 08, 2020 11:51:31 PM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : fgfdsg
+
+Jul 08, 2020 11:51:33 PM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : sdfsdf
+
+Jul 08, 2020 11:51:34 PM logger.FileLogger write
+INFO: >>> Create Account >>> age : 56
+
+Jul 08, 2020 11:51:38 PM logger.FileLogger write
+INFO: >>> Create Account >>> username : 876543
+
+Jul 08, 2020 11:51:41 PM logger.FileLogger write
+INFO: >>> Create Account >>> password : 576764
+
+Jul 08, 2020 11:51:46 PM logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 182.56.5.4
+
+Jul 08, 2020 11:51:46 PM logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jul 08, 2020 11:51:46 PM logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jul 08, 2020 11:51:48 PM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 08, 2020 11:51:49 PM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : dgsg
+
+Jul 08, 2020 11:51:50 PM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : dfhgfh
+
+Jul 08, 2020 11:51:51 PM logger.FileLogger write
+INFO: >>> Create Account >>> age : 67
+
+Jul 08, 2020 11:51:57 PM logger.FileLogger write
+INFO: >>> Create Account >>> username : 877444
+
+Jul 08, 2020 11:52:00 PM logger.FileLogger write
+INFO: >>> Create Account >>> password : 555555
+
+Jul 08, 2020 11:52:07 PM logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 132.56.4.3
+
+Jul 08, 2020 11:52:07 PM logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jul 08, 2020 11:52:07 PM logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+

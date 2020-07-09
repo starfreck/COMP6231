@@ -1,0 +1,88 @@
+Jul 08, 2020 11:49:34 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 08, 2020 11:49:43 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jul 08, 2020 11:49:43 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jul 08, 2020 11:49:43 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.45.3.3
+
+Jul 08, 2020 11:49:43 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 08, 2020 11:49:43 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jul 08, 2020 11:49:43 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jul 08, 2020 11:49:48 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 08, 2020 11:50:02 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jul 08, 2020 11:50:02 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jul 08, 2020 11:50:02 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.56.3.5
+
+Jul 08, 2020 11:50:02 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 08, 2020 11:50:02 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jul 08, 2020 11:50:02 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jul 08, 2020 11:50:06 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 08, 2020 11:50:25 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jul 08, 2020 11:50:25 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jul 08, 2020 11:50:25 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.56.3.33
+
+Jul 08, 2020 11:50:25 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 08, 2020 11:50:25 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to NorthAmerica
+
+Jul 08, 2020 11:50:25 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Jul 08, 2020 11:52:18 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 08, 2020 11:52:26 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jul 08, 2020 11:52:26 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jul 08, 2020 11:52:26 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.4.3.3
+
+Jul 08, 2020 11:52:26 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 08, 2020 11:52:26 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jul 08, 2020 11:52:26 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 6 offline, EU: 0 online, 6 offline, NA: 0 online, 6 offline.
+
