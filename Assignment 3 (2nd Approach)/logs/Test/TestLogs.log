@@ -1,0 +1,114 @@
+Jul 08, 2020 6:20:22 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jul 08, 2020 6:20:22 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jul 08, 2020 6:20:22 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.34.5.2
+
+Jul 08, 2020 6:20:22 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 132.45.3.2
+
+Jul 08, 2020 6:20:22 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.34.5.2
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> transferAccount() >>> going to sleep 1 second
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Kevin123
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Kevin123
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.45.3.6
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 132.5.4.7
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.45.3.6
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Kevin123
+
+Jul 08, 2020 6:22:05 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> suspendAccount() >>> going to sleep 1 second
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Kevin123
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Kevin123
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 132.56.4.1
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.2.5.3
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 132.56.4.1
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Kevin123
+
+Jul 08, 2020 6:45:19 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to NorthAmerica
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to NorthAmerica
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.54.4.23
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.5.6.3
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.54.4.23
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jul 08, 2020 6:48:47 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+

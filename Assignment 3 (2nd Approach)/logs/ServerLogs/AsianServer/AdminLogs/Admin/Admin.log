@@ -130,3 +130,159 @@ INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 3 offline
 Jul 08, 2020 4:36:51 PM logger.FileLogger write
 INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 3 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
 
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.56.3.2
+
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 6 offline
+
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 6 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 182.5.3.3
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Vasu1997
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Vasu1997" username is suspended
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 182.34.5.2
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Varun123
+
+Jul 08, 2020 6:20:23 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Varun123" username is suspended
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.34.5.2
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 4 offline
+
+Jul 08, 2020 6:20:24 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 182.45.3.6
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Kevin123
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> A player doesn't exixts with Kevin123 username
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.45.3.6
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 3 offline
+
+Jul 08, 2020 6:22:06 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 3 offline, EU: 0 online, 5 offline, NA: 0 online, 6 offline.
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 182.54.4.23
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Varun123
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Varun123" username is suspended
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.54.4.23
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 4 offline
+
+Jul 08, 2020 6:48:48 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+

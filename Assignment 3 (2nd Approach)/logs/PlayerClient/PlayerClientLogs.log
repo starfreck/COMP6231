@@ -32,3 +32,58 @@ Jul 08, 2020 1:20:46 AM logger.FileLogger write
 INFO: >>> Create Account >>> Respone from remote method >>> 
 New player account created successfully
 
+Jul 08, 2020 5:46:19 PM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 08, 2020 5:46:23 PM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Vasu
+
+Jul 08, 2020 5:46:26 PM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Ratanpara
+
+Jul 08, 2020 5:46:29 PM logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+
+Jul 08, 2020 5:46:36 PM logger.FileLogger write
+INFO: >>> Create Account >>> username : Vasu1997
+
+Jul 08, 2020 5:46:42 PM logger.FileLogger write
+INFO: >>> Create Account >>> password : Vasu1997
+
+Jul 08, 2020 5:46:49 PM logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 93.34.4.2
+
+Jul 08, 2020 5:46:49 PM logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jul 08, 2020 5:46:49 PM logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jul 08, 2020 5:57:58 PM logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Jul 08, 2020 6:50:24 PM logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jul 08, 2020 6:51:37 PM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 08, 2020 6:51:48 PM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Kim
+
+Jul 08, 2020 6:51:55 PM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : John
+
+Jul 08, 2020 6:52:15 PM logger.FileLogger write
+INFO: >>> Create Account >>> age : 25
+
+Jul 08, 2020 6:52:44 PM logger.FileLogger write
+INFO: >>> Create Account >>> username : KimJohn
+
+Jul 08, 2020 6:53:03 PM logger.FileLogger write
+INFO: >>> Create Account >>> password : KimJohn
+
+Jul 08, 2020 7:08:36 PM logger.FileLogger write
+INFO: >>> Create Account >>> Error >>> java.util.NoSuchElementException: No line found
+

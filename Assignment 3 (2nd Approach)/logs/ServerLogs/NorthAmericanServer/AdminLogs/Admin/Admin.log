@@ -19,3 +19,42 @@ INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
 Jul 08, 2020 4:35:56 PM logger.FileLogger write
 INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
 
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> suspendAccount
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 132.56.4.1
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Kevin123
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Kevin123" username is suspended
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> getPlayerStatus
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.56.4.1
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Jul 08, 2020 6:45:20 PM logger.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 3 offline.
+

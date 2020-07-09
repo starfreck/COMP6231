@@ -160,3 +160,56 @@ AS: 0 online, 3 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
 Jul 08, 2020 4:53:11 PM logger.FileLogger write
 INFO: >>> inputChoice >>> Please input Integer only
 
+Jul 08, 2020 6:11:58 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 08, 2020 6:12:07 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jul 08, 2020 6:12:07 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jul 08, 2020 6:12:07 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.56.3.2
+
+Jul 08, 2020 6:12:07 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 08, 2020 6:12:07 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jul 08, 2020 6:12:08 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 6 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jul 08, 2020 6:15:14 PM logger.FileLogger write
+INFO: >>> Suspend Account
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.5.3.3
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Vasu1997
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jul 08, 2020 6:15:30 PM logger.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Vasu1997" username is suspended
+
+Jul 08, 2020 6:47:58 PM logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Jul 08, 2020 6:47:58 PM logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
