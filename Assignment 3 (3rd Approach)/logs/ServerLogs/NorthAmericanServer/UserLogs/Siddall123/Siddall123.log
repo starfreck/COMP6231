@@ -22,3 +22,75 @@ INFO: >>> createPlayerAccount >>> ipadddress >>> 132.34.2.1
 Jul 08, 2020 11:45:11 PM logger.FileLogger write
 INFO: >>> createPlayerAccount >>> User information stored
 
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Siddall123
+
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Agnes
+
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Siddall
+
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Siddall123
+
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 132.34.2.1
+
+Jul 10, 2020 6:37:45 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Siddall123
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Agnes
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Siddall
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Siddall123
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 132.34.2.1
+
+Jul 10, 2020 11:28:18 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Siddall123
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Agnes
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Siddall
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Siddall123
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 132.34.2.1
+
+Jul 11, 2020 6:23:21 PM logger.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+

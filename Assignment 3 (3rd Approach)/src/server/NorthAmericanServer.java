@@ -31,7 +31,7 @@ public class NorthAmericanServer {
 	static final String loggerPath = "./logs/ServerLogs/";
 	// Initialize Server Logger
 	static FileLogger logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
-	// CORBA Server Var
+	// Server Var
 	static NorthAmericanServerImpl NorthAmericanServerObj;
 
 	public static void main(String[] args) {

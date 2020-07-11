@@ -86,3 +86,72 @@ Jul 08, 2020 11:52:26 PM logger.FileLogger write
 INFO: >>> Get Status >>> Response >>> 
 AS: 0 online, 6 offline, EU: 0 online, 6 offline, NA: 0 online, 6 offline.
 
+Jul 10, 2020 11:29:21 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 10, 2020 11:29:29 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jul 10, 2020 11:29:29 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jul 10, 2020 11:29:29 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.56.3.2
+
+Jul 10, 2020 11:29:29 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 10, 2020 11:29:29 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jul 10, 2020 11:29:30 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 6 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Jul 10, 2020 11:31:12 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 10, 2020 11:31:22 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  aDMIN
+
+Jul 10, 2020 11:31:22 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> SFDAS
+
+Jul 10, 2020 11:31:22 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jul 10, 2020 11:31:22 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 10, 2020 11:31:22 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jul 10, 2020 11:31:22 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+Wrong username or password...
+
+Jul 10, 2020 11:31:24 PM logger.FileLogger write
+INFO: >>> Get Status
+
+Jul 10, 2020 11:31:52 PM logger.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Jul 10, 2020 11:31:52 PM logger.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Jul 10, 2020 11:31:52 PM logger.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.1.1.1
+
+Jul 10, 2020 11:31:52 PM logger.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Jul 10, 2020 11:31:52 PM logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jul 10, 2020 11:31:52 PM logger.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 6 offline, EU: 0 online, 6 offline, NA: 0 online, 5 offline.
+
+Jul 11, 2020 2:25:09 AM logger.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+

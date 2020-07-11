@@ -82,3 +82,59 @@ Jul 08, 2020 11:52:07 PM logger.FileLogger write
 INFO: >>> Create Account >>> Respone from remote method >>> 
 New player account created successfully
 
+Jul 10, 2020 11:28:32 PM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 10, 2020 11:28:34 PM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : Appple
+
+Jul 10, 2020 11:28:40 PM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : Apple
+
+Jul 10, 2020 11:28:42 PM logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+
+Jul 10, 2020 11:29:01 PM logger.FileLogger write
+INFO: >>> Create Account >>> username : apple123
+
+Jul 10, 2020 11:29:05 PM logger.FileLogger write
+INFO: >>> Create Account >>> password : apple123
+
+Jul 10, 2020 11:29:11 PM logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 182.45.2.1
+
+Jul 10, 2020 11:29:11 PM logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jul 10, 2020 11:29:12 PM logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
+Jul 10, 2020 11:30:39 PM logger.FileLogger write
+INFO: >>> Create Account
+
+Jul 10, 2020 11:30:42 PM logger.FileLogger write
+INFO: >>> Create Account >>> firstname : applw
+
+Jul 10, 2020 11:30:44 PM logger.FileLogger write
+INFO: >>> Create Account >>> lastname : apple
+
+Jul 10, 2020 11:30:46 PM logger.FileLogger write
+INFO: >>> Create Account >>> age : 23
+
+Jul 10, 2020 11:30:50 PM logger.FileLogger write
+INFO: >>> Create Account >>> username : apple123
+
+Jul 10, 2020 11:30:53 PM logger.FileLogger write
+INFO: >>> Create Account >>> password : apple123
+
+Jul 10, 2020 11:30:58 PM logger.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 182.4.1.1
+
+Jul 10, 2020 11:30:58 PM logger.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Jul 10, 2020 11:30:58 PM logger.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+
