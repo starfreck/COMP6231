@@ -19,6 +19,8 @@ import Utilities.Ports;
 public class FrontEndImpl extends FrontEndPOA{
 	
 	private ORB orb;
+	//
+	static int LE_PORT;
 	// CORBA Var
 	static FrontEndImpl FrontEndObj;
 	// Registry URL
@@ -142,7 +144,9 @@ public class FrontEndImpl extends FrontEndPOA{
 	
 	public static void main(String[] args) throws InterruptedException, IOException {
 
-		ORB orb = ORB.init(FrontEndImpl.getConfig(), null);
+		FrontEndImpl.LE_PORT = Integer.parseInt(args[5]);
+		
+		ORB orb = ORB.init(getConfig(), null);
 		
 		// Run CORBA FrontEnd Server
 		Thread threadOne = new Thread(new Runnable() {
@@ -192,13 +196,14 @@ public class FrontEndImpl extends FrontEndPOA{
 
 	static String[] getConfig() throws IOException {
 
-		String[] orbarg = new String[4];
+		String[] orbarg = new String[5];
 
 		// Creating args array for ORB.init()
 		orbarg[0] = "-ORBInitialPort";
 		orbarg[1] = ORB_PORT;
 		orbarg[2] = "-ORBInitialHost";
 		orbarg[3] = "localhost";
+		orbarg[4] = String.valueOf(Ports.R1_PORT);
 
 		return orbarg;
 	}
@@ -225,7 +230,7 @@ public class FrontEndImpl extends FrontEndPOA{
 			socket = new DatagramSocket();
 
 			// Request Data
-			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, Ports.R1_PORT);
+			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, LE_PORT);
 			socket.send(requestData);
 
 			// Response Data

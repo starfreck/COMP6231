@@ -27,13 +27,13 @@ public class AsianServerImpl {
 	FileLogger userLogger;
 	FileLogger adminLogger;
 	// Logger Path
-	static final String loggerPath = "./logs/ServerLogs/";
+	String loggerPath = "./logs/ServerLogs/";
 	// UDP Server Ports
 	int AS_PORT;
 	int EU_PORT;
 	int NA_PORT;
 	// Contains All Players information
-	static ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
+	ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
 	
 	public AsianServerImpl(int AS_PORT, int EU_PORT, int NA_PORT) throws InterruptedException {
 		
@@ -754,7 +754,9 @@ public class AsianServerImpl {
 			String AdminUsername  		= data.split("\\|")[1];
 			String AdminPassword  		= data.split("\\|")[2];
 			String UsernameToSuspend  	= data.split("\\|")[3];
-	
+			
+			System.out.println("\n"+UsernameToSuspend);
+			
 			response = suspendAccount(AdminUsername, AdminPassword, AdminIPAddress, UsernameToSuspend);
 		}
 		

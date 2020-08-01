@@ -115,9 +115,10 @@ public class Replica {
 					status = replicaActions(methodName, data);
 					
 					// Create an array of random Strings
-					String[] randomResponse = {status, "Something went wrong with the server !"};
-					
-					status = randomResponse[new Random().nextInt(randomResponse.length)];
+					if(RE_PORT == Ports.R3_PORT){
+						String[] randomResponse = {status, "Something went wrong with the server !"};
+						status = randomResponse[new Random().nextInt(randomResponse.length)];
+					}
 				}
 				
 				// Get Client's IP & Port
@@ -140,56 +141,76 @@ public class Replica {
 	public String leaderActions(String methodName, String data) {
 		
 		String response = "";
-		String RMRequestData;
+		String RMRequestData = "";
+		String R1Response = "",R2Response = "",R3Response = "";
+		
 		String ClientIPAddress  = data.split("\\|")[0];
 		
 		// 1. Send the message to Server via UDP
-		String R1Response = UDPServerTunnel(ClientIPAddress, methodName+"Leader", data);
+		R1Response = UDPServerTunnel(ClientIPAddress, methodName+"Leader", data);
 		System.out.println("R1Response: "+R1Response);
 		
 		// 2. Send Message to Other Replicas via UDP FIFO & take the majority and send the result to client
-		String R2Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);
-		System.out.println("R2Response: "+R2Response);
-		String R3Response = sendMessageToReplica(Ports.R3_PORT, methodName, data);
-		System.out.println("R3Response: "+R3Response);
+		if(RE_PORT == Ports.R1_PORT) {
+			
+			R2Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);
+			System.out.println("R2Response: "+R2Response);
+			R3Response = sendMessageToReplica(Ports.R3_PORT, methodName, data);
+			System.out.println("R3Response: "+R3Response);
+		} else if(RE_PORT == Ports.R2_PORT) {
+			
+			R2Response = sendMessageToReplica(Ports.R1_PORT, methodName, data);
+			System.out.println("R2Response: "+R2Response);
+			R3Response = sendMessageToReplica(Ports.R3_PORT, methodName, data);
+			System.out.println("R3Response: "+R3Response);
+		
+		} else if(RE_PORT == Ports.R3_PORT) {
+			
+			R2Response = sendMessageToReplica(Ports.R1_PORT, methodName, data);
+			System.out.println("R2Response: "+R2Response);
+			R3Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);
+			System.out.println("R3Response: "+R3Response);
+		}
 		
 		// 3. Compare the results
 		
-		if(R2Response == R3Response){
+		// R1 == R2 == R3 -> T|T|T
+		if(R1Response.equals(R2Response) && R1Response.equals(R3Response)){
 			
-			if(R1Response == R3Response) {
-				// all are same
-				// send this to RM => "T|T|T"
-				RMRequestData = "T|T|T";
-				// Send outputR1/R2/R3 to Front-End 
-				response      =  R1Response;
-				
-			} else {
-				// Leader(R1) is wrong
-				// send this to RM => "F|T|T"
-				RMRequestData = "F|T|T";
-				// Send outputR2/R3 to Front-End
-				response      =  R2Response;
-			}
+			// all are same
+			// send this to RM => "T|T|T"
+			RMRequestData = "T|T|T";
+			// Send outputR1/R2/R3 to Front-End 
+			response      =  R1Response;
 		}
-		else{
+		// R1 != R2 == R3 -> F|T|T
+		else if(!R1Response.equals(R2Response) && R1Response.equals(R3Response)) {
+			// Leader(R1) is wrong
+			// send this to RM => "F|T|T"
+			RMRequestData = "F|T|T";
+			// Send outputR2/R3 to Front-End
+			response      =  R2Response;
+		}
+		// R1 == R2 != R3 -> T|T|F
+		else if(R1Response.equals(R2Response) && !R1Response.equals(R3Response)){
 
-			if(R1Response == R3Response){
-				// R2 is wrong
-				// leader, R1 right (Send this to the client)
-				// send this to RM => "T|F|T"
-				RMRequestData = "F|T|T";
-				// Send outputR1/R3 to Front-End 
-				response      =  R3Response;
-			} else{
-				// R1 == R2
-				// R3 is wrong
-				// send this to RM => "T|T|F"
-				RMRequestData = "T|T|F";
-				// Send outputR1/R2 to Front-End
-				response      =  R3Response;
-			}
+			// R1 == R2
+			// R3 is wrong
+			// send this to RM => "T|T|F"
+			RMRequestData = "T|T|F";
+			// Send outputR1/R2 to Front-End
+			response      =  R3Response;
+			
 		}
+		// R1 != R2 != R3 (R1 == R3) -> T|F|T
+		else if(R1Response.equals(R3Response) && !R1Response.equals(R2Response) && !R3Response.equals(R2Response) ){
+			// R2 is wrong
+			// leader, R1 right (Send this to the client)
+			// send this to RM => "T|F|T"
+			RMRequestData = "F|T|T";
+			// Send outputR1/R3 to Front-End 
+			response      =  R3Response;
+		} 
 		
 		// 4. send results to RM
 		SendResultsToRM(RMRequestData);

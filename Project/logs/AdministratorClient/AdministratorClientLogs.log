@@ -1812,3 +1812,258 @@ INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
 Aug 01, 2020 5:10:48 AM Util.FileLogger write
 INFO: >>> Suspend Account >>> Sending request to server
 
+Aug 01, 2020 10:57:42 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 01, 2020 10:57:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 01, 2020 10:57:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 01, 2020 10:57:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.4.3.3
+
+Aug 01, 2020 10:57:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 01, 2020 10:57:57 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 01, 2020 11:10:52 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 01, 2020 11:10:59 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 01, 2020 11:10:59 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 01, 2020 11:10:59 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.45.34.2
+
+Aug 01, 2020 11:10:59 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 01, 2020 11:11:00 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 01, 2020 11:11:19 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 11:11:43 AM Utilities.FileLogger write
+INFO: >>> Error >>> A player's username must have at least 6 characters
+
+Aug 01, 2020 11:11:46 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Varun123
+
+Aug 01, 2020 11:11:46 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 01, 2020 11:11:46 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.343.5.2
+
+Aug 01, 2020 11:11:46 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> sfaskfas
+
+Aug 01, 2020 11:11:46 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 11:11:46 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Aug 01, 2020 11:12:03 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 11:13:11 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 01, 2020 11:13:11 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 01, 2020 11:13:11 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.354.3.3
+
+Aug 01, 2020 11:13:11 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 01, 2020 11:13:11 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 11:13:11 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+
+
+Aug 01, 2020 11:19:23 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 01, 2020 11:19:32 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 01, 2020 11:19:32 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 01, 2020 11:19:33 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.45.3.2
+
+Aug 01, 2020 11:19:33 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 01, 2020 11:19:33 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 01, 2020 11:19:45 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 11:20:04 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 01, 2020 11:20:04 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 01, 2020 11:20:04 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.45.45.2
+
+Aug 01, 2020 11:20:04 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 01, 2020 11:20:04 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 11:20:04 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+
+
+Aug 01, 2020 11:22:41 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 11:22:53 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  VArun123
+
+Aug 01, 2020 11:22:53 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> asfasfsaf
+
+Aug 01, 2020 11:22:53 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.5.435.4
+
+Aug 01, 2020 11:22:53 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> safsafasf
+
+Aug 01, 2020 11:22:53 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 11:24:32 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Aug 01, 2020 11:24:41 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 11:25:00 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 01, 2020 11:25:00 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 01, 2020 11:25:00 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.1.1.1
+
+Aug 01, 2020 11:25:00 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 01, 2020 11:25:00 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 11:27:59 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+
+
+Aug 01, 2020 11:30:30 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 11:30:48 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 01, 2020 11:30:48 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 01, 2020 11:30:48 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.45.3.2
+
+Aug 01, 2020 11:30:48 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 01, 2020 11:30:48 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 11:30:48 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Varun123" username is suspended
+
+Aug 01, 2020 12:23:58 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 01, 2020 12:25:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 01, 2020 12:25:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 01, 2020 12:25:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.353.3.3
+
+Aug 01, 2020 12:25:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 01, 2020 12:25:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 01, 2020 12:25:51 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 12:26:05 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Varun123
+
+Aug 01, 2020 12:26:05 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Varun123
+
+Aug 01, 2020 12:26:05 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.54.2.2
+
+Aug 01, 2020 12:26:05 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> dfsdfdsfdsf
+
+Aug 01, 2020 12:26:05 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 12:26:06 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Aug 01, 2020 12:26:20 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 01, 2020 12:26:31 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 01, 2020 12:26:31 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 01, 2020 12:26:31 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.4.3.2
+
+Aug 01, 2020 12:26:31 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 01, 2020 12:26:31 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 01, 2020 12:26:31 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player doesn't exixts with given username
+

@@ -30,13 +30,13 @@ public class EuropeanServerImpl {
 	FileLogger userLogger;
 	FileLogger adminLogger;
 	// Logger Path
-	static final String loggerPath = "./logs/ServerLogs/";
+	String loggerPath = "./logs/ServerLogs/";
 	// UDP Server Ports
 	int AS_PORT;
 	int EU_PORT;
 	int NA_PORT;
 	// Contains All Players information
-	static ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
+	ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
 
 	public EuropeanServerImpl(int AS_PORT, int EU_PORT, int NA_PORT) throws InterruptedException {
 		
