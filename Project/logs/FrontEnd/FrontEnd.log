@@ -1,0 +1,37 @@
+Jul 22, 2020 6:37:33 PM Util.FileLogger write
+INFO: createPlayerAccount
+
+Jul 22, 2020 6:37:46 PM Util.FileLogger write
+INFO: playerSignInAug 01, 2020 4:42:53 AM Util.FileLogger write
+INFO: playerSignIn
+
+Aug 01, 2020 4:46:14 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 4:56:34 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 4:57:16 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 4:57:56 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 5:03:52 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 5:07:35 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 5:08:59 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 5:09:28 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 5:09:53 AM Util.FileLogger write
+INFO: getPlayerStatus
+
+Aug 01, 2020 5:10:48 AM Util.FileLogger write
+INFO: suspendAccount
+

@@ -1,0 +1,669 @@
+Jun 25, 2020 2:30:59 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 25, 2020 2:32:24 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 25, 2020 2:33:44 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 25, 2020 3:34:58 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to null
+
+Jun 25, 2020 3:41:13 PM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jun 25, 2020 3:41:24 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 25, 2020 3:42:31 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:23:26 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:27:28 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:29:50 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:35:15 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:39:07 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:44:35 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:47:40 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:51:50 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:55:06 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 5:58:41 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 6:05:48 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 6:12:25 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 6:14:16 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 6:19:35 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 6:23:24 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 6:41:44 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 6:48:46 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 10:42:07 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 10:46:13 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 10:51:15 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 10:52:51 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 10:54:33 PM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Jun 26, 2020 10:54:39 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 10:57:01 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 10:58:15 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 11:06:48 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 11:12:10 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 26, 2020 11:54:07 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 26, 2020 11:57:39 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 2:15:48 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 2:15:48 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 2:19:48 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 2:19:48 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 2:37:34 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to NorthAmerica
+
+Jun 27, 2020 2:37:35 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to NorthAmerica
+
+Jun 27, 2020 2:38:37 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 27, 2020 2:38:38 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun 27, 2020 2:39:21 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 27, 2020 2:39:22 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun 27, 2020 2:47:00 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 2:47:01 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 2:50:13 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 2:50:14 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 27, 2020 2:50:57 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Europe
+
+Jun 27, 2020 2:52:07 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 2:52:07 AM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 3:09:20 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 3:09:21 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 3:10:13 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 3:10:14 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 3:12:02 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 3:12:02 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 3:21:02 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 3:21:03 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 10:59:22 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 10:59:23 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 27, 2020 11:42:23 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 27, 2020 11:42:24 PM Logger.FileLogger write
+INFO: >>> Get Player Status >>> Sending request to Asia
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.1.1.1
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.1.1.1
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.1.1.1
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 12:21:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Siddall123
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Siddall123
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 132.34.21.1
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.12.23.8
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 132.34.21.1
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Siddall123
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to NorthAmerica
+
+Jun 28, 2020 10:51:46 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> transferAccount() >>> going to sleep 1 second
+
+Jun 28, 2020 10:51:47 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to NorthAmerica
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Gyles123
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Gyles123
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 93.12.1.67
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 182.65.89.23
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 93.12.1.67
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Gyles123
+
+Jun 28, 2020 10:59:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> suspendAccount() >>> going to sleep 1 second
+
+Jun 28, 2020 10:59:53 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 28, 2020 10:59:53 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Europe
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Bruce123
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Bruce123
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.1.1.1
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 132.56.3.9
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.1.1.1
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Bruce123
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 11:13:06 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Charles123
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Charles123
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.45.2.6
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.12.34.1
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.45.2.6
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Charles123
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 11:13:51 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Adak123
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Adak123
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.12.97.43
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 132.76.2.8
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.12.97.43
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Adak123
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 11:14:45 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Morce123
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Morce123
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 93.56.34.67
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 182.56.7.8
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 93.56.34.67
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Morce123
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Europe
+
+Jun 28, 2020 11:16:26 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Europe
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Morce123
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Morce123
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 132.56.34.87
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 182.56.78.2
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 132.56.34.87
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Morce123
+
+Jun 28, 2020 11:16:59 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to NorthAmerica
+
+Jun 28, 2020 11:17:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to NorthAmerica
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.1.1.1
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.1.1.1
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.1.1.1
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 11:42:58 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Kevin123
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Kevin123
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.56.3.7
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 132.46.8.3
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.56.3.7
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Kevin123
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 11:43:40 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.45.2.4
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.2.4.5
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.45.2.4
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 11:54:00 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Kevin123
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Kevin123
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.45.2.5
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 132.4.67.3
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.45.2.5
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Kevin123
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 28, 2020 11:54:36 PM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Kevin123
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Kevin123
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.11.1.1
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.4.2.1
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.11.1.1
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Kevin123
+
+Jun 29, 2020 12:35:23 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 29, 2020 12:35:24 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Charles123
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Charles123
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.4.3.4
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.6.78.4
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.4.3.4
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Charles123
+
+Jun 29, 2020 12:36:02 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 29, 2020 12:36:03 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.45.3.2
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.56.7.8
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.45.3.2
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 29, 2020 12:40:33 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Kevin123
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Kevin123
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.45.67.3
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 93.67.9.2
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.45.67.3
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Kevin123
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 29, 2020 1:16:57 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
+Jun 29, 2020 1:38:43 AM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jun 29, 2020 1:38:52 AM Logger.FileLogger write
+INFO: >>> Error >>> Invalid IP address
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Username >>> Varun123
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Password >>> Varun123
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> IPAddress >>> 182.56.32.2
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> newIPAddress >>> 132.56.2.6
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> AdminPassword >>> Admin
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> oldIPAddress >>> 182.56.32.2
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> UsernameToSuspend >>> Varun123
+
+Jun 29, 2020 1:39:19 AM Logger.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to Asia
+
+Jun 29, 2020 1:39:20 AM Logger.FileLogger write
+INFO: >>> Concurrency Test >>> Sending request to Asia
+
