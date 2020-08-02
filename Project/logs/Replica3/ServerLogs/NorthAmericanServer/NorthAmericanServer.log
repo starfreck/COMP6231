@@ -1,0 +1,129 @@
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Fabienne123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Fabienne
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Tapani
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Fabienne123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.1
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Darcie123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Darcie
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Sammie
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Darcie123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 15
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.2
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Philipa123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Philipa
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Alphonzo
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Philipa123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 18
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.3
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Davinia123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Davinia
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Amsel
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Davinia123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 20
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.4
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Gyles123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Gyles
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Key
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Gyles123
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 23
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.5
+
+Aug 02, 2020 5:17:27 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> Recived UDP request
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> Sending response of UDP request
+

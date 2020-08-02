@@ -22,12 +22,14 @@ public class AsianServerImpl {
 	// Server Name
 	static final String serverName = "AsianServer";
 	static final String serverShortName = "AS";
+	// Replica Name
+	String replicaName;
 	// Loggers
 	FileLogger logger;
 	FileLogger userLogger;
 	FileLogger adminLogger;
 	// Logger Path
-	String loggerPath = "./logs/ServerLogs/";
+	String loggerPath = "./logs/";
 	// UDP Server Ports
 	int AS_PORT;
 	int EU_PORT;
@@ -35,7 +37,10 @@ public class AsianServerImpl {
 	// Contains All Players information
 	ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
 	
-	public AsianServerImpl(int AS_PORT, int EU_PORT, int NA_PORT) throws InterruptedException {
+	public AsianServerImpl(String replicaName, int AS_PORT, int EU_PORT, int NA_PORT) throws InterruptedException {
+		
+		//Init replicaName
+		this.replicaName = replicaName;
 		
 		// Init Ports
 		this.AS_PORT = AS_PORT;
@@ -43,7 +48,8 @@ public class AsianServerImpl {
 		this.NA_PORT = NA_PORT;
 		
 		// Initialize Server Logger
-		this.logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
+		this.logger = new FileLogger(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/", serverName + ".log");
+		
 		this.addUsers();
 		
 		// Starting UDP Server
@@ -53,7 +59,7 @@ public class AsianServerImpl {
 			}
 		});
 		thread.start();
-		
+	
 		System.out.println(serverName + " ready and waiting ...");
 
 	}
@@ -627,13 +633,13 @@ public class AsianServerImpl {
 	private FileLogger initUserLogger(String username) {
 
 		// Initialize User Logger
-		return new FileLogger(loggerPath + serverName + "/UserLogs/" + username + "/", username + ".log");
+		return new FileLogger(loggerPath+replicaName+"/ServerLogs/"+serverName+"/UserLogs/"+username+"/",username+".log");
 	}
 
 	private FileLogger initAdminLogger(String username) {
 
 		// Initialize Admin Logger
-		return new FileLogger(loggerPath + serverName + "/AdminLogs/" + username + "/", username + ".log");
+		return new FileLogger(loggerPath+replicaName+"/ServerLogs/"+serverName+"/AdminLogs/"+username+"/",username+".log");
 	}
 	
 	public void UDPServer() {
@@ -656,11 +662,10 @@ public class AsianServerImpl {
 				// Client Request Data
 				requestPacket = new DatagramPacket(reciveData, reciveData.length);
 				socket.receive(requestPacket);
-				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
-						requestPacket.getLength());
+				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),requestPacket.getLength());
 				
 				String methodName = reciveDataString.split(":", 2)[0];
-				String data = reciveDataString.split(":", 2)[1];
+				String data 	  = reciveDataString.split(":", 2)[1];
 				
 //				System.out.println("methodName : "+methodName);
 //				System.out.println("data : "+data);

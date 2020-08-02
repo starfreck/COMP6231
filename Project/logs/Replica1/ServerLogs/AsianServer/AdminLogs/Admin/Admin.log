@@ -1,0 +1,21 @@
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.345.3.3
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 5 offline
+
+Aug 02, 2020 5:17:42 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+

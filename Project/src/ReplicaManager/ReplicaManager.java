@@ -17,9 +17,9 @@ public class ReplicaManager {
 	
 	public ReplicaManager() throws InterruptedException {
 		
-		R1 = new Replica(true, Ports.RM_PORT, Ports.R1_PORT, Ports.AS_PORT_1, Ports.EU_PORT_1, Ports.NA_PORT_1);
-		R2 = new Replica(false, Ports.RM_PORT, Ports.R2_PORT, Ports.AS_PORT_2, Ports.EU_PORT_2, Ports.NA_PORT_2);
-		R3 = new Replica(false, Ports.RM_PORT, Ports.R3_PORT, Ports.AS_PORT_3, Ports.EU_PORT_3, Ports.NA_PORT_3);
+		R1 = new Replica("Replica1",true, Ports.RM_PORT, Ports.R1_PORT, Ports.AS_PORT_1, Ports.EU_PORT_1, Ports.NA_PORT_1);
+		R2 = new Replica("Replica2",false, Ports.RM_PORT, Ports.R2_PORT, Ports.AS_PORT_2, Ports.EU_PORT_2, Ports.NA_PORT_2);
+		R3 = new Replica("Replica3",false, Ports.RM_PORT, Ports.R3_PORT, Ports.AS_PORT_3, Ports.EU_PORT_3, Ports.NA_PORT_3);
 		
 		R1.start();
 		R2.start();
@@ -131,13 +131,13 @@ public class ReplicaManager {
 	public void startNewReplica(String name) throws InterruptedException {
 		
 		if(name.equals("R1")) {
-			R1 = new Replica(true, Ports.RM_PORT, Ports.R1_PORT, Ports.AS_PORT_1, Ports.EU_PORT_1, Ports.NA_PORT_1);
+			R1 = new Replica("Replica1", true, Ports.RM_PORT, Ports.R1_PORT, Ports.AS_PORT_1, Ports.EU_PORT_1, Ports.NA_PORT_1);
 			R1.start();
 		} else if (name.equals("R2")) {
-			R2 = new Replica(true, Ports.RM_PORT, Ports.R2_PORT, Ports.AS_PORT_2, Ports.EU_PORT_2, Ports.NA_PORT_2);
+			R2 = new Replica("Replica2", false, Ports.RM_PORT, Ports.R2_PORT, Ports.AS_PORT_2, Ports.EU_PORT_2, Ports.NA_PORT_2);
 			R2.start();
 		} else if (name.equals("R3")) {
-			R3 = new Replica(true, Ports.RM_PORT, Ports.R3_PORT, Ports.AS_PORT_3, Ports.EU_PORT_3, Ports.NA_PORT_3);
+			R3 = new Replica("Replica3", false, Ports.RM_PORT, Ports.R3_PORT, Ports.AS_PORT_3, Ports.EU_PORT_3, Ports.NA_PORT_3);
 			R3.start();
 		}
 	}

@@ -25,12 +25,14 @@ public class EuropeanServerImpl {
 	// Server Name
 	static final String serverName = "EuropeanServer";
 	static final String serverShortName = "EU";
+	// Replica Name
+	String replicaName;
 	// Loggers
 	FileLogger logger;
 	FileLogger userLogger;
 	FileLogger adminLogger;
 	// Logger Path
-	String loggerPath = "./logs/ServerLogs/";
+	String loggerPath = "./logs/";
 	// UDP Server Ports
 	int AS_PORT;
 	int EU_PORT;
@@ -38,15 +40,19 @@ public class EuropeanServerImpl {
 	// Contains All Players information
 	ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
 
-	public EuropeanServerImpl(int AS_PORT, int EU_PORT, int NA_PORT) throws InterruptedException {
+	public EuropeanServerImpl(String replicaName, int AS_PORT, int EU_PORT, int NA_PORT) throws InterruptedException {
 		
+		//Init replicaName
+		this.replicaName = replicaName;
+				
 		// Init Ports
 		this.AS_PORT = AS_PORT;
 		this.EU_PORT = EU_PORT;
 		this.NA_PORT = NA_PORT;
 		
 		// Initialize Server Logger
-		this.logger = new FileLogger(loggerPath + serverName + "/", serverName + ".log");
+		this.logger = new FileLogger(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/", serverName + ".log");
+				
 		this.addUsers();
 		
 		// Starting UDP Server
@@ -636,13 +642,13 @@ public class EuropeanServerImpl {
 	private FileLogger initUserLogger(String username) {
 
 		// Initialize User Logger
-		return new FileLogger(loggerPath + serverName + "/UserLogs/" + username + "/", username + ".log");
+		return new FileLogger(loggerPath+replicaName+"/ServerLogs/"+serverName+"/UserLogs/"+username+"/",username+".log");
 	}
 
 	private FileLogger initAdminLogger(String username) {
 
 		// Initialize Admin Logger
-		return new FileLogger(loggerPath + serverName + "/AdminLogs/" + username + "/", username + ".log");
+		return new FileLogger(loggerPath+replicaName+"/ServerLogs/"+serverName+"/AdminLogs/"+username+"/",username+".log");
 	}
 	
 	public void UDPServer() throws IOException {

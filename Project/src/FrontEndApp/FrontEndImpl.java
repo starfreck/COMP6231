@@ -144,7 +144,8 @@ public class FrontEndImpl extends FrontEndPOA{
 	
 	public static void main(String[] args) throws InterruptedException, IOException {
 
-		FrontEndImpl.LE_PORT = Integer.parseInt(args[5]);
+		
+		FrontEndImpl.LE_PORT = Integer.parseInt(getConfig()[4]);
 		
 		ORB orb = ORB.init(getConfig(), null);
 		

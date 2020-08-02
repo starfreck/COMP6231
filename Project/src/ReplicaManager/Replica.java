@@ -10,6 +10,7 @@ import java.util.Random;
 import Servers.AsianServerImpl;
 import Servers.EuropeanServerImpl;
 import Servers.NorthAmericanServerImpl;
+import Utilities.FileLogger;
 import Utilities.Ports;
 
 public class Replica {
@@ -26,19 +27,29 @@ public class Replica {
 	int AS_PORT;
 	int EU_PORT;
 	int NA_PORT;
+	// Name Variables
+	String replicaName;
+	// Loggers
+	FileLogger logger;
+	// Logger Path
+	String loggerPath = "./logs/ReplicaLogs/";
 	// Servers' Variables
 	AsianServerImpl AS;
 	EuropeanServerImpl EU;
 	NorthAmericanServerImpl NA;
 	
-	public Replica(boolean isLeader, int RM_PORT, int RE_PORT, int AS_PORT,int EU_PORT, int NA_PORT) {
+	public Replica(String replicaName, boolean isLeader, int RM_PORT, int RE_PORT, int AS_PORT,int EU_PORT, int NA_PORT) {
 		
-		this.isLeader = isLeader;
-		this.RE_PORT  = RE_PORT;
-		this.RM_PORT  = RM_PORT;
-		this.AS_PORT  = AS_PORT;
-		this.EU_PORT  = EU_PORT;
-		this.NA_PORT  = NA_PORT;
+		this.replicaName = replicaName;
+		this.isLeader 	 = isLeader;
+		this.RE_PORT  	 = RE_PORT;
+		this.RM_PORT  	 = RM_PORT;
+		this.AS_PORT  	 = AS_PORT;
+		this.EU_PORT  	 = EU_PORT;
+		this.NA_PORT  	 = NA_PORT;
+		
+		// Initialize Server Logger
+		this.logger = new FileLogger(loggerPath + replicaName + "/", replicaName + ".log");
 		
 		// Starting UDP Server
 		Thread thread = new Thread(new Runnable() {
@@ -52,9 +63,9 @@ public class Replica {
 	public void start() throws InterruptedException {
 		
 		//System.out.println("\n>>> Starting a new Cluster...\n");
-		AS = new AsianServerImpl(AS_PORT, EU_PORT, NA_PORT);
-		EU = new EuropeanServerImpl(AS_PORT, EU_PORT, NA_PORT);
-		NA = new NorthAmericanServerImpl(AS_PORT, EU_PORT, NA_PORT);
+		AS = new AsianServerImpl(replicaName, AS_PORT, EU_PORT, NA_PORT);
+		EU = new EuropeanServerImpl(replicaName, AS_PORT, EU_PORT, NA_PORT);
+		NA = new NorthAmericanServerImpl(replicaName, AS_PORT, EU_PORT, NA_PORT);
 	}
 	
 	public void stop() {
@@ -62,6 +73,7 @@ public class Replica {
 		AS.kill();
 		EU.kill();
 		NA.kill();
+		// Killing Own UDP Server
 		Flag = false;
 		socket.close();
 		
@@ -99,6 +111,8 @@ public class Replica {
 				socket.receive(requestPacket);
 				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(), requestPacket.getLength());
 	
+				// methodName:data1|data2|data3.........
+				
 				String methodName 		= reciveDataString.split(":", 2)[0];
 				String data 	  		= reciveDataString.split(":", 2)[1];
 				
@@ -113,12 +127,6 @@ public class Replica {
 				// wait for request which are coming from Leader
 				else {
 					status = replicaActions(methodName, data);
-					
-					// Create an array of random Strings
-					if(RE_PORT == Ports.R3_PORT){
-						String[] randomResponse = {status, "Something went wrong with the server !"};
-						status = randomResponse[new Random().nextInt(randomResponse.length)];
-					}
 				}
 				
 				// Get Client's IP & Port
@@ -170,6 +178,11 @@ public class Replica {
 			System.out.println("R2Response: "+R2Response);
 			R3Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);
 			System.out.println("R3Response: "+R3Response);
+			
+			// Create an array of random Strings
+			String[] randomResponse = {R3Response, "Something went wrong with the server !"};
+			R3Response = randomResponse[new Random().nextInt(randomResponse.length)];
+			
 		}
 		
 		// 3. Compare the results
