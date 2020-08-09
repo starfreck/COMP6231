@@ -3,7 +3,9 @@ package ReplicaManager;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.net.SocketException;
+import java.net.SocketTimeoutException;
 
 import Utilities.Ports;
 
@@ -15,18 +17,28 @@ public class ReplicaManager {
 	
 	static Replica R1, R2,R3;
 	
-	public ReplicaManager() throws InterruptedException {
+	public ReplicaManager() {
 		
+		// Creating Replicas
 		R1 = new Replica("Replica1",true, Ports.RM_PORT, Ports.R1_PORT, Ports.AS_PORT_1, Ports.EU_PORT_1, Ports.NA_PORT_1);
 		R2 = new Replica("Replica2",false, Ports.RM_PORT, Ports.R2_PORT, Ports.AS_PORT_2, Ports.EU_PORT_2, Ports.NA_PORT_2);
 		R3 = new Replica("Replica3",false, Ports.RM_PORT, Ports.R3_PORT, Ports.AS_PORT_3, Ports.EU_PORT_3, Ports.NA_PORT_3);
 		
 		R1.start();
 		R2.start();
-		R3.start();	
+		R3.start();
+		
+		// Creating a thread for UDP HeartBeat Checker
+		Thread heartBeat = new Thread(new Runnable() {
+			public void run() {
+				UDPHeartBeat();
+			}
+		});
+		
+		heartBeat.start();
 	}
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		
 		// Create RM Object
 		ReplicaManager RM = new ReplicaManager();
@@ -41,7 +53,7 @@ public class ReplicaManager {
 			// Socket
 			socket = new DatagramSocket(Ports.RM_PORT);
 			
-			System.out.println("\nRM UDP Server is running...\n");
+			if(Ports.DEBUG) System.out.println("\nRM UDP Server is running...\n");
 			
 			while (true) {
 				
@@ -72,7 +84,7 @@ public class ReplicaManager {
 		}		
 	}
 	
-	public void UDPServerRequestProcessor(String request) throws InterruptedException {
+	public void UDPServerRequestProcessor(String request) {
 		
 		// R1, R2, R3
 		// T | T | F
@@ -96,49 +108,150 @@ public class ReplicaManager {
 		} // loop is ending here
 		
 		// Final State
-		System.out.println("\nR1:"+R1Count+" R2:"+R2Count+" R3:"+R3Count+"\n");
+		if(Ports.DEBUG) System.out.println("\nR1:"+R1Count+" R2:"+R2Count+" R3:"+R3Count+"\n");
 		
 		// Check if any counter is 3 or > 3
 		if(R1Count >= 3) {
-			System.out.println("\nStopping R1... \n");
-			R1.stop();
-			R1Count = 0;
+			stoppingOldReplica("R1");
 			// Start new Replica 1 with startNewReplica() as leader;
-			System.out.println("\nStarting a new R1... \n");
 			startNewReplica("R1");
 		}
 		
 		if(R2Count >= 3) {
-			System.out.println("\nStopping R2... \n");
-			R2.stop();
-			R2Count = 0;
+			stoppingOldReplica("R2");
 			// Start new replica startNewReplica() as Replica 2;
-			System.out.println("\nStarting a new R2... \n");
 			startNewReplica("R2");
 		}
 	
 		if(R3Count >= 3) {
-			System.out.println("\nStopping R3... \n");
-			R3.stop();
-			R3Count = 0;
+			stoppingOldReplica("R3");
 			// Start new replica startNewReplica() as Replica 3;
-			System.out.println("\nStarting a new R3... \n");
 			startNewReplica("R3");
 		}
 		
 	}
 	
-	public void startNewReplica(String name) throws InterruptedException {
+	public void stoppingOldReplica(String name) {
 		
 		if(name.equals("R1")) {
+			if(Ports.DEBUG) System.out.println("\nStopping R1... \n");
+			R1.stop();
+			R1Count = 0;
+		} else if (name.equals("R2")) {
+			if(Ports.DEBUG) System.out.println("\nStopping R2... \n");
+			R2.stop();
+			R2Count = 0;
+		} else if (name.equals("R3")) {
+			if(Ports.DEBUG) System.out.println("\nStopping R3... \n");
+			R3.stop();
+			R3Count = 0;
+		}
+	}
+
+	public void startNewReplica(String name) {
+		
+		if(name.equals("R1")) {
+			if(Ports.DEBUG) System.out.println("\nStarting a new R1... \n");
 			R1 = new Replica("Replica1", true, Ports.RM_PORT, Ports.R1_PORT, Ports.AS_PORT_1, Ports.EU_PORT_1, Ports.NA_PORT_1);
 			R1.start();
 		} else if (name.equals("R2")) {
+			if(Ports.DEBUG) System.out.println("\nStarting a new R2... \n");
 			R2 = new Replica("Replica2", false, Ports.RM_PORT, Ports.R2_PORT, Ports.AS_PORT_2, Ports.EU_PORT_2, Ports.NA_PORT_2);
 			R2.start();
 		} else if (name.equals("R3")) {
+			if(Ports.DEBUG) System.out.println("\nStarting a new R3... \n");
 			R3 = new Replica("Replica3", false, Ports.RM_PORT, Ports.R3_PORT, Ports.AS_PORT_3, Ports.EU_PORT_3, Ports.NA_PORT_3);
 			R3.start();
 		}
 	}
+	
+	public void UDPHeartBeat() {
+		
+		while(true) {
+			// List the all Ports here and start sending UDP Heart Beats
+			int servers[] = {Ports.R1_PORT, Ports.R2_PORT, Ports.R3_PORT, Ports.NA_PORT_1, Ports.NA_PORT_2, Ports.NA_PORT_3, Ports.EU_PORT_1, Ports.EU_PORT_2, Ports.EU_PORT_3, Ports.AS_PORT_1, Ports.AS_PORT_2, Ports.AS_PORT_3};
+			
+			for (int server : servers) {
+				sendHeartBeatMessage(server);
+			}
+		}
+	}
+	
+	private void sendHeartBeatMessage(int port) {
+
+		// UDP client
+		try {
+
+			String message = "UDPHeartBeat:just a message to check server pulse";
+			
+			DatagramSocket socket;
+			DatagramPacket requestData;
+			DatagramPacket responseData;
+			InetAddress host = InetAddress.getLocalHost();
+
+			byte[] sendMessage = message.getBytes();
+			byte[] recivedMessage = new byte[Ports.MAX_PACKET_SIZE];
+
+			// Get status from Given Server
+			socket = new DatagramSocket();
+
+			// Request Data
+			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, port);
+			socket.send(requestData);
+
+			// Socket Timeout to 10 Seconds
+			socket.setSoTimeout(Ports.UDP_REQUEST_TIMEOUT);
+			
+			// Response Data
+			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
+			socket.receive(responseData);
+			socket.close();
+			
+			// Retrieving Data
+			String reciveDataString = new String(responseData.getData(), responseData.getOffset(), responseData.getLength());
+
+			String methodName = reciveDataString.split(":", 2)[0];
+			String data 	  = reciveDataString.split(":", 2)[1];
+			
+			// Validate the response
+			if(!methodName.equals("UDPHeartBeat") && !data.equals("i am alive")) {
+				throw new SocketTimeoutException("UDPHeartBeat is hijacked");
+			} else {
+				if(Ports.HEART_BEAT_DEBUG) System.out.println("Recived UDP HeartBeat from Port "+port);
+			}
+
+		} catch (SocketTimeoutException e) {
+            // SocketTimeoutException inform RM
+            UDPHeartBeatTimeout(port);
+            
+        } catch (Exception e) {
+			System.err.println(e);
+		}
+	}
+	
+	private void UDPHeartBeatTimeout(int Port) {
+		
+		// Check the Port Group
+		// Something is wrong with Replica 1 Restart it.
+		if(Port == Ports.R1_PORT || Port == Ports.AS_PORT_1 || Port == Ports.EU_PORT_1 || Port == Ports.NA_PORT_1) {
+			if(Ports.DEBUG) System.out.println("\nUDPHeartBeatTimeout occurred in R1... \n");
+			stoppingOldReplica("R1");
+			startNewReplica("R1");
+		}
+		
+		// Something is wrong with Replica 2 Restart it.
+		if(Port == Ports.R2_PORT || Port == Ports.AS_PORT_2 || Port == Ports.EU_PORT_2 || Port == Ports.NA_PORT_2) {
+			if(Ports.DEBUG) System.out.println("\nUDPHeartBeatTimeout occurred in R2... \n");
+			stoppingOldReplica("R2");
+			startNewReplica("R2");
+		}
+		
+		// Something is wrong with Replica 3 Restart it.
+		if(Port == Ports.R3_PORT || Port == Ports.AS_PORT_3 || Port == Ports.EU_PORT_3 || Port == Ports.NA_PORT_3) {
+			if(Ports.DEBUG) System.out.println("\nUDPHeartBeatTimeout occurred in R3... \n");
+			stoppingOldReplica("R3");
+			startNewReplica("R3");
+		}
+	}
+	
 }

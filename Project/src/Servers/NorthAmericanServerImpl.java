@@ -1,6 +1,11 @@
 package Servers;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -10,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import Utilities.Database;
 import Utilities.FileLogger;
 import Utilities.Ports;
 
@@ -40,7 +46,7 @@ public class NorthAmericanServerImpl {
 	// Contains All Players information
 	ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> players = new ConcurrentHashMap<String, ArrayList<HashMap<String, String>>>();
 
-	public NorthAmericanServerImpl(String replicaName, int AS_PORT, int EU_PORT, int NA_PORT) throws InterruptedException {
+	public NorthAmericanServerImpl(String replicaName, int AS_PORT, int EU_PORT, int NA_PORT) {
 		
 		//Init replicaName
 		this.replicaName = replicaName;
@@ -53,24 +59,25 @@ public class NorthAmericanServerImpl {
 		// Initialize Server Logger
 		// Initialize Server Logger
 		this.logger = new FileLogger(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/", serverName + ".log");
-				
-		this.addUsers();
 		
+		// Check if the Database exists
+		if(new File(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/"+"database.ser").exists()) {
+			players = loadDB();
+		} else {
+			this.addUsers();
+		}
+				
+				
 		// Starting UDP Server
 		Thread thread = new Thread(new Runnable() {
 			public void run() {
-				try {
-					UDPServer();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				UDPServer();
 			}
 		});
 		
 		thread.start();
-		System.out.println(serverName + " ready and waiting ...");
-		//Thread.sleep(1000);
+		
+		if(Ports.DEBUG) System.out.println(serverName + " ready and waiting ...");
 
 	}
 
@@ -652,7 +659,7 @@ public class NorthAmericanServerImpl {
 		return new FileLogger(loggerPath+replicaName+"/ServerLogs/"+serverName+"/AdminLogs/"+username+"/",username+".log");
 	}
 	
-	public void UDPServer() throws IOException {
+	public void UDPServer() {
 
 		// UDP server
 		DatagramPacket requestPacket;
@@ -681,11 +688,18 @@ public class NorthAmericanServerImpl {
 //				System.out.println("methodName : "+methodName);
 //				System.out.println("data : "+data);
 				
-				// Process requests coming from Leader
-				status = processLeaderRequests(methodName, data);
-				// Process requests coming from other servers
-				if(status == "")
-					status = processServersRequests(methodName, data);
+				// HeartBeat Checker
+				if(methodName.equals("UDPHeartBeat")) {
+					// data has "UDPHeartBeat:just a message to check server pulse"
+					status = "UDPHeartBeat:i am alive";
+				} 
+				// Other Requests
+				else {
+					// Process requests coming from Leader
+					status = processLeaderRequests(methodName, data);
+					// Process requests coming from other servers
+					if(status 	== "") status = processServersRequests(methodName, data);
+				}
 				
 				// Get Client's IP & Port
 				InetAddress IPAddress = requestPacket.getAddress();
@@ -835,9 +849,51 @@ public class NorthAmericanServerImpl {
 	}
 
 	public void kill() {
+		// Write DB to File
+		storeDB();
+		
 		Flag = false;
 		socket.close();
 		System.out.println(serverName+" is killed...");
+	}
+	
+	public boolean storeDB() {
+		
+		try
+        {
+			Database DB = new Database(players);
+			FileOutputStream fileOut = new FileOutputStream(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/"+"database.ser");
+			ObjectOutputStream out = new ObjectOutputStream(fileOut);
+	        out.writeObject(DB);
+	        out.close();
+	        fileOut.close();
+	        
+        } catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+        return true;
+	}
+	
+	public ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> loadDB() {
+		
+		Database DB = null;
+		
+        try
+        {
+    		FileInputStream fileIn = new FileInputStream(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/"+"database.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            DB = (Database) in.readObject();
+            in.close();
+			fileIn.close();
+			// Delete DB File
+	        new File(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/"+"database.ser").delete();
+	        
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+        
+        return DB.getDB();   
 	}
 
 }

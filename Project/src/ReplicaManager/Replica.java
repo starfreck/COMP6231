@@ -38,7 +38,7 @@ public class Replica {
 	EuropeanServerImpl EU;
 	NorthAmericanServerImpl NA;
 	
-	public Replica(String replicaName, boolean isLeader, int RM_PORT, int RE_PORT, int AS_PORT,int EU_PORT, int NA_PORT) {
+	public Replica(String replicaName, boolean isLeader,int RM_PORT, int RE_PORT, int AS_PORT,int EU_PORT, int NA_PORT) {
 		
 		this.replicaName = replicaName;
 		this.isLeader 	 = isLeader;
@@ -60,7 +60,7 @@ public class Replica {
 		thread.start();
 	}
 	
-	public void start() throws InterruptedException {
+	public void start() {
 		
 		//System.out.println("\n>>> Starting a new Cluster...\n");
 		AS = new AsianServerImpl(replicaName, AS_PORT, EU_PORT, NA_PORT);
@@ -120,13 +120,22 @@ public class Replica {
 //				System.out.println("methodAction : "+methodName);
 //				System.out.println("data : "+data);
 			
-				// Follow Leader Actions
-				if(isLeader) {
-					status = leaderActions(methodName, data);
+				// HeartBeat Checker
+				if(methodName.equals("UDPHeartBeat")) {
+					// data has "UDPHeartBeat:just a message to check server pulse"
+					status = "UDPHeartBeat:i am alive";
 				}
-				// wait for request which are coming from Leader
+				
+				// Other Requests
 				else {
-					status = replicaActions(methodName, data);
+						// Follow Leader Actions
+						if(isLeader) {
+							status = leaderActions(methodName, data);
+						}
+						// wait for request which are coming from Leader
+						else {
+							status = replicaActions(methodName, data);
+						}
 				}
 				
 				// Get Client's IP & Port
@@ -150,39 +159,39 @@ public class Replica {
 		
 		String response = "";
 		String RMRequestData = "";
-		String R1Response = "",R2Response = "",R3Response = "";
+		String R1Response = "", R2Response = "", R3Response = "";
 		
 		String ClientIPAddress  = data.split("\\|")[0];
 		
 		// 1. Send the message to Server via UDP
 		R1Response = UDPServerTunnel(ClientIPAddress, methodName+"Leader", data);
-		System.out.println("R1Response: "+R1Response);
 		
 		// 2. Send Message to Other Replicas via UDP FIFO & take the majority and send the result to client
 		if(RE_PORT == Ports.R1_PORT) {
-			
 			R2Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);
-			System.out.println("R2Response: "+R2Response);
 			R3Response = sendMessageToReplica(Ports.R3_PORT, methodName, data);
-			System.out.println("R3Response: "+R3Response);
 		} else if(RE_PORT == Ports.R2_PORT) {
-			
 			R2Response = sendMessageToReplica(Ports.R1_PORT, methodName, data);
-			System.out.println("R2Response: "+R2Response);
 			R3Response = sendMessageToReplica(Ports.R3_PORT, methodName, data);
-			System.out.println("R3Response: "+R3Response);
-		
 		} else if(RE_PORT == Ports.R3_PORT) {
-			
 			R2Response = sendMessageToReplica(Ports.R1_PORT, methodName, data);
+			R3Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);		
+		}
+		
+		// creating Random Output
+		// new Random().nextBoolean()
+		if(Ports.DEBUG) System.out.println("R3Response ------------> "+R3Response);
+		
+		if(true) {
+			// Produce Wrong Output
+			R3Response = "Something went wrong with the server !";
+		}
+		
+		if(Ports.DEBUG) {
+			// Printing Results
+			System.out.println("R1Response: "+R1Response);
 			System.out.println("R2Response: "+R2Response);
-			R3Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);
 			System.out.println("R3Response: "+R3Response);
-			
-			// Create an array of random Strings
-			String[] randomResponse = {R3Response, "Something went wrong with the server !"};
-			R3Response = randomResponse[new Random().nextInt(randomResponse.length)];
-			
 		}
 		
 		// 3. Compare the results
@@ -212,10 +221,10 @@ public class Replica {
 			// send this to RM => "T|T|F"
 			RMRequestData = "T|T|F";
 			// Send outputR1/R2 to Front-End
-			response      =  R3Response;
+			response      =  R2Response;
 			
 		}
-		// R1 != R2 != R3 (R1 == R3) -> T|F|T
+		// R1 != R2 != R3 AND (R1 == R3) -> T|F|T
 		else if(R1Response.equals(R3Response) && !R1Response.equals(R2Response) && !R3Response.equals(R2Response) ){
 			// R2 is wrong
 			// leader, R1 right (Send this to the client)

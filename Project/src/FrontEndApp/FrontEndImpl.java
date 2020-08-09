@@ -142,7 +142,7 @@ public class FrontEndImpl extends FrontEndPOA{
 		orb.shutdown(false);
 	}
 	
-	public static void main(String[] args) throws InterruptedException, IOException {
+	public static void main(String[] args) throws IOException {
 
 		
 		FrontEndImpl.LE_PORT = Integer.parseInt(getConfig()[4]);
@@ -157,7 +157,12 @@ public class FrontEndImpl extends FrontEndPOA{
 		});
 
 		threadOne.start();
-		Thread.sleep(1000);
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void CORBAServer(ORB orb) {

@@ -1,0 +1,63 @@
+Aug 03, 2020 2:13:39 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 03, 2020 2:13:39 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 03, 2020 2:13:39 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 03, 2020 2:13:39 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.34.34.3
+
+Aug 03, 2020 2:13:39 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 03, 2020 2:13:39 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 5 offline
+
+Aug 03, 2020 2:13:39 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 03, 2020 2:21:13 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 03, 2020 2:21:13 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 03, 2020 2:21:13 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 03, 2020 2:21:13 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.23.2.2
+
+Aug 03, 2020 2:21:13 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 03, 2020 2:21:13 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 5 offline
+
+Aug 03, 2020 2:21:13 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 06, 2020 10:18:52 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 06, 2020 10:18:52 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 06, 2020 10:18:52 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 06, 2020 10:18:52 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 93.54.354.3
+
+Aug 06, 2020 10:18:52 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 06, 2020 10:18:52 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> EU: 0 online, 5 offline
+
+Aug 06, 2020 10:18:52 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> EU: 0 online, 5 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
+
