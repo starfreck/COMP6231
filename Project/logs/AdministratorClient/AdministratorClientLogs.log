@@ -2120,3 +2120,101 @@ A player account with "Kevin123" username is suspended
 Aug 09, 2020 1:51:05 AM Utilities.FileLogger write
 INFO: >>> inputChoice >>> Please input Integer only
 
+Aug 09, 2020 2:46:00 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin 
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.234.234.3
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+Wrong username or password...
+
+Aug 09, 2020 2:46:15 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 2:46:24 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 2:46:24 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 2:46:24 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.234.34.3
+
+Aug 09, 2020 2:46:24 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 09, 2020 2:46:45 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.23.24.3
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Varun123" username is suspended
+
+Aug 09, 2020 2:47:50 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 2:47:57 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 2:47:57 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 2:47:57 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.45.45.4
+
+Aug 09, 2020 2:47:57 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 09, 2020 2:49:37 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 2:49:45 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 2:49:45 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 2:49:45 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.45.4.54
+
+Aug 09, 2020 2:49:45 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 1 online, 5 offline, AS: 0 online, 4 offline.
+

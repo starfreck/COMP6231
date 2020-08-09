@@ -880,3 +880,87 @@ INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP reques
 Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
 INFO: >>> Client >>> Frontend >>> suspendAccount >>> Response from Leader >>> A player account with "Kevin123" username is suspended
 
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus >>> Response from Leader >>> Wrong username or password...
+
+Aug 09, 2020 2:46:24 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus
+
+Aug 09, 2020 2:46:24 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader
+
+Aug 09, 2020 2:46:25 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus >>> Response from Leader >>> AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> suspendAccount
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> suspendAccount >>> Response from Leader >>> A player account with "Varun123" username is suspended
+
+Aug 09, 2020 2:47:57 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus
+
+Aug 09, 2020 2:47:57 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader
+
+Aug 09, 2020 2:47:58 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus >>> Response from Leader >>> AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 09, 2020 2:48:44 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> createPlayerAccount
+
+Aug 09, 2020 2:48:44 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader
+
+Aug 09, 2020 2:48:44 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader
+
+Aug 09, 2020 2:48:45 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> createPlayerAccount >>> Response from Leader >>> New player account created successfully
+
+Aug 09, 2020 2:49:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> playerSignIn
+
+Aug 09, 2020 2:49:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader
+
+Aug 09, 2020 2:49:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader
+
+Aug 09, 2020 2:49:08 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> playerSignIn >>> Response from Leader >>> Account signed in successfully...
+
+Aug 09, 2020 2:49:45 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus
+
+Aug 09, 2020 2:49:45 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader
+
+Aug 09, 2020 2:49:45 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> Client >>> Frontend >>> getPlayerStatus >>> Response from Leader >>> NA: 0 online, 5 offline, EU: 1 online, 5 offline, AS: 0 online, 4 offline.
+

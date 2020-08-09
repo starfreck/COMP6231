@@ -26,3 +26,31 @@ Aug 08, 2020 6:06:21 PM Utilities.FileLogger write
 INFO: >>> Create Account >>> Respone from remote method >>> 
 New player account created successfully
 
+Aug 09, 2020 2:48:22 AM Utilities.FileLogger write
+INFO: >>> Create Account
+
+Aug 09, 2020 2:48:25 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> firstname : Anqi
+
+Aug 09, 2020 2:48:27 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> lastname : Wang
+
+Aug 09, 2020 2:48:29 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> age : 29
+
+Aug 09, 2020 2:48:33 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> username : anqiwang
+
+Aug 09, 2020 2:48:39 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> password : anqiwang
+
+Aug 09, 2020 2:48:43 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 93.343.43.2
+
+Aug 09, 2020 2:48:44 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Aug 09, 2020 2:48:45 AM Utilities.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+

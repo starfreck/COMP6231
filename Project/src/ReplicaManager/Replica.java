@@ -5,6 +5,8 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
+import java.util.LinkedList;
+import java.util.Queue;
 
 import Servers.AsianServerImpl;
 import Servers.EuropeanServerImpl;
@@ -39,6 +41,8 @@ public class Replica {
 	AsianServerImpl AS;
 	EuropeanServerImpl EU;
 	NorthAmericanServerImpl NA;
+	// UDP FIFO Queue
+	Queue<String[]> queue = new LinkedList<>();
 	
 	public Replica(String replicaName, boolean isLeader,int RM_PORT, int RE_PORT, int AS_PORT,int EU_PORT, int NA_PORT) {
 		
@@ -81,13 +85,24 @@ public class Replica {
 		
 	}
 	
-	public void UDPFIFO() {
+	public String UDPFIFO() {
 		
-		if(isLeader) {
-			// Client Code
-		} else {
-			// Server Code
+		String response = "";
+		
+		while(!queue.isEmpty()) {
+			
+			// Take out request from the queue
+			String[] request = queue.remove();
+			
+			int port		  = Integer.parseInt(request[0]);
+			String methodName = request[1];
+			String data 	  = request[2];
+			
+			response = response+"|"+sendMessageToReplica(port, methodName, data);
+			
 		}
+		
+		return response;
 	}
 	
 	// It will listen for the requests coming from FA
@@ -132,6 +147,19 @@ public class Replica {
 				else {
 						// Follow Leader Actions
 						if(isLeader) {
+							
+							// Adding Requests to UDP FIFO Queue
+							if(RE_PORT == Constants.R1_PORT) {
+								queue.add(new String[]{String.valueOf(Constants.R2_PORT),methodName,data});
+								queue.add(new String[]{String.valueOf(Constants.R3_PORT),methodName,data});
+							} else if(RE_PORT == Constants.R2_PORT) {
+								queue.add(new String[]{String.valueOf(Constants.R1_PORT),methodName,data});
+								queue.add(new String[]{String.valueOf(Constants.R3_PORT),methodName,data});
+							} else if(RE_PORT == Constants.R3_PORT) {
+								queue.add(new String[]{String.valueOf(Constants.R1_PORT),methodName,data});
+								queue.add(new String[]{String.valueOf(Constants.R2_PORT),methodName,data});			
+							}
+							
 							status = leaderActions(methodName, data);
 						}
 						// wait for request which are coming from Leader
@@ -168,17 +196,10 @@ public class Replica {
 		// 1. Send the message to Server via UDP
 		R1Response = UDPServerTunnel(ClientIPAddress, methodName+"Leader", data);
 		
-		// 2. Send Message to Other Replicas via UDP FIFO & take the majority and send the result to client
-		if(RE_PORT == Constants.R1_PORT) {
-			R2Response = sendMessageToReplica(Constants.R2_PORT, methodName, data);
-			R3Response = sendMessageToReplica(Constants.R3_PORT, methodName, data);
-		} else if(RE_PORT == Constants.R2_PORT) {
-			R2Response = sendMessageToReplica(Constants.R1_PORT, methodName, data);
-			R3Response = sendMessageToReplica(Constants.R3_PORT, methodName, data);
-		} else if(RE_PORT == Constants.R3_PORT) {
-			R2Response = sendMessageToReplica(Constants.R1_PORT, methodName, data);
-			R3Response = sendMessageToReplica(Constants.R2_PORT, methodName, data);		
-		}
+		// 2. Receive Messages from Other Replicas via UDP FIFO & take the majority and send the result to client
+		String Responses = UDPFIFO();
+		R2Response = Responses.split("\\|")[1];
+		R3Response = Responses.split("\\|")[2];
 		
 		// creating Wrong Output		
 		if(isWrongCounter < 3) {

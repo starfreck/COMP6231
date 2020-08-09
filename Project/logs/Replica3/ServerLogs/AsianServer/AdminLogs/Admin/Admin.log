@@ -1504,3 +1504,78 @@ INFO: >>> suspendAccount >>> Username To Suspend >>> Kevin123
 Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
 INFO: >>> suspendAccount >>> A player account with "Kevin123" username is suspended
 
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin 
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.234.234.3
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Wrong username or password...
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.234.34.3
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 5 offline
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> suspendAccount
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 182.23.24.3
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Varun123
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> A player account with "Varun123" username is suspended
+
+Aug 09, 2020 2:48:01 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 09, 2020 2:48:01 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 09, 2020 2:48:01 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 09, 2020 2:48:01 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 182.45.45.4
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> AS: 0 online, 4 offline
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+

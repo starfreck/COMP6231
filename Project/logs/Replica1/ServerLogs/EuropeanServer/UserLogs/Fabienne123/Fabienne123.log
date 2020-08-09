@@ -1462,3 +1462,27 @@ INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.1
 Aug 09, 2020 1:45:37 AM Utilities.FileLogger write
 INFO: >>> createPlayerAccount >>> User information stored
 
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> Fabienne123
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Fabienne
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Tapani
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> Fabienne123
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 19
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 93.5.4.1
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+

@@ -241,3 +241,24 @@ INFO: >>> suspendAccount >>> Username To Suspend >>> Varun123
 Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
 INFO: >>> suspendAccount >>> A player doesn't exixts with Varun123 username
 
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.45.4.54
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 1 online, 5 offline, AS: 0 online, 4 offline.
+

@@ -1165,3 +1165,93 @@ INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
 Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
 INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|T
 
+Aug 09, 2020 2:45:49 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> Creating Replica 1
+
+Aug 09, 2020 2:45:49 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> Starting Replica 1
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> Creating Replica 2
+
+Aug 09, 2020 2:45:50 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> Starting Replica 2
+
+Aug 09, 2020 2:45:51 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> Creating Replica 3
+
+Aug 09, 2020 2:45:51 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> Starting Replica 3
+
+Aug 09, 2020 2:45:52 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> Starting UDP Heart Beat Monitor
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
+
+Aug 09, 2020 2:46:08 AM Utilities.FileLogger write
+INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|F
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
+
+Aug 09, 2020 2:46:26 AM Utilities.FileLogger write
+INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|F
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> UDPServer >>> Reciving request
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> UDPServer >>> Reciving request >>> UDP Heart Beat
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|F
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> UDPServer >>> Reciving request >>> UDP Heart Beat
+
+Aug 09, 2020 2:46:57 AM Utilities.FileLogger write
+INFO: >>> stoppingOldReplica >>> Stopping R3...
+
+Aug 09, 2020 2:46:58 AM Utilities.FileLogger write
+INFO: >>> startNewReplica >>> Starting a new R3...
+
+Aug 09, 2020 2:47:18 AM Utilities.FileLogger write
+INFO: >>> stoppingOldReplica >>> Stopping R3...
+
+Aug 09, 2020 2:47:18 AM Utilities.FileLogger write
+INFO: >>> startNewReplica >>> Starting a new R3...
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> UDPServer >>> Reciving request
+
+Aug 09, 2020 2:48:02 AM Utilities.FileLogger write
+INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|T
+
+Aug 09, 2020 2:48:45 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
+
+Aug 09, 2020 2:48:45 AM Utilities.FileLogger write
+INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|T
+
+Aug 09, 2020 2:48:45 AM Utilities.FileLogger write
+INFO: >>> UDPServer >>> Reciving request >>> UDP Heart Beat
+
+Aug 09, 2020 2:49:08 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
+
+Aug 09, 2020 2:49:08 AM Utilities.FileLogger write
+INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|T
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> ReplicaManager >>> UDP Request arrived from Leader
+
+Aug 09, 2020 2:49:46 AM Utilities.FileLogger write
+INFO: >>> UDPServerRequestProcessor >>> request >>> T|T|T
+
