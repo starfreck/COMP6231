@@ -97,3 +97,147 @@ INFO: >>> suspendAccount >>> Username To Suspend >>> Kevin123
 Aug 06, 2020 10:20:40 PM Utilities.FileLogger write
 INFO: >>> suspendAccount >>> A player doesn't exixts with Kevin123 username
 
+Aug 07, 2020 3:56:24 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 07, 2020 3:56:25 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 07, 2020 3:56:25 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 07, 2020 3:56:25 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.3.3.23
+
+Aug 07, 2020 3:56:25 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 07, 2020 3:56:25 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 07, 2020 3:56:25 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 4 offline.
+
+Aug 08, 2020 3:39:38 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 08, 2020 3:39:38 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 08, 2020 3:39:38 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 08, 2020 3:39:38 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.46.456.4
+
+Aug 08, 2020 3:39:38 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 08, 2020 3:39:38 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 08, 2020 3:39:38 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Aug 08, 2020 3:41:33 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 08, 2020 3:41:33 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 08, 2020 3:41:33 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 08, 2020 3:41:33 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.324.34.3
+
+Aug 08, 2020 3:41:33 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 08, 2020 3:41:33 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 08, 2020 3:41:34 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.34.3.43
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.2.3423.34
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> username >>> Admin
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> password >>> Admin
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> ipadddress >>> 132.32.432.4
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> getOwnStatus >>> NA: 0 online, 5 offline
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> getPlayerStatus >>> Sending response to Admin >>> NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 3 offline.
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> suspendAccount
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> Admin
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 132.345.34.3
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Varun123
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> A player doesn't exixts with Varun123 username
+

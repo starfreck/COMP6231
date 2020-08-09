@@ -1,0 +1,27 @@
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> username >>> anqiwang
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> firstname >>> Anqi
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> lastname >>> Wang
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> password >>> anqiwang
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> age >>> 28
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> ipadddress >>> 182.23.2.32
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> createPlayerAccount >>> User information stored
+
+Aug 08, 2020 6:07:27 PM Utilities.FileLogger write
+INFO: >>> playerSignIn >>> anqiwang signed in successfully...
+

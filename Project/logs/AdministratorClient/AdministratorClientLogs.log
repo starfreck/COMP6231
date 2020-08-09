@@ -725,3 +725,1398 @@ Aug 06, 2020 10:20:40 PM Utilities.FileLogger write
 INFO: >>> Suspend Account >>> Response >>> 
 A player doesn't exixts with given username
 
+Aug 07, 2020 3:25:18 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 07, 2020 3:25:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 07, 2020 3:25:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 07, 2020 3:25:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.3.3.34
+
+Aug 07, 2020 3:25:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 07, 2020 3:25:31 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+
+
+Aug 07, 2020 3:26:06 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 07, 2020 3:26:06 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 07, 2020 3:26:06 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 07, 2020 3:26:06 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 07, 2020 3:26:06 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 07, 2020 3:26:33 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 07, 2020 3:26:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 07, 2020 3:26:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 07, 2020 3:26:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.5.4.34
+
+Aug 07, 2020 3:26:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 07, 2020 3:26:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+
+
+Aug 07, 2020 3:54:53 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 07, 2020 3:55:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 07, 2020 3:55:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 07, 2020 3:55:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.343.4.34
+
+Aug 07, 2020 3:55:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 07, 2020 3:55:01 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 07, 2020 3:55:14 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 07, 2020 3:55:32 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 07, 2020 3:55:32 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 07, 2020 3:55:32 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.43.434.3
+
+Aug 07, 2020 3:55:32 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 07, 2020 3:55:32 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 07, 2020 3:55:32 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Varun123" username is suspended
+
+Aug 07, 2020 3:55:48 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 07, 2020 3:55:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 07, 2020 3:55:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 07, 2020 3:55:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.2.2.2
+
+Aug 07, 2020 3:55:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 07, 2020 3:55:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 0 online, 5 offline, AS: 0 online, 4 offline, NA: 0 online, 5 offline.
+
+Aug 07, 2020 3:56:15 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 07, 2020 3:56:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 07, 2020 3:56:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 07, 2020 3:56:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.3.3.23
+
+Aug 07, 2020 3:56:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 07, 2020 3:56:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 4 offline.
+
+Aug 07, 2020 3:59:38 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 3:03:52 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:04:55 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:05:04 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:05:04 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:05:04 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.24.324.24
+
+Aug 08, 2020 3:05:04 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:05:57 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:06:10 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Asmin
+
+Aug 08, 2020 3:06:10 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:06:10 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.4.34.34
+
+Aug 08, 2020 3:06:10 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:06:10 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+Wrong username or password...
+
+Aug 08, 2020 3:07:45 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:18:18 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:18:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:18:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:18:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.324.234.2
+
+Aug 08, 2020 3:18:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:18:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 3:18:46 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 08, 2020 3:19:00 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 08, 2020 3:19:00 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 08, 2020 3:19:00 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.34.345.3
+
+Aug 08, 2020 3:19:00 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 08, 2020 3:19:00 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 08, 2020 3:19:00 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Varun123" username is suspended
+
+Aug 08, 2020 3:19:23 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:21:42 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:21:42 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:21:42 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.3
+
+Aug 08, 2020 3:21:42 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:21:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 3:22:18 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:22:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:22:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:22:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.23.2
+
+Aug 08, 2020 3:22:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:22:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 3:38:42 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:38:47 PM Utilities.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Aug 08, 2020 3:38:51 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:38:51 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:38:51 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.35.45.45
+
+Aug 08, 2020 3:38:51 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:39:02 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 3:39:26 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:39:31 PM Utilities.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Aug 08, 2020 3:39:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:39:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:39:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.46.456.4
+
+Aug 08, 2020 3:39:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:39:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Aug 08, 2020 3:39:51 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:39:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:39:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:39:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.34
+
+Aug 08, 2020 3:39:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:40:02 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 3:41:22 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:41:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:41:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:41:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.324.34.3
+
+Aug 08, 2020 3:41:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:45:30 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:45:35 PM Utilities.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Aug 08, 2020 3:45:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:45:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:45:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.43.43.43
+
+Aug 08, 2020 3:45:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:45:56 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 3:47:04 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:47:14 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:47:14 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:47:14 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.3.43
+
+Aug 08, 2020 3:47:14 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:47:27 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 3:48:48 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 3:48:56 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 3:48:56 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 3:48:56 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.43.43.2
+
+Aug 08, 2020 3:48:56 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 3:49:05 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:09:15 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:09:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:09:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:09:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.343.23.2
+
+Aug 08, 2020 5:09:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:10:42 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:10:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:10:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:10:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.324.34.3
+
+Aug 08, 2020 5:10:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:12:19 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:12:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:12:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:12:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.32
+
+Aug 08, 2020 5:12:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:12:27 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:12:29 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:12:38 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:12:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:12:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.23.323
+
+Aug 08, 2020 5:12:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:12:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:12:42 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.34.3.43
+
+Aug 08, 2020 5:12:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:12:55 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Aug 08, 2020 5:13:09 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:13:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:13:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:13:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.23.2
+
+Aug 08, 2020 5:13:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:13:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:18:33 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 5:19:00 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:19:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:19:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:19:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.3.3.3
+
+Aug 08, 2020 5:19:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:19:08 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:19:09 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:19:16 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:19:16 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:19:16 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.234.23.2
+
+Aug 08, 2020 5:19:16 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:19:16 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:19:20 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:19:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:19:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:19:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.32.2.2
+
+Aug 08, 2020 5:19:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:19:42 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:20:12 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:20:19 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:20:19 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:20:19 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.23.2
+
+Aug 08, 2020 5:20:19 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:20:19 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:31:51 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:31:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:31:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:31:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.3.23.2
+
+Aug 08, 2020 5:31:58 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:32:08 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:32:41 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:32:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:32:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:32:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.23.2
+
+Aug 08, 2020 5:32:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:33:01 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:33:19 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:33:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:33:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:33:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.3
+
+Aug 08, 2020 5:33:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:33:31 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:34:08 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:34:13 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:34:13 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:34:13 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.234.23.2
+
+Aug 08, 2020 5:34:13 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:43:57 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:44:03 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:44:03 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:44:03 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.3.3.2
+
+Aug 08, 2020 5:44:03 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:44:04 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:44:14 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:44:23 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:44:23 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> 182.2.2.2
+
+Aug 08, 2020 5:44:23 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.2.32.2
+
+Aug 08, 2020 5:44:23 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:44:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+Wrong username or password...
+
+Aug 08, 2020 5:44:26 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:44:31 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:44:31 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:44:31 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.2.32.32
+
+Aug 08, 2020 5:44:31 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:44:32 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:44:50 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:44:55 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:44:55 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:44:55 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.23.2
+
+Aug 08, 2020 5:44:55 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:44:56 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:51:38 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 5:51:38 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 5:51:38 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 5:52:39 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:52:46 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:52:46 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:52:46 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.34
+
+Aug 08, 2020 5:52:46 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:52:46 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:53:05 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:53:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:53:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:53:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.24.324
+
+Aug 08, 2020 5:53:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:53:16 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:53:26 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:53:38 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:53:38 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:53:38 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.324.234.2
+
+Aug 08, 2020 5:53:38 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:53:39 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:53:53 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:54:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:54:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:54:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.2.32.32
+
+Aug 08, 2020 5:54:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:54:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:54:24 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:54:37 PM Utilities.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Aug 08, 2020 5:54:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:54:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:54:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.3
+
+Aug 08, 2020 5:54:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:54:41 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:56:59 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 5:56:59 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 5:56:59 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 5:58:09 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:58:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:58:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:58:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.32.24.324
+
+Aug 08, 2020 5:58:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:58:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:58:37 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:58:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:58:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:58:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.3.43.4
+
+Aug 08, 2020 5:58:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:58:44 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:58:54 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:59:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:59:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:59:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.3.3
+
+Aug 08, 2020 5:59:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:59:00 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:59:17 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:59:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:59:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:59:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.324.324.2
+
+Aug 08, 2020 5:59:24 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:59:25 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 5:59:42 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.2.3423.34
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 5:59:54 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 5 offline.
+
+Aug 08, 2020 6:01:34 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:01:34 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:01:34 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:01:34 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:01:34 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:02:05 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:02:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:02:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:02:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.23.23
+
+Aug 08, 2020 6:02:15 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:02:16 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:02:26 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:02:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:02:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:02:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.2.2.2
+
+Aug 08, 2020 6:02:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:02:34 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:02:38 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 08, 2020 6:02:50 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  \Admin
+
+Aug 08, 2020 6:02:50 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 08, 2020 6:02:50 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.2.2.2
+
+Aug 08, 2020 6:02:50 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 08, 2020 6:02:50 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 08, 2020 6:02:51 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+Wrong username or password...
+
+Aug 08, 2020 6:02:54 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:03:01 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:03:01 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:03:01 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.12.132.1
+
+Aug 08, 2020 6:03:01 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:03:02 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:03:04 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 08, 2020 6:03:14 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 08, 2020 6:03:14 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 08, 2020 6:03:14 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.23.2.3
+
+Aug 08, 2020 6:03:14 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 08, 2020 6:03:14 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 08, 2020 6:03:14 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Varun123" username is suspended
+
+Aug 08, 2020 6:03:41 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 08, 2020 6:03:55 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 08, 2020 6:03:55 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 08, 2020 6:03:55 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.23.23.2
+
+Aug 08, 2020 6:03:55 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 08, 2020 6:03:55 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 08, 2020 6:03:55 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player doesn't exixts with given username
+
+Aug 08, 2020 6:03:59 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:04:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:04:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:04:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.21.1.1
+
+Aug 08, 2020 6:04:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:04:06 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:04:24 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:04:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:04:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:04:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.2.32
+
+Aug 08, 2020 6:04:29 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:04:30 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:04:47 PM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 08, 2020 6:05:01 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 08, 2020 6:05:01 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 08, 2020 6:05:01 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.2.32.32
+
+Aug 08, 2020 6:05:01 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Kevin123
+
+Aug 08, 2020 6:05:01 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 08, 2020 6:05:01 PM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Kevin123" username is suspended
+
+Aug 08, 2020 6:05:11 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:05:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:05:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:05:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.32.432.4
+
+Aug 08, 2020 6:05:20 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:05:21 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+NA: 0 online, 5 offline, EU: 0 online, 5 offline, AS: 0 online, 3 offline.
+
+Aug 08, 2020 6:06:31 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:06:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:06:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:06:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.23.2
+
+Aug 08, 2020 6:06:48 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:06:49 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 4 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:07:38 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:07:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:07:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:07:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.2.32
+
+Aug 08, 2020 6:07:43 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:07:44 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 1 online, 3 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:08:56 PM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 08, 2020 6:09:08 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 08, 2020 6:09:08 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 08, 2020 6:09:08 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.23.232.2
+
+Aug 08, 2020 6:09:08 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 08, 2020 6:09:09 PM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 0 online, 6 offline, AS: 0 online, 3 offline, NA: 0 online, 5 offline.
+
+Aug 08, 2020 6:09:18 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:09:18 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:09:18 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:09:18 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:09:18 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:09:22 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 08, 2020 6:09:23 PM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+
+Aug 09, 2020 12:41:13 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 12:41:21 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 12:41:21 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 12:41:21 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.4.234.34
+
+Aug 09, 2020 12:41:21 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 12:41:22 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+UDPHeartBeat:i am alive
+
+Aug 09, 2020 12:52:40 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 12:52:56 AM Utilities.FileLogger write
+INFO: >>> Error >>> Invalid IP address formate
+
+Aug 09, 2020 12:53:03 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 12:53:03 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 12:53:03 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 132.45.4.54
+
+Aug 09, 2020 12:53:03 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 12:53:03 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+
+
+Aug 09, 2020 12:57:03 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 12:57:15 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 12:57:15 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 12:57:15 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.3
+
+Aug 09, 2020 12:57:15 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 12:57:16 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+UDPHeartBeat:i am alive
+
+Aug 09, 2020 1:12:27 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 1:12:37 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 1:12:37 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 1:12:37 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.23.232.2
+
+Aug 09, 2020 1:12:37 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 1:12:38 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+
+
+Aug 09, 2020 1:45:49 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 1:45:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 1:45:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 1:45:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 182.34.34.34
+
+Aug 09, 2020 1:45:56 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 1:45:57 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+AS: 0 online, 5 offline, EU: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 09, 2020 1:46:09 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 132.345.34.3
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Varun123
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 09, 2020 1:46:31 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player doesn't exixts with given username
+
+Aug 09, 2020 1:48:37 AM Utilities.FileLogger write
+INFO: >>> Get Status
+
+Aug 09, 2020 1:49:18 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> username >>>  Admin
+
+Aug 09, 2020 1:49:18 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> password >>> Admin
+
+Aug 09, 2020 1:49:19 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> ipaddress >>> 93.23.23.2
+
+Aug 09, 2020 1:49:19 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Sending request to server
+
+Aug 09, 2020 1:49:20 AM Utilities.FileLogger write
+INFO: >>> Get Status >>> Response >>> 
+EU: 0 online, 5 offline, AS: 0 online, 5 offline, NA: 0 online, 5 offline.
+
+Aug 09, 2020 1:50:26 AM Utilities.FileLogger write
+INFO: >>> Suspend Account
+
+Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> username >>>  Admin
+
+Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> password >>> Admin
+
+Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> ipaddress >>> 182.23.23.2
+
+Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Username To Suspend >>> Kevin123
+
+Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Sending request to server
+
+Aug 09, 2020 1:50:38 AM Utilities.FileLogger write
+INFO: >>> Suspend Account >>> Response >>> 
+A player account with "Kevin123" username is suspended
+
+Aug 09, 2020 1:51:05 AM Utilities.FileLogger write
+INFO: >>> inputChoice >>> Please input Integer only
+

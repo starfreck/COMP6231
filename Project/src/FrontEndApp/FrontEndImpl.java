@@ -14,7 +14,7 @@ import org.omg.PortableServer.POA;
 import org.omg.PortableServer.POAHelper;
 
 import Utilities.FileLogger;
-import Utilities.Ports;
+import Utilities.Constants;
 
 public class FrontEndImpl extends FrontEndPOA{
 	
@@ -55,86 +55,95 @@ public class FrontEndImpl extends FrontEndPOA{
 	public synchronized String createPlayerAccount(String FirstName, String LastName, int Age, String Username, String Password,
 			String IPAddress) {
 		
-		this.logger.write("createPlayerAccount");
-		System.out.println("createPlayerAccount");
+		this.logger.write(">>> Client >>> Frontend >>> createPlayerAccount");
 		
 		// createPlayerAccount
 		String methodName = "createPlayerAccount";
 		// IPAddress|FirstName|LastName|Age|Username|Password
 		String Data = IPAddress+"|"+FirstName+"|"+LastName+"|"+String.valueOf(Age)+"|"+Username+"|"+Password;
+		String response = sendMessageToLeader(methodName,Data);
 		
-		return sendMessageToLeader(methodName,Data);
-		
+		this.logger.write(">>> Client >>> Frontend >>> createPlayerAccount >>> Response from Leader >>> "+response);
+		return response;
 	}
 
 	@Override
 	public synchronized String playerSignIn(String Username, String Password, String IPAddress) {
 		
-		this.logger.write("playerSignIn");
-		System.out.println("playerSignIn");
-		
+		this.logger.write(">>> Client >>> Frontend >>> playerSignIn");
+
 		// playerSignIn
 		String methodName = "playerSignIn";
 		// IPAddress|Username|Password
 		String Data = IPAddress+"|"+Username+"|"+Password;
 		
-		return sendMessageToLeader(methodName,Data);
+		String response = sendMessageToLeader(methodName,Data);
+		
+		this.logger.write(">>> Client >>> Frontend >>> playerSignIn >>> Response from Leader >>> "+response);
+		return response;
 	}
 
 	@Override
 	public synchronized String playerSignOut(String Username, String IPAddress) {
 		
-		this.logger.write("playerSignOut");
-		System.out.println("playerSignOut");
+		this.logger.write(">>> Client >>> Frontend >>> playerSignOut");
 		
 		// playerSignOut
 		String methodName = "playerSignOut";
 		// IPAddress|Username
 		String Data = IPAddress+"|"+Username;
 		
-		return sendMessageToLeader(methodName,Data);
+		String response = sendMessageToLeader(methodName,Data);
+		
+		this.logger.write(">>> Client >>> Frontend >>> playerSignOut >>> Response from Leader >>> "+response);
+		return response;
 	}
 
 	@Override
 	public synchronized String transferAccount(String Username, String Password, String OldIPAddress, String NewIPAddress) {
 		
-		this.logger.write("transferAccount");
-		System.out.println("transferAccount");
-	
+		this.logger.write(">>> Client >>> Frontend >>> transferAccount");
+		
 		// transferAccount
 		String methodName = "transferAccount";
 		// OldIPAddress|Username|Password|NewIPAddress
 		String Data = OldIPAddress+"|"+Username+"|"+Password+"|"+NewIPAddress;
 		
-		return sendMessageToLeader(methodName,Data);
+		String response = sendMessageToLeader(methodName,Data);
+		
+		this.logger.write(">>> Client >>> Frontend >>> transferAccount >>> Response from Leader >>> "+response);
+		return response;
 	}
 
 	@Override
 	public synchronized String getPlayerStatus(String AdminUsername, String AdminPassword, String IPAddress) {
 		
-		this.logger.write("getPlayerStatus");
-		System.out.println("getPlayerStatus");
+		this.logger.write(">>> Client >>> Frontend >>> getPlayerStatus");
 		
 		// getPlayerStatus
 		String methodName = "getPlayerStatus";
 		// IPAddress|AdminUsername|AdminPassword
 		String Data = IPAddress+"|"+AdminUsername+"|"+AdminPassword;
 		
-		return sendMessageToLeader(methodName,Data);
+		String response = sendMessageToLeader(methodName,Data);
+		
+		this.logger.write(">>> Client >>> Frontend >>> getPlayerStatus >>> Response from Leader >>> "+response);
+		return response;
 	}
 
 	@Override
 	public synchronized String suspendAccount(String AdminUsername, String AdminPassword, String AdminIPAddress, String UsernameToSuspend) {
 		
-		this.logger.write("suspendAccount");
-		System.out.println("suspendAccount");
-		
+		this.logger.write(">>> Client >>> Frontend >>> suspendAccount");
 		// suspendAccount
 		String methodName = "suspendAccount";
 		// AdminIPAddress|AdminUsername|AdminPassword|UsernameToSuspend
 		String Data = AdminIPAddress+"|"+AdminUsername+"|"+AdminPassword+"|"+UsernameToSuspend;
 		
-		return sendMessageToLeader(methodName,Data);
+		String response = sendMessageToLeader(methodName,Data);
+		
+		this.logger.write(">>> Client >>> Frontend >>> suspendAccount >>> Response from Leader >>> "+response);
+		return response;
 	}
 
 	@Override
@@ -209,8 +218,7 @@ public class FrontEndImpl extends FrontEndPOA{
 		orbarg[1] = ORB_PORT;
 		orbarg[2] = "-ORBInitialHost";
 		orbarg[3] = "localhost";
-		orbarg[4] = String.valueOf(Ports.R1_PORT);
-
+		orbarg[4] = String.valueOf(Constants.R1_PORT);
 		return orbarg;
 	}
 	
@@ -230,17 +238,19 @@ public class FrontEndImpl extends FrontEndPOA{
 			InetAddress host = InetAddress.getLocalHost();
 
 			byte[] sendMessage = methodAction.getBytes();
-			byte[] recivedMessage = new byte[Ports.MAX_PACKET_SIZE];
+			byte[] recivedMessage = new byte[Constants.MAX_PACKET_SIZE];
 
 			// Get status from Given Server
 			socket = new DatagramSocket();
 
 			// Request Data
 			requestData = new DatagramPacket(sendMessage, sendMessage.length, host, LE_PORT);
+			this.logger.write(">>> Client >>> Frontend >>> sendMessageToLeader >>> Sending a UDP request to Leader");
 			socket.send(requestData);
 
 			// Response Data
 			responseData = new DatagramPacket(recivedMessage, recivedMessage.length);
+			this.logger.write(">>> Client >>> Frontend >>> sendMessageToLeader >>> Receiving a UDP request to Leader");
 			socket.receive(responseData);
 
 			// Retrieving Data
@@ -249,6 +259,7 @@ public class FrontEndImpl extends FrontEndPOA{
 			socket.close();
 
 		} catch (Exception e) {
+			this.logger.write(">>> Client >>> Frontend >>> sendMessageToLeader >>> Exception >>> "+e);
 			System.err.println(e);
 		}
 

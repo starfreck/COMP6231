@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import Utilities.Database;
 import Utilities.FileLogger;
-import Utilities.Ports;
+import Utilities.Constants;
 
 public class AsianServerImpl {
 
@@ -73,7 +73,7 @@ public class AsianServerImpl {
 		
 		thread.start();
 	
-		if(Ports.DEBUG) System.out.println(serverName + " ready and waiting ...");
+		if(Constants.DEBUG) System.out.println(serverName + " ready and waiting ...");
 
 	}
 
@@ -615,7 +615,7 @@ public class AsianServerImpl {
 			InetAddress host = InetAddress.getLocalHost();
 
 			byte[] sendMessage = methodAction.getBytes();
-			byte[] recivedMessage = new byte[Ports.MAX_PACKET_SIZE];
+			byte[] recivedMessage = new byte[Constants.MAX_PACKET_SIZE];
 
 			// Get status from Given Server
 			socket = new DatagramSocket();
@@ -667,12 +667,14 @@ public class AsianServerImpl {
 
 			while (Flag) {
 				
-				byte[] sendData = new byte[Ports.MAX_PACKET_SIZE];
-				byte[] reciveData = new byte[Ports.MAX_PACKET_SIZE];
+				byte[] sendData = new byte[Constants.MAX_PACKET_SIZE];
+				byte[] reciveData = new byte[Constants.MAX_PACKET_SIZE];
 
 				// Client Request Data
 				requestPacket = new DatagramPacket(reciveData, reciveData.length);
 				socket.receive(requestPacket);
+				this.logger.write(">>> UDPServer >>> Reciving request");
+				
 				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),requestPacket.getLength());
 				
 				String methodName = reciveDataString.split(":", 2)[0];
@@ -682,17 +684,23 @@ public class AsianServerImpl {
 //				System.out.println("data : "+data);
 				
 				// HeartBeat Checker
-				if(methodName.equals("UDPHeartBeat")) {
+				if(methodName.equals("UDPHeartBeat"))
+				{
 					// data has "UDPHeartBeat:just a message to check server pulse"
+					this.logger.write(">>> UDPServer >>> Reciving request >>> UDP Heart Beat");
 					status = "UDPHeartBeat:i am alive";
 				} 
 				// Other Requests
-				else {
+				else
+				{
+					this.logger.write(">>> UDPServer >>> Request is coming from leader or other servers");	
 					// Process requests coming from Leader
 					status = processLeaderRequests(methodName, data);
 					// Process requests coming from other servers
-					if(status 	== "") status = processServersRequests(methodName, data);
+					if(status 	== "")status = processServersRequests(methodName, data);
 				}
+				
+				
 				
 				// Get Client's IP & Port
 				InetAddress IPAddress = requestPacket.getAddress();
@@ -701,7 +709,7 @@ public class AsianServerImpl {
 				sendData = status.getBytes();
 				responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
 				socket.send(responsePacket);
-				logger.write(">>> Sending response of UDP request");
+				this.logger.write(">>> UDPServer >>> Sending response of UDP request");
 
 			}
 			
@@ -713,6 +721,8 @@ public class AsianServerImpl {
 	}
 	
 	public String processLeaderRequests(String methodName, String data) {
+		
+		this.logger.write(">>> processLeaderRequests >>> Start processing UDP request");
 		
 		String response = "";
 		
@@ -778,15 +788,17 @@ public class AsianServerImpl {
 			String AdminPassword  		= data.split("\\|")[2];
 			String UsernameToSuspend  	= data.split("\\|")[3];
 			
-			System.out.println("\n"+UsernameToSuspend);
-			
 			response = suspendAccount(AdminUsername, AdminPassword, AdminIPAddress, UsernameToSuspend);
 		}
+		
+		this.logger.write(">>> processLeaderRequests >>> Finish processing UDP request");
 		
 		return response;
 	}
 	
 	public String processServersRequests(String methodName, String data) {
+		
+		this.logger.write(">>> processServersRequests >>> Start processing UDP request");
 		
 		String response = "";
 		
@@ -844,6 +856,8 @@ public class AsianServerImpl {
 			logger.write(">>> deleteTransferedAccountStatus >>> " + response);					
 		}
 		
+		this.logger.write(">>> processServersRequests >>> Finish processing UDP request");
+		
 		return response;
 	}
 	
@@ -852,11 +866,15 @@ public class AsianServerImpl {
 		storeDB();
 		
 		Flag = false;
+		this.logger.write(">>> kill >>> Closing socket");
 		socket.close();
 		System.out.println(serverName+" is killed...");
+		this.logger.write(">>> kill >>> "+serverName+" is killed...");
 	}
 	
 	public boolean storeDB() {
+		
+		this.logger.write(">>> storeDB >>> Write DB to File");
 		
 		try
         {
@@ -871,10 +889,13 @@ public class AsianServerImpl {
 			e.printStackTrace();
 		}
 		
+		this.logger.write(">>> storeDB >>> DB is stored in File");
         return true;
 	}
 	
 	public ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> loadDB() {
+		
+		this.logger.write(">>> loadDB >>> Read DB from File");
 		
 		Database DB = null;
 		
@@ -885,10 +906,14 @@ public class AsianServerImpl {
             DB = (Database) in.readObject();
             in.close();
 			fileIn.close();
+			
+			this.logger.write(">>> loadDB >>> Read finished");
 			// Delete DB File
 	        new File(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/"+"database.ser").delete();
 	        
-		} catch (Exception e) {
+	        this.logger.write(">>> loadDB >>> Delete DB File");
+		
+        } catch (Exception e) {
 			e.printStackTrace();
 		}
         

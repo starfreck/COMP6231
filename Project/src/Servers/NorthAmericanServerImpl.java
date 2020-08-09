@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import Utilities.Database;
 import Utilities.FileLogger;
-import Utilities.Ports;
+import Utilities.Constants;
 
 
 
@@ -37,7 +37,7 @@ public class NorthAmericanServerImpl {
 	FileLogger logger;
 	FileLogger userLogger;
 	FileLogger adminLogger;
-	// Logger Path
+	// Logger PathDatagramSocket
 	String loggerPath = "./logs/";
 	// UDP Server Ports
 	int AS_PORT;
@@ -77,7 +77,7 @@ public class NorthAmericanServerImpl {
 		
 		thread.start();
 		
-		if(Ports.DEBUG) System.out.println(serverName + " ready and waiting ...");
+		if(Constants.DEBUG) System.out.println(serverName + " ready and waiting ...");
 
 	}
 
@@ -621,7 +621,7 @@ public class NorthAmericanServerImpl {
 			InetAddress host = InetAddress.getLocalHost();
 
 			byte[] sendMessage = methodAction.getBytes();
-			byte[] recivedMessage = new byte[Ports.MAX_PACKET_SIZE];
+			byte[] recivedMessage = new byte[Constants.MAX_PACKET_SIZE];
 
 			// Get status from Given Server
 			socket = new DatagramSocket();
@@ -672,34 +672,41 @@ public class NorthAmericanServerImpl {
 			socket = new DatagramSocket(NA_PORT);
 
 			while (Flag) {
-
-				byte[] sendData = new byte[Ports.MAX_PACKET_SIZE];
-				byte[] reciveData = new byte[Ports.MAX_PACKET_SIZE];
+				
+				byte[] sendData = new byte[Constants.MAX_PACKET_SIZE];
+				byte[] reciveData = new byte[Constants.MAX_PACKET_SIZE];
 
 				// Client Request Data
 				requestPacket = new DatagramPacket(reciveData, reciveData.length);
 				socket.receive(requestPacket);
-				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),
-						requestPacket.getLength());
-
+				this.logger.write(">>> UDPServer >>> Reciving request");
+				
+				reciveDataString = new String(requestPacket.getData(), requestPacket.getOffset(),requestPacket.getLength());
+				
 				String methodName = reciveDataString.split(":", 2)[0];
-				String data = reciveDataString.split(":", 2)[1];
+				String data 	  = reciveDataString.split(":", 2)[1];
 				
 //				System.out.println("methodName : "+methodName);
 //				System.out.println("data : "+data);
 				
 				// HeartBeat Checker
-				if(methodName.equals("UDPHeartBeat")) {
+				if(methodName.equals("UDPHeartBeat"))
+				{
 					// data has "UDPHeartBeat:just a message to check server pulse"
+					this.logger.write(">>> UDPServer >>> Reciving request >>> UDP Heart Beat");
 					status = "UDPHeartBeat:i am alive";
 				} 
 				// Other Requests
-				else {
+				else
+				{
+					this.logger.write(">>> UDPServer >>> Request is coming from leader or other servers");	
 					// Process requests coming from Leader
 					status = processLeaderRequests(methodName, data);
 					// Process requests coming from other servers
-					if(status 	== "") status = processServersRequests(methodName, data);
+					if(status 	== "")status = processServersRequests(methodName, data);
 				}
+				
+				
 				
 				// Get Client's IP & Port
 				InetAddress IPAddress = requestPacket.getAddress();
@@ -708,18 +715,20 @@ public class NorthAmericanServerImpl {
 				sendData = status.getBytes();
 				responsePacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
 				socket.send(responsePacket);
-				logger.write(">>> Sending response of UDP request");
+				this.logger.write(">>> UDPServer >>> Sending response of UDP request");
 
 			}
+			
 		} catch (SocketException e) {
 			//System.out.println("Socket: " + e.getMessage());
 		} catch (IOException e) {
 			System.out.println("IO: " + e.getMessage());
 		}
-
 	}
 	
 	public String processLeaderRequests(String methodName, String data) {
+		
+		this.logger.write(">>> processLeaderRequests >>> Start processing UDP request");
 		
 		String response = "";
 		
@@ -784,25 +793,29 @@ public class NorthAmericanServerImpl {
 			String AdminUsername  		= data.split("\\|")[1];
 			String AdminPassword  		= data.split("\\|")[2];
 			String UsernameToSuspend  	= data.split("\\|")[3];
-	
+			
 			response = suspendAccount(AdminUsername, AdminPassword, AdminIPAddress, UsernameToSuspend);
 		}
+		
+		this.logger.write(">>> processLeaderRequests >>> Finish processing UDP request");
 		
 		return response;
 	}
 	
 	public String processServersRequests(String methodName, String data) {
 		
-		String response= "";
+		this.logger.write(">>> processServersRequests >>> Start processing UDP request");
+		
+		String response = "";
 		
 		// getPlayerStatus
-		if (methodName.equals("getPlayerStatus")) {
+		if(methodName.equals("getPlayerStatus")) {
 
 			logger.write(">>> Recived UDP request");
 			response = getOwnStatus();
 			logger.write(">>> getOwnStatus >>> " + response);
 
-		} 
+		}
 		// transferAccount
 		else if (methodName.equals("transferAccount")) {
 
@@ -814,7 +827,8 @@ public class NorthAmericanServerImpl {
 				// Account with Given Name is already present
 				logger.write(">>> transferAccount >>> Account with" + response + " username is already present");
 				response = "false";
-			} else {
+			
+			} else{
 				// Account Can transfer
 				// FirstName, LastName, Age, Username, Password, IPAddress
 				createPlayerAccount(accountInfo[2], accountInfo[3], Integer.parseInt(accountInfo[4]), accountInfo[0], accountInfo[1], accountInfo[5]);
@@ -830,7 +844,9 @@ public class NorthAmericanServerImpl {
 			logger.write(">>> Recived UDP request");
 
 			String[] accountInfo = data.split("\\|");
+			
 			String Username = accountInfo[0];
+			
 			if (validateAccount(accountInfo[0])) {
 				// Account with Given Name is present
 				logger.write(">>> deleteTransferedAccount >>> Account with" + response + " username is present");
@@ -838,26 +854,33 @@ public class NorthAmericanServerImpl {
 				response = Boolean.toString(deleteAccount(Username));
 			} else {
 				// Account with Given Name is present
-				logger.write(">>> deleteTransferedAccount >>> Account with" + response + " username is not present");
+				logger.write(
+						">>> deleteTransferedAccount >>> Account with" + response + " username is not present");
 				response = "false";
 			}
 			
-			logger.write(">>> deleteTransferedAccountStatus >>> " + response);	
+			logger.write(">>> deleteTransferedAccountStatus >>> " + response);					
 		}
+		
+		this.logger.write(">>> processServersRequests >>> Finish processing UDP request");
 		
 		return response;
 	}
-
+	
 	public void kill() {
 		// Write DB to File
 		storeDB();
 		
 		Flag = false;
+		this.logger.write(">>> kill >>> Closing socket");
 		socket.close();
 		System.out.println(serverName+" is killed...");
+		this.logger.write(">>> kill >>> "+serverName+" is killed...");
 	}
 	
 	public boolean storeDB() {
+		
+		this.logger.write(">>> storeDB >>> Write DB to File");
 		
 		try
         {
@@ -872,10 +895,13 @@ public class NorthAmericanServerImpl {
 			e.printStackTrace();
 		}
 		
+		this.logger.write(">>> storeDB >>> DB is stored in File");
         return true;
 	}
 	
 	public ConcurrentHashMap<String, ArrayList<HashMap<String, String>>> loadDB() {
+		
+		this.logger.write(">>> loadDB >>> Read DB from File");
 		
 		Database DB = null;
 		
@@ -886,14 +912,17 @@ public class NorthAmericanServerImpl {
             DB = (Database) in.readObject();
             in.close();
 			fileIn.close();
+			
+			this.logger.write(">>> loadDB >>> Read finished");
 			// Delete DB File
 	        new File(loggerPath+replicaName+"/ServerLogs/"+ serverName + "/"+"database.ser").delete();
 	        
-		} catch (Exception e) {
+	        this.logger.write(">>> loadDB >>> Delete DB File");
+		
+        } catch (Exception e) {
 			e.printStackTrace();
 		}
         
         return DB.getDB();   
 	}
-
 }

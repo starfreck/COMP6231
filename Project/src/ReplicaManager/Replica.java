@@ -5,13 +5,13 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
-import java.util.Random;
 
 import Servers.AsianServerImpl;
 import Servers.EuropeanServerImpl;
 import Servers.NorthAmericanServerImpl;
 import Utilities.FileLogger;
-import Utilities.Ports;
+import Utilities.Constants;
+
 
 public class Replica {
 	
@@ -19,6 +19,8 @@ public class Replica {
 	boolean Flag = true;
 	// Leader Variables
 	boolean isLeader = false;
+	// isWrongCounter Variables
+	int isWrongCounter = 0;
 	// Socket Variables
 	DatagramSocket socket;
 	// Ports
@@ -103,8 +105,8 @@ public class Replica {
 	
 			while (Flag) {
 				
-				byte[] sendData = new byte[Ports.MAX_PACKET_SIZE];
-				byte[] reciveData = new byte[Ports.MAX_PACKET_SIZE];
+				byte[] sendData = new byte[Constants.MAX_PACKET_SIZE];
+				byte[] reciveData = new byte[Constants.MAX_PACKET_SIZE];
 	
 				// Client Request Data
 				requestPacket = new DatagramPacket(reciveData, reciveData.length);
@@ -167,31 +169,32 @@ public class Replica {
 		R1Response = UDPServerTunnel(ClientIPAddress, methodName+"Leader", data);
 		
 		// 2. Send Message to Other Replicas via UDP FIFO & take the majority and send the result to client
-		if(RE_PORT == Ports.R1_PORT) {
-			R2Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);
-			R3Response = sendMessageToReplica(Ports.R3_PORT, methodName, data);
-		} else if(RE_PORT == Ports.R2_PORT) {
-			R2Response = sendMessageToReplica(Ports.R1_PORT, methodName, data);
-			R3Response = sendMessageToReplica(Ports.R3_PORT, methodName, data);
-		} else if(RE_PORT == Ports.R3_PORT) {
-			R2Response = sendMessageToReplica(Ports.R1_PORT, methodName, data);
-			R3Response = sendMessageToReplica(Ports.R2_PORT, methodName, data);		
+		if(RE_PORT == Constants.R1_PORT) {
+			R2Response = sendMessageToReplica(Constants.R2_PORT, methodName, data);
+			R3Response = sendMessageToReplica(Constants.R3_PORT, methodName, data);
+		} else if(RE_PORT == Constants.R2_PORT) {
+			R2Response = sendMessageToReplica(Constants.R1_PORT, methodName, data);
+			R3Response = sendMessageToReplica(Constants.R3_PORT, methodName, data);
+		} else if(RE_PORT == Constants.R3_PORT) {
+			R2Response = sendMessageToReplica(Constants.R1_PORT, methodName, data);
+			R3Response = sendMessageToReplica(Constants.R2_PORT, methodName, data);		
 		}
 		
-		// creating Random Output
-		// new Random().nextBoolean()
-		if(Ports.DEBUG) System.out.println("R3Response ------------> "+R3Response);
-		
-		if(true) {
+		// creating Wrong Output		
+		if(isWrongCounter < 3) {
+
 			// Produce Wrong Output
 			R3Response = "Something went wrong with the server !";
+			isWrongCounter++;
 		}
 		
-		if(Ports.DEBUG) {
+		if(Constants.DEBUG) {
 			// Printing Results
+			System.out.println();
 			System.out.println("R1Response: "+R1Response);
 			System.out.println("R2Response: "+R2Response);
 			System.out.println("R3Response: "+R3Response);
+			System.out.println();
 		}
 		
 		// 3. Compare the results
@@ -262,7 +265,7 @@ public class Replica {
 			InetAddress host = InetAddress.getLocalHost();
 
 			byte[] sendMessage = methodAction.getBytes();
-			byte[] recivedMessage = new byte[Ports.MAX_PACKET_SIZE];
+			byte[] recivedMessage = new byte[Constants.MAX_PACKET_SIZE];
 
 			// Get status from Given Server
 			socket = new DatagramSocket();
@@ -313,7 +316,7 @@ public class Replica {
 			InetAddress host = InetAddress.getLocalHost();
 
 			byte[] sendMessage = methodAction.getBytes();
-			byte[] recivedMessage = new byte[Ports.MAX_PACKET_SIZE];
+			byte[] recivedMessage = new byte[Constants.MAX_PACKET_SIZE];
 
 			// Get status from Given Server
 			socket = new DatagramSocket();

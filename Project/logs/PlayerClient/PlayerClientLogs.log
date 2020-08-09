@@ -1,0 +1,28 @@
+Aug 08, 2020 6:05:39 PM Utilities.FileLogger write
+INFO: >>> Create Account
+
+Aug 08, 2020 6:05:43 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> firstname : Anqi
+
+Aug 08, 2020 6:05:47 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> lastname : Wang
+
+Aug 08, 2020 6:05:51 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> age : 28
+
+Aug 08, 2020 6:06:08 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> username : anqiwang
+
+Aug 08, 2020 6:06:15 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> password : anqiwang
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> ipaddress : 182.23.2.32
+
+Aug 08, 2020 6:06:20 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> Sending data to createPlayerAccount()
+
+Aug 08, 2020 6:06:21 PM Utilities.FileLogger write
+INFO: >>> Create Account >>> Respone from remote method >>> 
+New player account created successfully
+

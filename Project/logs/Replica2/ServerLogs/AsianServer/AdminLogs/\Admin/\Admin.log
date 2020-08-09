@@ -1,0 +1,18 @@
+Aug 08, 2020 6:02:51 PM Utilities.FileLogger write
+INFO: >>> suspendAccount
+
+Aug 08, 2020 6:02:51 PM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin Username >>> \Admin
+
+Aug 08, 2020 6:02:51 PM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin Password >>> Admin
+
+Aug 08, 2020 6:02:51 PM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Admin IPAddress >>> 182.2.2.2
+
+Aug 08, 2020 6:02:51 PM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Username To Suspend >>> Varun123
+
+Aug 08, 2020 6:02:51 PM Utilities.FileLogger write
+INFO: >>> suspendAccount >>> Wrong username or password...
+
