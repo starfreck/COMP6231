@@ -36,7 +36,7 @@ public class Replica {
 	// Loggers
 	FileLogger logger;
 	// Logger Path
-	String loggerPath = "./logs/ReplicaLogs/";
+	String loggerPath = "./logs/";
 	// Servers' Variables
 	AsianServerImpl AS;
 	EuropeanServerImpl EU;
@@ -69,17 +69,24 @@ public class Replica {
 	public void start() {
 		
 		//System.out.println("\n>>> Starting a new Cluster...\n");
+		this.logger.write(">>> Replica >>> Starting Asian Server...");
 		AS = new AsianServerImpl(replicaName, AS_PORT, EU_PORT, NA_PORT);
+		this.logger.write(">>> Replica >>> Starting European Server...");
 		EU = new EuropeanServerImpl(replicaName, AS_PORT, EU_PORT, NA_PORT);
+		this.logger.write(">>> Replica >>> Starting North American Server...");
 		NA = new NorthAmericanServerImpl(replicaName, AS_PORT, EU_PORT, NA_PORT);
 	}
 	
 	public void stop() {
 		// Kill all servers 
+		this.logger.write(">>> Replica >>> Stopping Asian Server...");
 		AS.kill();
+		this.logger.write(">>> Replica >>> Stopping European Server...");
 		EU.kill();
+		this.logger.write(">>> Replica >>> Stopping North American Server...");
 		NA.kill();
 		// Killing Own UDP Server
+		this.logger.write(">>> Replica >>> Stopping Replica UDP Server...");
 		Flag = false;
 		socket.close();
 		
@@ -92,6 +99,7 @@ public class Replica {
 		while(!queue.isEmpty()) {
 			
 			// Take out request from the queue
+			this.logger.write(">>> UDPFIFO >>> Take out request from the queue and process the request");
 			String[] request = queue.remove();
 			
 			int port		  = Integer.parseInt(request[0]);
@@ -140,6 +148,7 @@ public class Replica {
 				// HeartBeat Checker
 				if(methodName.equals("UDPHeartBeat")) {
 					// data has "UDPHeartBeat:just a message to check server pulse"
+					this.logger.write(">>> UDPServer >>> UDPHeartBeat recived from RM");
 					status = "UDPHeartBeat:i am alive";
 				}
 				
@@ -148,7 +157,11 @@ public class Replica {
 						// Follow Leader Actions
 						if(isLeader) {
 							
+							
 							// Adding Requests to UDP FIFO Queue
+					
+							this.logger.write(">>> UDPServer >>> Adding Requests to UDP FIFO Queue");
+							
 							if(RE_PORT == Constants.R1_PORT) {
 								queue.add(new String[]{String.valueOf(Constants.R2_PORT),methodName,data});
 								queue.add(new String[]{String.valueOf(Constants.R3_PORT),methodName,data});
@@ -161,10 +174,12 @@ public class Replica {
 							}
 							
 							status = leaderActions(methodName, data);
+							this.logger.write(">>> UDPServer >>> leaderActions response >>> "+status);
 						}
 						// wait for request which are coming from Leader
 						else {
 							status = replicaActions(methodName, data);
+							this.logger.write(">>> UDPServer >>> replicaActions response >>> "+status);
 						}
 				}
 				
@@ -194,18 +209,25 @@ public class Replica {
 		String ClientIPAddress  = data.split("\\|")[0];
 		
 		// 1. Send the message to Server via UDP
+		this.logger.write(">>> leaderActions >>> Send the message to own Server via UDP ");
 		R1Response = UDPServerTunnel(ClientIPAddress, methodName+"Leader", data);
-		
+		this.logger.write(">>> leaderActions >>> Send the message to own Server via UDP >>> R1Response >>>  "+R1Response);
 		// 2. Receive Messages from Other Replicas via UDP FIFO & take the majority and send the result to client
+		
 		String Responses = UDPFIFO();
+		
 		R2Response = Responses.split("\\|")[1];
+		this.logger.write(">>> leaderActions >>> R2Response >>> "+R2Response);
 		R3Response = Responses.split("\\|")[2];
+		this.logger.write(">>> leaderActions >>> R3Response >>> "+R3Response);
 		
 		// creating Wrong Output		
 		if(isWrongCounter < 3) {
 
 			// Produce Wrong Output
+			this.logger.write(">>> leaderActions >>> R3Response >>> Produce Wrong Output");
 			R3Response = "Something went wrong with the server !";
+			this.logger.write(">>> leaderActions >>> R3Response >>> "+R3Response);
 			isWrongCounter++;
 		}
 		
@@ -219,6 +241,7 @@ public class Replica {
 		}
 		
 		// 3. Compare the results
+		this.logger.write(">>> leaderActions >>>  Compare the results");
 		
 		// R1 == R2 == R3 -> T|T|T
 		if(R1Response.equals(R2Response) && R1Response.equals(R3Response)){
@@ -259,6 +282,7 @@ public class Replica {
 		} 
 		
 		// 4. send results to RM
+		this.logger.write(">>> leaderActions >>>  send results to RM");
 		SendResultsToRM(RMRequestData);
 		
 		return response;
@@ -391,5 +415,4 @@ public class Replica {
 	public boolean isLeader() {
 		return isLeader;
 	}
-
 }

@@ -6,6 +6,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
+import java.util.concurrent.ConcurrentHashMap;
 
 import Utilities.FileLogger;
 import Utilities.Constants;
@@ -22,7 +23,10 @@ public class ReplicaManager {
 	FileLogger logger;
 	// Logger Path
 	String loggerPath = "./logs/ReplicaManagerLogs/";
-		
+	
+	int maxAttempt = 3;
+	ConcurrentHashMap<Integer, Integer> maxAttempts = new ConcurrentHashMap<Integer, Integer>();
+	
 	public ReplicaManager() {
 		
 		// Initialize Server Logger
@@ -48,6 +52,25 @@ public class ReplicaManager {
 		this.logger.write(">>> ReplicaManager >>> Starting Replica 3");
 		R3.start();
 		
+		
+		// Setting up Max Attempts
+		
+		// All Replicas
+		maxAttempts.put(Constants.R1_PORT, maxAttempt);
+		maxAttempts.put(Constants.R1_PORT, maxAttempt);
+		maxAttempts.put(Constants.R1_PORT, maxAttempt);
+		// All Asian Servers
+		maxAttempts.put(Constants.AS_PORT_1, maxAttempt);
+		maxAttempts.put(Constants.AS_PORT_2, maxAttempt);
+		maxAttempts.put(Constants.AS_PORT_3, maxAttempt);
+		// All European Servers
+		maxAttempts.put(Constants.EU_PORT_1, maxAttempt);
+		maxAttempts.put(Constants.EU_PORT_2, maxAttempt);
+		maxAttempts.put(Constants.EU_PORT_3, maxAttempt);
+		// All North American Servers
+		maxAttempts.put(Constants.NA_PORT_1, maxAttempt);
+		maxAttempts.put(Constants.NA_PORT_2, maxAttempt);
+		maxAttempts.put(Constants.NA_PORT_2, maxAttempt);
 		
 		// Creating a thread for UDP HeartBeat Checker
 		Thread heartBeat = new Thread(new Runnable() {
@@ -127,22 +150,30 @@ public class ReplicaManager {
 		// Final State
 		if(Constants.DEBUG) System.out.println("\nR1:"+R1Count+" R2:"+R2Count+" R3:"+R3Count+"\n");
 		
+		this.logger.write(">>> UDPServerRequestProcessor >>> Final State >>> R1:"+R1Count+" R2:"+R2Count+" R3:"+R3Count);
+		
 		// Check if any counter is 3 or > 3
 		if(R1Count >= 3) {
+			this.logger.write(">>> UDPServerRequestProcessor >>> R1Count >= 3 >>> Stopping Old Replica");
 			stoppingOldReplica("R1");
 			// Start new Replica 1 with startNewReplica() as leader;
+			this.logger.write(">>> UDPServerRequestProcessor >>> R1Count >= 3 >>> Starting New Replica as a leader");
 			startNewReplica("R1");
 		}
 		
 		if(R2Count >= 3) {
+			this.logger.write(">>> UDPServerRequestProcessor >>> R2Count >= 3 >>> Stopping Old Replica");
 			stoppingOldReplica("R2");
 			// Start new replica startNewReplica() as Replica 2;
+			this.logger.write(">>> UDPServerRequestProcessor >>> R2Count >= 3 >>> Starting New Replica");
 			startNewReplica("R2");
 		}
 	
 		if(R3Count >= 3) {
+			this.logger.write(">>> UDPServerRequestProcessor >>> R3Count >= 3 >>> Stopping Old Replica");
 			stoppingOldReplica("R3");
 			// Start new replica startNewReplica() as Replica 3;
+			this.logger.write(">>> UDPServerRequestProcessor >>> R3Count >= 3 >>> Starting New Replica");
 			startNewReplica("R3");
 		}
 		
@@ -195,6 +226,7 @@ public class ReplicaManager {
 			int servers[] = {Constants.R1_PORT, Constants.R2_PORT, Constants.R3_PORT, Constants.NA_PORT_1, Constants.NA_PORT_2, Constants.NA_PORT_3, Constants.EU_PORT_1, Constants.EU_PORT_2, Constants.EU_PORT_3, Constants.AS_PORT_1, Constants.AS_PORT_2, Constants.AS_PORT_3};
 			
 			for (int server : servers) {
+				this.logger.write(">>> UDPHeartBeat >>> Sending a HeartBeat Message too the sever running on port "+server);
 				sendHeartBeatMessage(server);
 			}
 		}
@@ -240,13 +272,30 @@ public class ReplicaManager {
 			if(!methodName.equals("UDPHeartBeat") && !data.equals("i am alive")) {
 				throw new SocketTimeoutException("UDPHeartBeat is hijacked");
 			} else {
+				this.logger.write(">>> UDPHeartBeat >>> Recived UDP HeartBeat from sever running on port "+port);
 				if(Constants.HEART_BEAT_DEBUG) System.out.println("Recived UDP HeartBeat from Port "+port);
 			}
 
 		} catch (SocketTimeoutException e) {
             // SocketTimeoutException inform RM
-            UDPHeartBeatTimeout(port);
-            
+			// check max maxAttempts
+			if(maxAttempts.get(port) != 0) {
+				// reduce maxAttempts for server
+				if(Constants.DEBUG) System.out.println();
+				this.logger.write(">>> UDPHeartBeat >>> Reduce maxAttempts for the server running on "+port);
+				if(Constants.DEBUG) System.out.println("UDPHeartBeat Message : Reduce maxAttempts for the server running on "+port);
+				if(Constants.DEBUG) System.out.println();
+				maxAttempts.put(port,maxAttempts.get(port)-1);
+			} else {
+				// reset maxAttempts for server
+				if(Constants.DEBUG) System.out.println();
+				this.logger.write(">>> UDPHeartBeat >>> Max Attempts finished for server running on "+port);
+				if(Constants.DEBUG) System.out.println("UDPHeartBeat Message : Max Attempts finished for server running on "+port);
+				if(Constants.DEBUG) System.out.println();
+				maxAttempts.put(port,maxAttempt);
+				UDPHeartBeatTimeout(port);
+			}
+			
         } catch (Exception e) {
 			System.err.println(e);
 		}
@@ -257,6 +306,7 @@ public class ReplicaManager {
 		// Check the Port Group
 		// Something is wrong with Replica 1 Restart it.
 		if(Port == Constants.R1_PORT || Port == Constants.AS_PORT_1 || Port == Constants.EU_PORT_1 || Port == Constants.NA_PORT_1) {
+			this.logger.write(">>> UDPHeartBeatTimeout >>> UDPHeartBeatTimeout occurred in R1...");
 			if(Constants.DEBUG) System.out.println("\nUDPHeartBeatTimeout occurred in R1... \n");
 			stoppingOldReplica("R1");
 			startNewReplica("R1");
@@ -264,6 +314,7 @@ public class ReplicaManager {
 		
 		// Something is wrong with Replica 2 Restart it.
 		if(Port == Constants.R2_PORT || Port == Constants.AS_PORT_2 || Port == Constants.EU_PORT_2 || Port == Constants.NA_PORT_2) {
+			this.logger.write(">>> UDPHeartBeatTimeout >>> UDPHeartBeatTimeout occurred in R2...");
 			if(Constants.DEBUG) System.out.println("\nUDPHeartBeatTimeout occurred in R2... \n");
 			stoppingOldReplica("R2");
 			startNewReplica("R2");
@@ -271,6 +322,7 @@ public class ReplicaManager {
 		
 		// Something is wrong with Replica 3 Restart it.
 		if(Port == Constants.R3_PORT || Port == Constants.AS_PORT_3 || Port == Constants.EU_PORT_3 || Port == Constants.NA_PORT_3) {
+			this.logger.write(">>> UDPHeartBeatTimeout >>> UDPHeartBeatTimeout occurred in R3...");
 			if(Constants.DEBUG) System.out.println("\nUDPHeartBeatTimeout occurred in R3... \n");
 			stoppingOldReplica("R3");
 			startNewReplica("R3");

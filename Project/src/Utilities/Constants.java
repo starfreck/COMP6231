@@ -37,7 +37,7 @@ public class Constants {
 	// Max Packet Size
 	public static final int MAX_PACKET_SIZE = 1024;
 	
-	// UDP Request Timeout (20000 ms = 20 s)
-	public static final int UDP_REQUEST_TIMEOUT = 20000;
+	// UDP Request Timeout (10000 ms = 10 s)
+	public static final int UDP_REQUEST_TIMEOUT = 10000;
 	
 }

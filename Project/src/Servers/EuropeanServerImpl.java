@@ -306,16 +306,11 @@ public class EuropeanServerImpl {
 
 						// Asian IP
 						if (NewIPAddress.split("\\.")[0].equals("182")) {
-							this.logger.write(">>> transferAccount >>> New IPAdddress is Asian Server IP >>> Account is already in Asian Server");
-							return "Your Account is already in Asian Server";
-						}
-						// European IP
-						else if (NewIPAddress.split("\\.")[0].equals("93")) {
-							
-							this.logger.write(">>> transferAccount >>> New IPAdddress is European Server IP");
+
+							this.logger.write(">>> transferAccount >>> New IP is for an Asian Server");
 							
 							String Data = getPlayerAccountInfo(Username);
-							String status = this.UDPServerTunnel("EU", "transferAccount", Data + NewIPAddress);
+							String status = this.UDPServerTunnel("AS", "transferAccount", Data + NewIPAddress);
 
 							if ("true".equals(status)) {
 								// Account is transfer
@@ -326,7 +321,7 @@ public class EuropeanServerImpl {
 								} else {
 
 									// Delete Account from remote server
-									status = UDPServerTunnel("EU", "deleteTransferedAccount", Data + NewIPAddress);
+									status = UDPServerTunnel("AS", "deleteTransferedAccount", Data);
 									String msg = "Something went wrong during account transfer rollback started...";
 
 									if ("true".equals(status)) {
@@ -343,10 +338,15 @@ public class EuropeanServerImpl {
 								return "Account with Given Name is already present on remote server";
 							}
 						}
+						// European IP
+						else if (NewIPAddress.split("\\.")[0].equals("93")) {
+							this.logger.write(">>> transferAccount >>> Your Account is already in European Server");
+							return "Your Account is already in European Server";
+						}
 						// North American IP
 						else if (NewIPAddress.split("\\.")[0].equals("132")) {
-							
-							this.logger.write(">>> transferAccount >>> New IPAdddress is North American Server IP");
+
+							this.logger.write(">>> transferAccount >>> New IP in a North American Server");
 							
 							String Data = getPlayerAccountInfo(Username);
 							String status = this.UDPServerTunnel("NA", "transferAccount", Data + NewIPAddress);
@@ -359,7 +359,7 @@ public class EuropeanServerImpl {
 									return "Account is succesfully transfered";
 								} else {
 									// Delete Account from remote server
-									status = UDPServerTunnel("NA", "deleteTransferedAccount", Data + NewIPAddress);
+									status = UDPServerTunnel("NA", "deleteTransferedAccount", Data);
 									String msg = "Something went wrong during account transfer rollback started...";
 									if ("true".equals(status)) {
 										msg = msg + "\nRollback successfully finshed...";
@@ -375,7 +375,7 @@ public class EuropeanServerImpl {
 								return "Account with Given Name is already present on remote server";
 							}
 						}
-
+						this.logger.write(">>> transferAccount >>> New IP Address is invalid");
 						return "New IP Address is invalid";
 
 					} else {

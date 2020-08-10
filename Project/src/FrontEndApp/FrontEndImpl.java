@@ -28,7 +28,7 @@ public class FrontEndImpl extends FrontEndPOA{
 	// Name
 	static final String name = "FrontEnd";
 	// Logger
-	FileLogger logger = new FileLogger(loggerPath,"FrontEnd.log");;
+	FileLogger logger;
 	// Logger Path
 	static final String loggerPath = "./logs/FrontEnd/";
 	
@@ -40,6 +40,8 @@ public class FrontEndImpl extends FrontEndPOA{
 	
 	protected FrontEndImpl() {
 		super(); 
+		
+		logger = new FileLogger(loggerPath,"FrontEnd.log");
 		
 		// Initialize Servers List
 		gameServers.put("132", "NorthAmerica");
